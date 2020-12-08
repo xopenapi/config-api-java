@@ -156,7 +156,7 @@ Name | Type | Description  | Notes
 
 <a name="configBatchRetrieveByResourcesPost"></a>
 # **configBatchRetrieveByResourcesPost**
-> InlineResponse200 configBatchRetrieveByResourcesPost(batchRetrieveByResourcesReq)
+> BatchRetrieveConfigsByResourcesRsp configBatchRetrieveByResourcesPost(batchRetrieveByResourcesReq)
 
 查询配置
 
@@ -184,7 +184,7 @@ public class Example {
     ConfigApi apiInstance = new ConfigApi(defaultClient);
     BatchRetrieveByResourcesReq batchRetrieveByResourcesReq = new BatchRetrieveByResourcesReq(); // BatchRetrieveByResourcesReq | 
     try {
-      InlineResponse200 result = apiInstance.configBatchRetrieveByResourcesPost(batchRetrieveByResourcesReq);
+      BatchRetrieveConfigsByResourcesRsp result = apiInstance.configBatchRetrieveByResourcesPost(batchRetrieveByResourcesReq);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ConfigApi#configBatchRetrieveByResourcesPost");
@@ -205,7 +205,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200**](InlineResponse200.md)
+[**BatchRetrieveConfigsByResourcesRsp**](BatchRetrieveConfigsByResourcesRsp.md)
 
 ### Authorization
 

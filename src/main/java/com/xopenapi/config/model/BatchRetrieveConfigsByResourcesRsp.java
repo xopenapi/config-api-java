@@ -28,10 +28,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * InlineResponse200
+ * BatchRetrieveConfigsByResourcesRsp
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-12-08T10:50:47.636Z[GMT]")
-public class InlineResponse200 {
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-12-08T12:57:31.779Z[GMT]")
+public class BatchRetrieveConfigsByResourcesRsp {
   public static final String SERIALIZED_NAME_CODE = "code";
   @SerializedName(SERIALIZED_NAME_CODE)
   private Long code;
@@ -45,7 +45,7 @@ public class InlineResponse200 {
   private List<Config> data = null;
 
 
-  public InlineResponse200 code(Long code) {
+  public BatchRetrieveConfigsByResourcesRsp code(Long code) {
     
     this.code = code;
     return this;
@@ -68,7 +68,7 @@ public class InlineResponse200 {
   }
 
 
-  public InlineResponse200 msg(String msg) {
+  public BatchRetrieveConfigsByResourcesRsp msg(String msg) {
     
     this.msg = msg;
     return this;
@@ -91,13 +91,13 @@ public class InlineResponse200 {
   }
 
 
-  public InlineResponse200 data(List<Config> data) {
+  public BatchRetrieveConfigsByResourcesRsp data(List<Config> data) {
     
     this.data = data;
     return this;
   }
 
-  public InlineResponse200 addDataItem(Config dataItem) {
+  public BatchRetrieveConfigsByResourcesRsp addDataItem(Config dataItem) {
     if (this.data == null) {
       this.data = new ArrayList<Config>();
     }
@@ -130,10 +130,10 @@ public class InlineResponse200 {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    InlineResponse200 inlineResponse200 = (InlineResponse200) o;
-    return Objects.equals(this.code, inlineResponse200.code) &&
-        Objects.equals(this.msg, inlineResponse200.msg) &&
-        Objects.equals(this.data, inlineResponse200.data);
+    BatchRetrieveConfigsByResourcesRsp batchRetrieveConfigsByResourcesRsp = (BatchRetrieveConfigsByResourcesRsp) o;
+    return Objects.equals(this.code, batchRetrieveConfigsByResourcesRsp.code) &&
+        Objects.equals(this.msg, batchRetrieveConfigsByResourcesRsp.msg) &&
+        Objects.equals(this.data, batchRetrieveConfigsByResourcesRsp.data);
   }
 
   @Override
@@ -145,7 +145,7 @@ public class InlineResponse200 {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class InlineResponse200 {\n");
+    sb.append("class BatchRetrieveConfigsByResourcesRsp {\n");
     sb.append("    code: ").append(toIndentedString(code)).append("\n");
     sb.append("    msg: ").append(toIndentedString(msg)).append("\n");
     sb.append("    data: ").append(toIndentedString(data)).append("\n");

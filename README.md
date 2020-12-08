@@ -2,7 +2,7 @@
 
 配置服务API
 - API version: 1.0.0
-  - Build date: 2020-12-08T10:50:47.636Z[GMT]
+  - Build date: 2020-12-08T12:57:31.779Z[GMT]
 
 配置服务API
 
@@ -154,6 +154,7 @@ Class | Method | HTTP request | Description
  - [BatchRetrieveConfigTemplatesByKeysRsp](docs/BatchRetrieveConfigTemplatesByKeysRsp.md)
  - [BatchRetrieveConfigTemplatesRsp](docs/BatchRetrieveConfigTemplatesRsp.md)
  - [BatchRetrieveConfigsByKeysRsp](docs/BatchRetrieveConfigsByKeysRsp.md)
+ - [BatchRetrieveConfigsByResourcesRsp](docs/BatchRetrieveConfigsByResourcesRsp.md)
  - [BatchRetrieveConfigsRsp](docs/BatchRetrieveConfigsRsp.md)
  - [Config](docs/Config.md)
  - [ConfigGroup](docs/ConfigGroup.md)
@@ -178,7 +179,6 @@ Class | Method | HTTP request | Description
  - [GetConfigRsp](docs/GetConfigRsp.md)
  - [GetConfigTemplateRsp](docs/GetConfigTemplateRsp.md)
  - [IdsReq](docs/IdsReq.md)
- - [InlineResponse200](docs/InlineResponse200.md)
  - [PageConfigGroupsRsp](docs/PageConfigGroupsRsp.md)
  - [PageConfigGroupsRspData](docs/PageConfigGroupsRspData.md)
  - [PageConfigTemplatesRsp](docs/PageConfigTemplatesRsp.md)

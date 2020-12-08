@@ -17,6 +17,7 @@ import com.xopenapi.ApiException;
 import com.xopenapi.config.model.BatchRetrieveByKeysReq;
 import com.xopenapi.config.model.BatchRetrieveByResourcesReq;
 import com.xopenapi.config.model.BatchRetrieveConfigsByKeysRsp;
+import com.xopenapi.config.model.BatchRetrieveConfigsByResourcesRsp;
 import com.xopenapi.config.model.BatchRetrieveConfigsRsp;
 import com.xopenapi.config.model.CreateConfigReq;
 import com.xopenapi.config.model.CreateConfigRsp;
@@ -25,7 +26,6 @@ import com.xopenapi.config.model.CursorQuery;
 import com.xopenapi.config.model.DeleteRsp;
 import com.xopenapi.config.model.GetConfigRsp;
 import com.xopenapi.config.model.IdsReq;
-import com.xopenapi.config.model.InlineResponse200;
 import com.xopenapi.config.model.PageConfigsRsp;
 import com.xopenapi.config.model.PageQuery;
 import com.xopenapi.config.model.RetrieveConfigByKeyReq;
@@ -94,7 +94,7 @@ public class ConfigApiTest {
     @Test
     public void configBatchRetrieveByResourcesPostTest() throws ApiException {
         BatchRetrieveByResourcesReq batchRetrieveByResourcesReq = null;
-        InlineResponse200 response = api.configBatchRetrieveByResourcesPost(batchRetrieveByResourcesReq);
+        BatchRetrieveConfigsByResourcesRsp response = api.configBatchRetrieveByResourcesPost(batchRetrieveByResourcesReq);
 
         // TODO: test validations
     }

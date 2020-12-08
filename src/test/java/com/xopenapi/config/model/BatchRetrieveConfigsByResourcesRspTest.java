@@ -30,17 +30,17 @@ import org.junit.Test;
 
 
 /**
- * Model tests for InlineResponse200
+ * Model tests for BatchRetrieveConfigsByResourcesRsp
  */
-public class InlineResponse200Test {
-    private final InlineResponse200 model = new InlineResponse200();
+public class BatchRetrieveConfigsByResourcesRspTest {
+    private final BatchRetrieveConfigsByResourcesRsp model = new BatchRetrieveConfigsByResourcesRsp();
 
     /**
-     * Model tests for InlineResponse200
+     * Model tests for BatchRetrieveConfigsByResourcesRsp
      */
     @Test
-    public void testInlineResponse200() {
-        // TODO: test InlineResponse200
+    public void testBatchRetrieveConfigsByResourcesRsp() {
+        // TODO: test BatchRetrieveConfigsByResourcesRsp
     }
 
     /**

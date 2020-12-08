@@ -250,7 +250,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/inline_response_200'
+                $ref: '#/components/schemas/BatchRetrieveConfigsByResourcesRsp'
           description: successful operation
         "405":
           description: Invalid input
@@ -953,6 +953,39 @@ components:
           $ref: '#/components/schemas/Config'
       type: object
     BatchRetrieveConfigsRsp:
+      example:
+        msg: msg
+        code: 0
+        data:
+        - resourceId: resourceId
+          groupId: groupId
+          ctime: 6
+          id: id
+          templateId: templateId
+          mtime: 1
+          value: '{}'
+          key: key
+        - resourceId: resourceId
+          groupId: groupId
+          ctime: 6
+          id: id
+          templateId: templateId
+          mtime: 1
+          value: '{}'
+          key: key
+      properties:
+        code:
+          format: int64
+          type: integer
+        msg:
+          format: string
+          type: string
+        data:
+          items:
+            $ref: '#/components/schemas/Config'
+          type: array
+      type: object
+    BatchRetrieveConfigsByResourcesRsp:
       example:
         msg: msg
         code: 0
@@ -1746,38 +1779,6 @@ components:
           format: string
           type: string
       type: object
-    inline_response_200:
-      example:
-        msg: msg
-        code: 0
-        data:
-        - resourceId: resourceId
-          groupId: groupId
-          ctime: 6
-          id: id
-          templateId: templateId
-          mtime: 1
-          value: '{}'
-          key: key
-        - resourceId: resourceId
-          groupId: groupId
-          ctime: 6
-          id: id
-          templateId: templateId
-          mtime: 1
-          value: '{}'
-          key: key
-      properties:
-        code:
-          format: int64
-          type: integer
-        msg:
-          format: string
-          type: string
-        data:
-          items:
-            $ref: '#/components/schemas/Config'
-          type: array
     PageConfigsRsp_data:
       example:
         pageCount: 5
