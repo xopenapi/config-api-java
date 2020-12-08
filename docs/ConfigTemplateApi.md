@@ -18,7 +18,7 @@ Method | HTTP request | Description
 
 <a name="configTemplateBatchDeletePost"></a>
 # **configTemplateBatchDeletePost**
-> InlineResponse2001 configTemplateBatchDeletePost(idsReq)
+> InlineResponse200 configTemplateBatchDeletePost(idsReq)
 
 批量删除配置模版
 
@@ -46,7 +46,7 @@ public class Example {
     ConfigTemplateApi apiInstance = new ConfigTemplateApi(defaultClient);
     IdsReq idsReq = new IdsReq(); // IdsReq | 
     try {
-      InlineResponse2001 result = apiInstance.configTemplateBatchDeletePost(idsReq);
+      InlineResponse200 result = apiInstance.configTemplateBatchDeletePost(idsReq);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ConfigTemplateApi#configTemplateBatchDeletePost");
@@ -67,7 +67,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2001**](InlineResponse2001.md)
+[**InlineResponse200**](InlineResponse200.md)
 
 ### Authorization
 
@@ -86,7 +86,7 @@ Name | Type | Description  | Notes
 
 <a name="configTemplateBatchRetrieveByGroupPost"></a>
 # **configTemplateBatchRetrieveByGroupPost**
-> InlineResponse2006 configTemplateBatchRetrieveByGroupPost(groupName)
+> BatchRetrieveConfigTemplatesByGroupRsp configTemplateBatchRetrieveByGroupPost(groupName)
 
 查询配置模版
 
@@ -114,7 +114,7 @@ public class Example {
     ConfigTemplateApi apiInstance = new ConfigTemplateApi(defaultClient);
     String groupName = "groupName_example"; // String | 分组标签名
     try {
-      InlineResponse2006 result = apiInstance.configTemplateBatchRetrieveByGroupPost(groupName);
+      BatchRetrieveConfigTemplatesByGroupRsp result = apiInstance.configTemplateBatchRetrieveByGroupPost(groupName);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ConfigTemplateApi#configTemplateBatchRetrieveByGroupPost");
@@ -135,7 +135,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2006**](InlineResponse2006.md)
+[**BatchRetrieveConfigTemplatesByGroupRsp**](BatchRetrieveConfigTemplatesByGroupRsp.md)
 
 ### Authorization
 
@@ -154,7 +154,7 @@ Name | Type | Description  | Notes
 
 <a name="configTemplateBatchRetrieveByKeysPost"></a>
 # **configTemplateBatchRetrieveByKeysPost**
-> InlineResponse2006 configTemplateBatchRetrieveByKeysPost(batchRetrieveConfigTemplateByKeysReq)
+> BatchRetrieveConfigTemplatesByKeysRsp configTemplateBatchRetrieveByKeysPost(batchRetrieveConfigTemplateByKeysReq)
 
 查询配置模版
 
@@ -182,7 +182,7 @@ public class Example {
     ConfigTemplateApi apiInstance = new ConfigTemplateApi(defaultClient);
     BatchRetrieveConfigTemplateByKeysReq batchRetrieveConfigTemplateByKeysReq = new BatchRetrieveConfigTemplateByKeysReq(); // BatchRetrieveConfigTemplateByKeysReq | 
     try {
-      InlineResponse2006 result = apiInstance.configTemplateBatchRetrieveByKeysPost(batchRetrieveConfigTemplateByKeysReq);
+      BatchRetrieveConfigTemplatesByKeysRsp result = apiInstance.configTemplateBatchRetrieveByKeysPost(batchRetrieveConfigTemplateByKeysReq);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ConfigTemplateApi#configTemplateBatchRetrieveByKeysPost");
@@ -203,7 +203,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2006**](InlineResponse2006.md)
+[**BatchRetrieveConfigTemplatesByKeysRsp**](BatchRetrieveConfigTemplatesByKeysRsp.md)
 
 ### Authorization
 
@@ -222,7 +222,7 @@ Name | Type | Description  | Notes
 
 <a name="configTemplateBatchRetrievePost"></a>
 # **configTemplateBatchRetrievePost**
-> InlineResponse2006 configTemplateBatchRetrievePost(idsReq)
+> BatchRetrieveConfigTemplatesRsp configTemplateBatchRetrievePost(idsReq)
 
 批量查询配置模版
 
@@ -250,7 +250,7 @@ public class Example {
     ConfigTemplateApi apiInstance = new ConfigTemplateApi(defaultClient);
     IdsReq idsReq = new IdsReq(); // IdsReq | 
     try {
-      InlineResponse2006 result = apiInstance.configTemplateBatchRetrievePost(idsReq);
+      BatchRetrieveConfigTemplatesRsp result = apiInstance.configTemplateBatchRetrievePost(idsReq);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ConfigTemplateApi#configTemplateBatchRetrievePost");
@@ -271,7 +271,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2006**](InlineResponse2006.md)
+[**BatchRetrieveConfigTemplatesRsp**](BatchRetrieveConfigTemplatesRsp.md)
 
 ### Authorization
 
@@ -290,7 +290,7 @@ Name | Type | Description  | Notes
 
 <a name="configTemplateCursorPost"></a>
 # **configTemplateCursorPost**
-> InlineResponse2008 configTemplateCursorPost(cursorQuery)
+> CursorConfigTemplatesRsp configTemplateCursorPost(cursorQuery)
 
 Cursor查询配置模版
 
@@ -318,7 +318,7 @@ public class Example {
     ConfigTemplateApi apiInstance = new ConfigTemplateApi(defaultClient);
     CursorQuery cursorQuery = new CursorQuery(); // CursorQuery | 
     try {
-      InlineResponse2008 result = apiInstance.configTemplateCursorPost(cursorQuery);
+      CursorConfigTemplatesRsp result = apiInstance.configTemplateCursorPost(cursorQuery);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ConfigTemplateApi#configTemplateCursorPost");
@@ -339,7 +339,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2008**](InlineResponse2008.md)
+[**CursorConfigTemplatesRsp**](CursorConfigTemplatesRsp.md)
 
 ### Authorization
 
@@ -358,7 +358,7 @@ Name | Type | Description  | Notes
 
 <a name="configTemplateIdDelete"></a>
 # **configTemplateIdDelete**
-> InlineResponse2001 configTemplateIdDelete(id)
+> InlineResponse200 configTemplateIdDelete(id)
 
 删除配置模版
 
@@ -386,7 +386,7 @@ public class Example {
     ConfigTemplateApi apiInstance = new ConfigTemplateApi(defaultClient);
     String id = "id_example"; // String | 删除配置模版
     try {
-      InlineResponse2001 result = apiInstance.configTemplateIdDelete(id);
+      InlineResponse200 result = apiInstance.configTemplateIdDelete(id);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ConfigTemplateApi#configTemplateIdDelete");
@@ -407,7 +407,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2001**](InlineResponse2001.md)
+[**InlineResponse200**](InlineResponse200.md)
 
 ### Authorization
 
@@ -426,7 +426,7 @@ Name | Type | Description  | Notes
 
 <a name="configTemplateIdGet"></a>
 # **configTemplateIdGet**
-> InlineResponse2005 configTemplateIdGet(id)
+> GetConfigTemplateRsp configTemplateIdGet(id)
 
 查询配置模版
 
@@ -454,7 +454,7 @@ public class Example {
     ConfigTemplateApi apiInstance = new ConfigTemplateApi(defaultClient);
     String id = "id_example"; // String | 查询配置通过配置ID
     try {
-      InlineResponse2005 result = apiInstance.configTemplateIdGet(id);
+      GetConfigTemplateRsp result = apiInstance.configTemplateIdGet(id);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ConfigTemplateApi#configTemplateIdGet");
@@ -475,7 +475,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2005**](InlineResponse2005.md)
+[**GetConfigTemplateRsp**](GetConfigTemplateRsp.md)
 
 ### Authorization
 
@@ -494,7 +494,7 @@ Name | Type | Description  | Notes
 
 <a name="configTemplatePagePost"></a>
 # **configTemplatePagePost**
-> InlineResponse2007 configTemplatePagePost(pageQuery)
+> PageConfigTemplatesRsp configTemplatePagePost(pageQuery)
 
 Page查询配置模版
 
@@ -522,7 +522,7 @@ public class Example {
     ConfigTemplateApi apiInstance = new ConfigTemplateApi(defaultClient);
     PageQuery pageQuery = new PageQuery(); // PageQuery | 
     try {
-      InlineResponse2007 result = apiInstance.configTemplatePagePost(pageQuery);
+      PageConfigTemplatesRsp result = apiInstance.configTemplatePagePost(pageQuery);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ConfigTemplateApi#configTemplatePagePost");
@@ -543,7 +543,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2007**](InlineResponse2007.md)
+[**PageConfigTemplatesRsp**](PageConfigTemplatesRsp.md)
 
 ### Authorization
 
@@ -562,7 +562,7 @@ Name | Type | Description  | Notes
 
 <a name="configTemplatePost"></a>
 # **configTemplatePost**
-> InlineResponse2005 configTemplatePost(createConfigTemplateReq)
+> CreateConfigTemplateRsp configTemplatePost(createConfigTemplateReq)
 
 创建配置模版
 
@@ -590,7 +590,7 @@ public class Example {
     ConfigTemplateApi apiInstance = new ConfigTemplateApi(defaultClient);
     CreateConfigTemplateReq createConfigTemplateReq = new CreateConfigTemplateReq(); // CreateConfigTemplateReq | 
     try {
-      InlineResponse2005 result = apiInstance.configTemplatePost(createConfigTemplateReq);
+      CreateConfigTemplateRsp result = apiInstance.configTemplatePost(createConfigTemplateReq);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ConfigTemplateApi#configTemplatePost");
@@ -611,7 +611,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2005**](InlineResponse2005.md)
+[**CreateConfigTemplateRsp**](CreateConfigTemplateRsp.md)
 
 ### Authorization
 
@@ -630,7 +630,7 @@ Name | Type | Description  | Notes
 
 <a name="configTemplateRetrieveByKeyPost"></a>
 # **configTemplateRetrieveByKeyPost**
-> InlineResponse2005 configTemplateRetrieveByKeyPost(key)
+> RetrieveConfigTemplateByKeyRsp configTemplateRetrieveByKeyPost(key)
 
 查询配置模版
 
@@ -658,7 +658,7 @@ public class Example {
     ConfigTemplateApi apiInstance = new ConfigTemplateApi(defaultClient);
     String key = "key_example"; // String | 主键Key
     try {
-      InlineResponse2005 result = apiInstance.configTemplateRetrieveByKeyPost(key);
+      RetrieveConfigTemplateByKeyRsp result = apiInstance.configTemplateRetrieveByKeyPost(key);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ConfigTemplateApi#configTemplateRetrieveByKeyPost");
@@ -679,7 +679,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2005**](InlineResponse2005.md)
+[**RetrieveConfigTemplateByKeyRsp**](RetrieveConfigTemplateByKeyRsp.md)
 
 ### Authorization
 

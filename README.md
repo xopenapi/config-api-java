@@ -2,7 +2,7 @@
 
 配置服务API
 - API version: 1.0.0
-  - Build date: 2020-12-08T09:21:35.124Z[GMT]
+  - Build date: 2020-12-08T10:34:11.838Z[GMT]
 
 配置服务API
 
@@ -92,7 +92,7 @@ public class Example {
     ConfigApi apiInstance = new ConfigApi(defaultClient);
     IdsReq idsReq = new IdsReq(); // IdsReq | 
     try {
-      InlineResponse2001 result = apiInstance.configBatchDeletePost(idsReq);
+      InlineResponse200 result = apiInstance.configBatchDeletePost(idsReq);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ConfigApi#configBatchDeletePost");
@@ -150,40 +150,53 @@ Class | Method | HTTP request | Description
  - [BatchRetrieveByKeysReq](docs/BatchRetrieveByKeysReq.md)
  - [BatchRetrieveByResourcesReq](docs/BatchRetrieveByResourcesReq.md)
  - [BatchRetrieveConfigTemplateByKeysReq](docs/BatchRetrieveConfigTemplateByKeysReq.md)
+ - [BatchRetrieveConfigTemplatesByGroupRsp](docs/BatchRetrieveConfigTemplatesByGroupRsp.md)
+ - [BatchRetrieveConfigTemplatesByKeysRsp](docs/BatchRetrieveConfigTemplatesByKeysRsp.md)
+ - [BatchRetrieveConfigTemplatesRsp](docs/BatchRetrieveConfigTemplatesRsp.md)
+ - [BatchRetrieveConfigsByKeysRsp](docs/BatchRetrieveConfigsByKeysRsp.md)
+ - [BatchRetrieveConfigsRsp](docs/BatchRetrieveConfigsRsp.md)
  - [Config](docs/Config.md)
  - [ConfigGroup](docs/ConfigGroup.md)
  - [ConfigTemplate](docs/ConfigTemplate.md)
  - [CreateConfigGroupReq](docs/CreateConfigGroupReq.md)
+ - [CreateConfigGroupRsp](docs/CreateConfigGroupRsp.md)
  - [CreateConfigReq](docs/CreateConfigReq.md)
+ - [CreateConfigRsp](docs/CreateConfigRsp.md)
  - [CreateConfigTemplateReq](docs/CreateConfigTemplateReq.md)
+ - [CreateConfigTemplateRsp](docs/CreateConfigTemplateRsp.md)
+ - [CursorConfigGroupsRsp](docs/CursorConfigGroupsRsp.md)
+ - [CursorConfigGroupsRspData](docs/CursorConfigGroupsRspData.md)
+ - [CursorConfigTemplatesRsp](docs/CursorConfigTemplatesRsp.md)
+ - [CursorConfigTemplatesRspData](docs/CursorConfigTemplatesRspData.md)
+ - [CursorConfigsRsp](docs/CursorConfigsRsp.md)
+ - [CursorConfigsRspData](docs/CursorConfigsRspData.md)
  - [CursorExtra](docs/CursorExtra.md)
  - [CursorQuery](docs/CursorQuery.md)
+ - [GetConfigGroupRsp](docs/GetConfigGroupRsp.md)
+ - [GetConfigGroupsRsp](docs/GetConfigGroupsRsp.md)
+ - [GetConfigRsp](docs/GetConfigRsp.md)
+ - [GetConfigTemplateRsp](docs/GetConfigTemplateRsp.md)
  - [IdsReq](docs/IdsReq.md)
  - [InlineResponse200](docs/InlineResponse200.md)
  - [InlineResponse2001](docs/InlineResponse2001.md)
- - [InlineResponse20010](docs/InlineResponse20010.md)
- - [InlineResponse20011](docs/InlineResponse20011.md)
- - [InlineResponse20011Data](docs/InlineResponse20011Data.md)
- - [InlineResponse20012](docs/InlineResponse20012.md)
- - [InlineResponse20012Data](docs/InlineResponse20012Data.md)
- - [InlineResponse2002](docs/InlineResponse2002.md)
- - [InlineResponse2003](docs/InlineResponse2003.md)
- - [InlineResponse2003Data](docs/InlineResponse2003Data.md)
- - [InlineResponse2004](docs/InlineResponse2004.md)
- - [InlineResponse2004Data](docs/InlineResponse2004Data.md)
- - [InlineResponse2005](docs/InlineResponse2005.md)
- - [InlineResponse2006](docs/InlineResponse2006.md)
- - [InlineResponse2007](docs/InlineResponse2007.md)
- - [InlineResponse2007Data](docs/InlineResponse2007Data.md)
- - [InlineResponse2008](docs/InlineResponse2008.md)
- - [InlineResponse2008Data](docs/InlineResponse2008Data.md)
- - [InlineResponse2009](docs/InlineResponse2009.md)
+ - [PageConfigGroupsRsp](docs/PageConfigGroupsRsp.md)
+ - [PageConfigGroupsRspData](docs/PageConfigGroupsRspData.md)
+ - [PageConfigTemplatesRsp](docs/PageConfigTemplatesRsp.md)
+ - [PageConfigTemplatesRspData](docs/PageConfigTemplatesRspData.md)
+ - [PageConfigsRsp](docs/PageConfigsRsp.md)
+ - [PageConfigsRspData](docs/PageConfigsRspData.md)
  - [PageQuery](docs/PageQuery.md)
  - [RetrieveConfigByKeyReq](docs/RetrieveConfigByKeyReq.md)
+ - [RetrieveConfigByKeyRsp](docs/RetrieveConfigByKeyRsp.md)
+ - [RetrieveConfigGroupByNameRsp](docs/RetrieveConfigGroupByNameRsp.md)
+ - [RetrieveConfigTemplateByKeyRsp](docs/RetrieveConfigTemplateByKeyRsp.md)
  - [SortSpec](docs/SortSpec.md)
  - [UpdateConfigGroupReq](docs/UpdateConfigGroupReq.md)
+ - [UpdateConfigGroupRsp](docs/UpdateConfigGroupRsp.md)
  - [UpdateConfigReq](docs/UpdateConfigReq.md)
+ - [UpdateConfigRsp](docs/UpdateConfigRsp.md)
  - [UpdateConfigTemplateReq](docs/UpdateConfigTemplateReq.md)
+ - [UpdateConfigTemplateRsp](docs/UpdateConfigTemplateRsp.md)
 
 
 ## Documentation for Authorization

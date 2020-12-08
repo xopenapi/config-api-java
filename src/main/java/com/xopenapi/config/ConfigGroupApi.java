@@ -28,16 +28,18 @@ import java.io.IOException;
 
 
 import com.xopenapi.config.model.CreateConfigGroupReq;
+import com.xopenapi.config.model.CreateConfigGroupRsp;
+import com.xopenapi.config.model.CursorConfigGroupsRsp;
 import com.xopenapi.config.model.CursorQuery;
+import com.xopenapi.config.model.GetConfigGroupRsp;
+import com.xopenapi.config.model.GetConfigGroupsRsp;
 import com.xopenapi.config.model.IdsReq;
-import com.xopenapi.config.model.InlineResponse2001;
-import com.xopenapi.config.model.InlineResponse20010;
-import com.xopenapi.config.model.InlineResponse20011;
-import com.xopenapi.config.model.InlineResponse20012;
-import com.xopenapi.config.model.InlineResponse2005;
-import com.xopenapi.config.model.InlineResponse2009;
+import com.xopenapi.config.model.InlineResponse200;
+import com.xopenapi.config.model.PageConfigGroupsRsp;
 import com.xopenapi.config.model.PageQuery;
+import com.xopenapi.config.model.RetrieveConfigGroupByNameRsp;
 import com.xopenapi.config.model.UpdateConfigGroupReq;
+import com.xopenapi.config.model.UpdateConfigGroupRsp;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -119,7 +121,7 @@ public class ConfigGroupApi {
      * 批量删除组
      * 批量删除组通过组Id
      * @param idsReq  (optional)
-     * @return InlineResponse2001
+     * @return InlineResponse200
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -128,8 +130,8 @@ public class ConfigGroupApi {
         <tr><td> 405 </td><td> Invalid input </td><td>  -  </td></tr>
      </table>
      */
-    public InlineResponse2001 configGroupBatchDeletePost(IdsReq idsReq) throws ApiException {
-        ApiResponse<InlineResponse2001> localVarResp = configGroupBatchDeletePostWithHttpInfo(idsReq);
+    public InlineResponse200 configGroupBatchDeletePost(IdsReq idsReq) throws ApiException {
+        ApiResponse<InlineResponse200> localVarResp = configGroupBatchDeletePostWithHttpInfo(idsReq);
         return localVarResp.getData();
     }
 
@@ -137,7 +139,7 @@ public class ConfigGroupApi {
      * 批量删除组
      * 批量删除组通过组Id
      * @param idsReq  (optional)
-     * @return ApiResponse&lt;InlineResponse2001&gt;
+     * @return ApiResponse&lt;InlineResponse200&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -146,9 +148,9 @@ public class ConfigGroupApi {
         <tr><td> 405 </td><td> Invalid input </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<InlineResponse2001> configGroupBatchDeletePostWithHttpInfo(IdsReq idsReq) throws ApiException {
+    public ApiResponse<InlineResponse200> configGroupBatchDeletePostWithHttpInfo(IdsReq idsReq) throws ApiException {
         okhttp3.Call localVarCall = configGroupBatchDeletePostValidateBeforeCall(idsReq, null);
-        Type localVarReturnType = new TypeToken<InlineResponse2001>(){}.getType();
+        Type localVarReturnType = new TypeToken<InlineResponse200>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -166,10 +168,10 @@ public class ConfigGroupApi {
         <tr><td> 405 </td><td> Invalid input </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call configGroupBatchDeletePostAsync(IdsReq idsReq, final ApiCallback<InlineResponse2001> _callback) throws ApiException {
+    public okhttp3.Call configGroupBatchDeletePostAsync(IdsReq idsReq, final ApiCallback<InlineResponse200> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = configGroupBatchDeletePostValidateBeforeCall(idsReq, _callback);
-        Type localVarReturnType = new TypeToken<InlineResponse2001>(){}.getType();
+        Type localVarReturnType = new TypeToken<InlineResponse200>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -228,7 +230,7 @@ public class ConfigGroupApi {
      * 批量查询组
      * 批量查询组通过组Id
      * @param idsReq  (optional)
-     * @return InlineResponse20010
+     * @return GetConfigGroupsRsp
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -237,8 +239,8 @@ public class ConfigGroupApi {
         <tr><td> 405 </td><td> Invalid input </td><td>  -  </td></tr>
      </table>
      */
-    public InlineResponse20010 configGroupBatchRetrievePost(IdsReq idsReq) throws ApiException {
-        ApiResponse<InlineResponse20010> localVarResp = configGroupBatchRetrievePostWithHttpInfo(idsReq);
+    public GetConfigGroupsRsp configGroupBatchRetrievePost(IdsReq idsReq) throws ApiException {
+        ApiResponse<GetConfigGroupsRsp> localVarResp = configGroupBatchRetrievePostWithHttpInfo(idsReq);
         return localVarResp.getData();
     }
 
@@ -246,7 +248,7 @@ public class ConfigGroupApi {
      * 批量查询组
      * 批量查询组通过组Id
      * @param idsReq  (optional)
-     * @return ApiResponse&lt;InlineResponse20010&gt;
+     * @return ApiResponse&lt;GetConfigGroupsRsp&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -255,9 +257,9 @@ public class ConfigGroupApi {
         <tr><td> 405 </td><td> Invalid input </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<InlineResponse20010> configGroupBatchRetrievePostWithHttpInfo(IdsReq idsReq) throws ApiException {
+    public ApiResponse<GetConfigGroupsRsp> configGroupBatchRetrievePostWithHttpInfo(IdsReq idsReq) throws ApiException {
         okhttp3.Call localVarCall = configGroupBatchRetrievePostValidateBeforeCall(idsReq, null);
-        Type localVarReturnType = new TypeToken<InlineResponse20010>(){}.getType();
+        Type localVarReturnType = new TypeToken<GetConfigGroupsRsp>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -275,10 +277,10 @@ public class ConfigGroupApi {
         <tr><td> 405 </td><td> Invalid input </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call configGroupBatchRetrievePostAsync(IdsReq idsReq, final ApiCallback<InlineResponse20010> _callback) throws ApiException {
+    public okhttp3.Call configGroupBatchRetrievePostAsync(IdsReq idsReq, final ApiCallback<GetConfigGroupsRsp> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = configGroupBatchRetrievePostValidateBeforeCall(idsReq, _callback);
-        Type localVarReturnType = new TypeToken<InlineResponse20010>(){}.getType();
+        Type localVarReturnType = new TypeToken<GetConfigGroupsRsp>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -337,7 +339,7 @@ public class ConfigGroupApi {
      * Cursor查询组
      * Cursor查询组
      * @param cursorQuery  (optional)
-     * @return InlineResponse20012
+     * @return CursorConfigGroupsRsp
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -346,8 +348,8 @@ public class ConfigGroupApi {
         <tr><td> 405 </td><td> Invalid input </td><td>  -  </td></tr>
      </table>
      */
-    public InlineResponse20012 configGroupCursorPost(CursorQuery cursorQuery) throws ApiException {
-        ApiResponse<InlineResponse20012> localVarResp = configGroupCursorPostWithHttpInfo(cursorQuery);
+    public CursorConfigGroupsRsp configGroupCursorPost(CursorQuery cursorQuery) throws ApiException {
+        ApiResponse<CursorConfigGroupsRsp> localVarResp = configGroupCursorPostWithHttpInfo(cursorQuery);
         return localVarResp.getData();
     }
 
@@ -355,7 +357,7 @@ public class ConfigGroupApi {
      * Cursor查询组
      * Cursor查询组
      * @param cursorQuery  (optional)
-     * @return ApiResponse&lt;InlineResponse20012&gt;
+     * @return ApiResponse&lt;CursorConfigGroupsRsp&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -364,9 +366,9 @@ public class ConfigGroupApi {
         <tr><td> 405 </td><td> Invalid input </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<InlineResponse20012> configGroupCursorPostWithHttpInfo(CursorQuery cursorQuery) throws ApiException {
+    public ApiResponse<CursorConfigGroupsRsp> configGroupCursorPostWithHttpInfo(CursorQuery cursorQuery) throws ApiException {
         okhttp3.Call localVarCall = configGroupCursorPostValidateBeforeCall(cursorQuery, null);
-        Type localVarReturnType = new TypeToken<InlineResponse20012>(){}.getType();
+        Type localVarReturnType = new TypeToken<CursorConfigGroupsRsp>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -384,10 +386,10 @@ public class ConfigGroupApi {
         <tr><td> 405 </td><td> Invalid input </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call configGroupCursorPostAsync(CursorQuery cursorQuery, final ApiCallback<InlineResponse20012> _callback) throws ApiException {
+    public okhttp3.Call configGroupCursorPostAsync(CursorQuery cursorQuery, final ApiCallback<CursorConfigGroupsRsp> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = configGroupCursorPostValidateBeforeCall(cursorQuery, _callback);
-        Type localVarReturnType = new TypeToken<InlineResponse20012>(){}.getType();
+        Type localVarReturnType = new TypeToken<CursorConfigGroupsRsp>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -452,7 +454,7 @@ public class ConfigGroupApi {
      * 删除组
      * 删除组
      * @param id 删除组 (required)
-     * @return InlineResponse2001
+     * @return InlineResponse200
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -461,8 +463,8 @@ public class ConfigGroupApi {
         <tr><td> 405 </td><td> Invalid input </td><td>  -  </td></tr>
      </table>
      */
-    public InlineResponse2001 configGroupIdDelete(String id) throws ApiException {
-        ApiResponse<InlineResponse2001> localVarResp = configGroupIdDeleteWithHttpInfo(id);
+    public InlineResponse200 configGroupIdDelete(String id) throws ApiException {
+        ApiResponse<InlineResponse200> localVarResp = configGroupIdDeleteWithHttpInfo(id);
         return localVarResp.getData();
     }
 
@@ -470,7 +472,7 @@ public class ConfigGroupApi {
      * 删除组
      * 删除组
      * @param id 删除组 (required)
-     * @return ApiResponse&lt;InlineResponse2001&gt;
+     * @return ApiResponse&lt;InlineResponse200&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -479,9 +481,9 @@ public class ConfigGroupApi {
         <tr><td> 405 </td><td> Invalid input </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<InlineResponse2001> configGroupIdDeleteWithHttpInfo(String id) throws ApiException {
+    public ApiResponse<InlineResponse200> configGroupIdDeleteWithHttpInfo(String id) throws ApiException {
         okhttp3.Call localVarCall = configGroupIdDeleteValidateBeforeCall(id, null);
-        Type localVarReturnType = new TypeToken<InlineResponse2001>(){}.getType();
+        Type localVarReturnType = new TypeToken<InlineResponse200>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -499,10 +501,10 @@ public class ConfigGroupApi {
         <tr><td> 405 </td><td> Invalid input </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call configGroupIdDeleteAsync(String id, final ApiCallback<InlineResponse2001> _callback) throws ApiException {
+    public okhttp3.Call configGroupIdDeleteAsync(String id, final ApiCallback<InlineResponse200> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = configGroupIdDeleteValidateBeforeCall(id, _callback);
-        Type localVarReturnType = new TypeToken<InlineResponse2001>(){}.getType();
+        Type localVarReturnType = new TypeToken<InlineResponse200>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -567,7 +569,7 @@ public class ConfigGroupApi {
      * 查询组
      * 查询组通过组ID
      * @param id 查询组通过组ID (required)
-     * @return InlineResponse2009
+     * @return GetConfigGroupRsp
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -576,8 +578,8 @@ public class ConfigGroupApi {
         <tr><td> 405 </td><td> Invalid input </td><td>  -  </td></tr>
      </table>
      */
-    public InlineResponse2009 configGroupIdGet(String id) throws ApiException {
-        ApiResponse<InlineResponse2009> localVarResp = configGroupIdGetWithHttpInfo(id);
+    public GetConfigGroupRsp configGroupIdGet(String id) throws ApiException {
+        ApiResponse<GetConfigGroupRsp> localVarResp = configGroupIdGetWithHttpInfo(id);
         return localVarResp.getData();
     }
 
@@ -585,7 +587,7 @@ public class ConfigGroupApi {
      * 查询组
      * 查询组通过组ID
      * @param id 查询组通过组ID (required)
-     * @return ApiResponse&lt;InlineResponse2009&gt;
+     * @return ApiResponse&lt;GetConfigGroupRsp&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -594,9 +596,9 @@ public class ConfigGroupApi {
         <tr><td> 405 </td><td> Invalid input </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<InlineResponse2009> configGroupIdGetWithHttpInfo(String id) throws ApiException {
+    public ApiResponse<GetConfigGroupRsp> configGroupIdGetWithHttpInfo(String id) throws ApiException {
         okhttp3.Call localVarCall = configGroupIdGetValidateBeforeCall(id, null);
-        Type localVarReturnType = new TypeToken<InlineResponse2009>(){}.getType();
+        Type localVarReturnType = new TypeToken<GetConfigGroupRsp>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -614,10 +616,10 @@ public class ConfigGroupApi {
         <tr><td> 405 </td><td> Invalid input </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call configGroupIdGetAsync(String id, final ApiCallback<InlineResponse2009> _callback) throws ApiException {
+    public okhttp3.Call configGroupIdGetAsync(String id, final ApiCallback<GetConfigGroupRsp> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = configGroupIdGetValidateBeforeCall(id, _callback);
-        Type localVarReturnType = new TypeToken<InlineResponse2009>(){}.getType();
+        Type localVarReturnType = new TypeToken<GetConfigGroupRsp>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -676,7 +678,7 @@ public class ConfigGroupApi {
      * Page查询组
      * Page查询组
      * @param pageQuery  (optional)
-     * @return InlineResponse20011
+     * @return PageConfigGroupsRsp
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -685,8 +687,8 @@ public class ConfigGroupApi {
         <tr><td> 405 </td><td> Invalid input </td><td>  -  </td></tr>
      </table>
      */
-    public InlineResponse20011 configGroupPagePost(PageQuery pageQuery) throws ApiException {
-        ApiResponse<InlineResponse20011> localVarResp = configGroupPagePostWithHttpInfo(pageQuery);
+    public PageConfigGroupsRsp configGroupPagePost(PageQuery pageQuery) throws ApiException {
+        ApiResponse<PageConfigGroupsRsp> localVarResp = configGroupPagePostWithHttpInfo(pageQuery);
         return localVarResp.getData();
     }
 
@@ -694,7 +696,7 @@ public class ConfigGroupApi {
      * Page查询组
      * Page查询组
      * @param pageQuery  (optional)
-     * @return ApiResponse&lt;InlineResponse20011&gt;
+     * @return ApiResponse&lt;PageConfigGroupsRsp&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -703,9 +705,9 @@ public class ConfigGroupApi {
         <tr><td> 405 </td><td> Invalid input </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<InlineResponse20011> configGroupPagePostWithHttpInfo(PageQuery pageQuery) throws ApiException {
+    public ApiResponse<PageConfigGroupsRsp> configGroupPagePostWithHttpInfo(PageQuery pageQuery) throws ApiException {
         okhttp3.Call localVarCall = configGroupPagePostValidateBeforeCall(pageQuery, null);
-        Type localVarReturnType = new TypeToken<InlineResponse20011>(){}.getType();
+        Type localVarReturnType = new TypeToken<PageConfigGroupsRsp>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -723,10 +725,10 @@ public class ConfigGroupApi {
         <tr><td> 405 </td><td> Invalid input </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call configGroupPagePostAsync(PageQuery pageQuery, final ApiCallback<InlineResponse20011> _callback) throws ApiException {
+    public okhttp3.Call configGroupPagePostAsync(PageQuery pageQuery, final ApiCallback<PageConfigGroupsRsp> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = configGroupPagePostValidateBeforeCall(pageQuery, _callback);
-        Type localVarReturnType = new TypeToken<InlineResponse20011>(){}.getType();
+        Type localVarReturnType = new TypeToken<PageConfigGroupsRsp>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -785,7 +787,7 @@ public class ConfigGroupApi {
      * 创建组
      * 创建组
      * @param createConfigGroupReq  (optional)
-     * @return InlineResponse2009
+     * @return CreateConfigGroupRsp
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -794,8 +796,8 @@ public class ConfigGroupApi {
         <tr><td> 405 </td><td> Invalid input </td><td>  -  </td></tr>
      </table>
      */
-    public InlineResponse2009 configGroupPost(CreateConfigGroupReq createConfigGroupReq) throws ApiException {
-        ApiResponse<InlineResponse2009> localVarResp = configGroupPostWithHttpInfo(createConfigGroupReq);
+    public CreateConfigGroupRsp configGroupPost(CreateConfigGroupReq createConfigGroupReq) throws ApiException {
+        ApiResponse<CreateConfigGroupRsp> localVarResp = configGroupPostWithHttpInfo(createConfigGroupReq);
         return localVarResp.getData();
     }
 
@@ -803,7 +805,7 @@ public class ConfigGroupApi {
      * 创建组
      * 创建组
      * @param createConfigGroupReq  (optional)
-     * @return ApiResponse&lt;InlineResponse2009&gt;
+     * @return ApiResponse&lt;CreateConfigGroupRsp&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -812,9 +814,9 @@ public class ConfigGroupApi {
         <tr><td> 405 </td><td> Invalid input </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<InlineResponse2009> configGroupPostWithHttpInfo(CreateConfigGroupReq createConfigGroupReq) throws ApiException {
+    public ApiResponse<CreateConfigGroupRsp> configGroupPostWithHttpInfo(CreateConfigGroupReq createConfigGroupReq) throws ApiException {
         okhttp3.Call localVarCall = configGroupPostValidateBeforeCall(createConfigGroupReq, null);
-        Type localVarReturnType = new TypeToken<InlineResponse2009>(){}.getType();
+        Type localVarReturnType = new TypeToken<CreateConfigGroupRsp>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -832,10 +834,10 @@ public class ConfigGroupApi {
         <tr><td> 405 </td><td> Invalid input </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call configGroupPostAsync(CreateConfigGroupReq createConfigGroupReq, final ApiCallback<InlineResponse2009> _callback) throws ApiException {
+    public okhttp3.Call configGroupPostAsync(CreateConfigGroupReq createConfigGroupReq, final ApiCallback<CreateConfigGroupRsp> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = configGroupPostValidateBeforeCall(createConfigGroupReq, _callback);
-        Type localVarReturnType = new TypeToken<InlineResponse2009>(){}.getType();
+        Type localVarReturnType = new TypeToken<CreateConfigGroupRsp>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -894,7 +896,7 @@ public class ConfigGroupApi {
      * 更新组
      * 更新组，需要全部的组信息
      * @param updateConfigGroupReq  (optional)
-     * @return InlineResponse2009
+     * @return UpdateConfigGroupRsp
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -903,8 +905,8 @@ public class ConfigGroupApi {
         <tr><td> 405 </td><td> Invalid input </td><td>  -  </td></tr>
      </table>
      */
-    public InlineResponse2009 configGroupPut(UpdateConfigGroupReq updateConfigGroupReq) throws ApiException {
-        ApiResponse<InlineResponse2009> localVarResp = configGroupPutWithHttpInfo(updateConfigGroupReq);
+    public UpdateConfigGroupRsp configGroupPut(UpdateConfigGroupReq updateConfigGroupReq) throws ApiException {
+        ApiResponse<UpdateConfigGroupRsp> localVarResp = configGroupPutWithHttpInfo(updateConfigGroupReq);
         return localVarResp.getData();
     }
 
@@ -912,7 +914,7 @@ public class ConfigGroupApi {
      * 更新组
      * 更新组，需要全部的组信息
      * @param updateConfigGroupReq  (optional)
-     * @return ApiResponse&lt;InlineResponse2009&gt;
+     * @return ApiResponse&lt;UpdateConfigGroupRsp&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -921,9 +923,9 @@ public class ConfigGroupApi {
         <tr><td> 405 </td><td> Invalid input </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<InlineResponse2009> configGroupPutWithHttpInfo(UpdateConfigGroupReq updateConfigGroupReq) throws ApiException {
+    public ApiResponse<UpdateConfigGroupRsp> configGroupPutWithHttpInfo(UpdateConfigGroupReq updateConfigGroupReq) throws ApiException {
         okhttp3.Call localVarCall = configGroupPutValidateBeforeCall(updateConfigGroupReq, null);
-        Type localVarReturnType = new TypeToken<InlineResponse2009>(){}.getType();
+        Type localVarReturnType = new TypeToken<UpdateConfigGroupRsp>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -941,10 +943,10 @@ public class ConfigGroupApi {
         <tr><td> 405 </td><td> Invalid input </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call configGroupPutAsync(UpdateConfigGroupReq updateConfigGroupReq, final ApiCallback<InlineResponse2009> _callback) throws ApiException {
+    public okhttp3.Call configGroupPutAsync(UpdateConfigGroupReq updateConfigGroupReq, final ApiCallback<UpdateConfigGroupRsp> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = configGroupPutValidateBeforeCall(updateConfigGroupReq, _callback);
-        Type localVarReturnType = new TypeToken<InlineResponse2009>(){}.getType();
+        Type localVarReturnType = new TypeToken<UpdateConfigGroupRsp>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -1012,7 +1014,7 @@ public class ConfigGroupApi {
      * 查询组
      * 查询组通过Name
      * @param name 查询组通过Name (required)
-     * @return InlineResponse2005
+     * @return RetrieveConfigGroupByNameRsp
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -1021,8 +1023,8 @@ public class ConfigGroupApi {
         <tr><td> 405 </td><td> Invalid input </td><td>  -  </td></tr>
      </table>
      */
-    public InlineResponse2005 configGroupRetrieveByNamePost(String name) throws ApiException {
-        ApiResponse<InlineResponse2005> localVarResp = configGroupRetrieveByNamePostWithHttpInfo(name);
+    public RetrieveConfigGroupByNameRsp configGroupRetrieveByNamePost(String name) throws ApiException {
+        ApiResponse<RetrieveConfigGroupByNameRsp> localVarResp = configGroupRetrieveByNamePostWithHttpInfo(name);
         return localVarResp.getData();
     }
 
@@ -1030,7 +1032,7 @@ public class ConfigGroupApi {
      * 查询组
      * 查询组通过Name
      * @param name 查询组通过Name (required)
-     * @return ApiResponse&lt;InlineResponse2005&gt;
+     * @return ApiResponse&lt;RetrieveConfigGroupByNameRsp&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -1039,9 +1041,9 @@ public class ConfigGroupApi {
         <tr><td> 405 </td><td> Invalid input </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<InlineResponse2005> configGroupRetrieveByNamePostWithHttpInfo(String name) throws ApiException {
+    public ApiResponse<RetrieveConfigGroupByNameRsp> configGroupRetrieveByNamePostWithHttpInfo(String name) throws ApiException {
         okhttp3.Call localVarCall = configGroupRetrieveByNamePostValidateBeforeCall(name, null);
-        Type localVarReturnType = new TypeToken<InlineResponse2005>(){}.getType();
+        Type localVarReturnType = new TypeToken<RetrieveConfigGroupByNameRsp>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -1059,10 +1061,10 @@ public class ConfigGroupApi {
         <tr><td> 405 </td><td> Invalid input </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call configGroupRetrieveByNamePostAsync(String name, final ApiCallback<InlineResponse2005> _callback) throws ApiException {
+    public okhttp3.Call configGroupRetrieveByNamePostAsync(String name, final ApiCallback<RetrieveConfigGroupByNameRsp> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = configGroupRetrieveByNamePostValidateBeforeCall(name, _callback);
-        Type localVarReturnType = new TypeToken<InlineResponse2005>(){}.getType();
+        Type localVarReturnType = new TypeToken<RetrieveConfigGroupByNameRsp>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

@@ -20,7 +20,7 @@ Method | HTTP request | Description
 
 <a name="configBatchDeletePost"></a>
 # **configBatchDeletePost**
-> InlineResponse2001 configBatchDeletePost(idsReq)
+> InlineResponse200 configBatchDeletePost(idsReq)
 
 批量删除配置
 
@@ -48,7 +48,7 @@ public class Example {
     ConfigApi apiInstance = new ConfigApi(defaultClient);
     IdsReq idsReq = new IdsReq(); // IdsReq | 
     try {
-      InlineResponse2001 result = apiInstance.configBatchDeletePost(idsReq);
+      InlineResponse200 result = apiInstance.configBatchDeletePost(idsReq);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ConfigApi#configBatchDeletePost");
@@ -69,7 +69,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2001**](InlineResponse2001.md)
+[**InlineResponse200**](InlineResponse200.md)
 
 ### Authorization
 
@@ -88,7 +88,7 @@ Name | Type | Description  | Notes
 
 <a name="configBatchRetrieveByKeysPost"></a>
 # **configBatchRetrieveByKeysPost**
-> InlineResponse2002 configBatchRetrieveByKeysPost(batchRetrieveByKeysReq)
+> BatchRetrieveConfigsByKeysRsp configBatchRetrieveByKeysPost(batchRetrieveByKeysReq)
 
 查询配置
 
@@ -116,7 +116,7 @@ public class Example {
     ConfigApi apiInstance = new ConfigApi(defaultClient);
     BatchRetrieveByKeysReq batchRetrieveByKeysReq = new BatchRetrieveByKeysReq(); // BatchRetrieveByKeysReq | 
     try {
-      InlineResponse2002 result = apiInstance.configBatchRetrieveByKeysPost(batchRetrieveByKeysReq);
+      BatchRetrieveConfigsByKeysRsp result = apiInstance.configBatchRetrieveByKeysPost(batchRetrieveByKeysReq);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ConfigApi#configBatchRetrieveByKeysPost");
@@ -137,7 +137,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2002**](InlineResponse2002.md)
+[**BatchRetrieveConfigsByKeysRsp**](BatchRetrieveConfigsByKeysRsp.md)
 
 ### Authorization
 
@@ -156,7 +156,7 @@ Name | Type | Description  | Notes
 
 <a name="configBatchRetrieveByResourcesPost"></a>
 # **configBatchRetrieveByResourcesPost**
-> InlineResponse2002 configBatchRetrieveByResourcesPost(batchRetrieveByResourcesReq)
+> InlineResponse2001 configBatchRetrieveByResourcesPost(batchRetrieveByResourcesReq)
 
 查询配置
 
@@ -184,7 +184,7 @@ public class Example {
     ConfigApi apiInstance = new ConfigApi(defaultClient);
     BatchRetrieveByResourcesReq batchRetrieveByResourcesReq = new BatchRetrieveByResourcesReq(); // BatchRetrieveByResourcesReq | 
     try {
-      InlineResponse2002 result = apiInstance.configBatchRetrieveByResourcesPost(batchRetrieveByResourcesReq);
+      InlineResponse2001 result = apiInstance.configBatchRetrieveByResourcesPost(batchRetrieveByResourcesReq);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ConfigApi#configBatchRetrieveByResourcesPost");
@@ -205,7 +205,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2002**](InlineResponse2002.md)
+[**InlineResponse2001**](InlineResponse2001.md)
 
 ### Authorization
 
@@ -224,7 +224,7 @@ Name | Type | Description  | Notes
 
 <a name="configBatchRetrievePost"></a>
 # **configBatchRetrievePost**
-> InlineResponse2002 configBatchRetrievePost(idsReq)
+> BatchRetrieveConfigsRsp configBatchRetrievePost(idsReq)
 
 批量查询配置
 
@@ -252,7 +252,7 @@ public class Example {
     ConfigApi apiInstance = new ConfigApi(defaultClient);
     IdsReq idsReq = new IdsReq(); // IdsReq | 
     try {
-      InlineResponse2002 result = apiInstance.configBatchRetrievePost(idsReq);
+      BatchRetrieveConfigsRsp result = apiInstance.configBatchRetrievePost(idsReq);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ConfigApi#configBatchRetrievePost");
@@ -273,7 +273,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2002**](InlineResponse2002.md)
+[**BatchRetrieveConfigsRsp**](BatchRetrieveConfigsRsp.md)
 
 ### Authorization
 
@@ -292,7 +292,7 @@ Name | Type | Description  | Notes
 
 <a name="configCursorPost"></a>
 # **configCursorPost**
-> InlineResponse2004 configCursorPost(cursorQuery)
+> CursorConfigsRsp configCursorPost(cursorQuery)
 
 Cursor查询配置
 
@@ -320,7 +320,7 @@ public class Example {
     ConfigApi apiInstance = new ConfigApi(defaultClient);
     CursorQuery cursorQuery = new CursorQuery(); // CursorQuery | 
     try {
-      InlineResponse2004 result = apiInstance.configCursorPost(cursorQuery);
+      CursorConfigsRsp result = apiInstance.configCursorPost(cursorQuery);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ConfigApi#configCursorPost");
@@ -341,7 +341,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2004**](InlineResponse2004.md)
+[**CursorConfigsRsp**](CursorConfigsRsp.md)
 
 ### Authorization
 
@@ -360,7 +360,7 @@ Name | Type | Description  | Notes
 
 <a name="configIdDelete"></a>
 # **configIdDelete**
-> InlineResponse2001 configIdDelete(id)
+> InlineResponse200 configIdDelete(id)
 
 删除配置
 
@@ -388,7 +388,7 @@ public class Example {
     ConfigApi apiInstance = new ConfigApi(defaultClient);
     String id = "id_example"; // String | 删除配置
     try {
-      InlineResponse2001 result = apiInstance.configIdDelete(id);
+      InlineResponse200 result = apiInstance.configIdDelete(id);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ConfigApi#configIdDelete");
@@ -409,7 +409,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2001**](InlineResponse2001.md)
+[**InlineResponse200**](InlineResponse200.md)
 
 ### Authorization
 
@@ -428,7 +428,7 @@ Name | Type | Description  | Notes
 
 <a name="configIdGet"></a>
 # **configIdGet**
-> InlineResponse200 configIdGet(id)
+> GetConfigRsp configIdGet(id)
 
 查询配置
 
@@ -456,7 +456,7 @@ public class Example {
     ConfigApi apiInstance = new ConfigApi(defaultClient);
     String id = "id_example"; // String | 查询配置通过配置ID
     try {
-      InlineResponse200 result = apiInstance.configIdGet(id);
+      GetConfigRsp result = apiInstance.configIdGet(id);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ConfigApi#configIdGet");
@@ -477,7 +477,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200**](InlineResponse200.md)
+[**GetConfigRsp**](GetConfigRsp.md)
 
 ### Authorization
 
@@ -496,7 +496,7 @@ Name | Type | Description  | Notes
 
 <a name="configPagePost"></a>
 # **configPagePost**
-> InlineResponse2003 configPagePost(pageQuery)
+> PageConfigsRsp configPagePost(pageQuery)
 
 Page查询配置
 
@@ -524,7 +524,7 @@ public class Example {
     ConfigApi apiInstance = new ConfigApi(defaultClient);
     PageQuery pageQuery = new PageQuery(); // PageQuery | 
     try {
-      InlineResponse2003 result = apiInstance.configPagePost(pageQuery);
+      PageConfigsRsp result = apiInstance.configPagePost(pageQuery);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ConfigApi#configPagePost");
@@ -545,7 +545,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2003**](InlineResponse2003.md)
+[**PageConfigsRsp**](PageConfigsRsp.md)
 
 ### Authorization
 
@@ -564,7 +564,7 @@ Name | Type | Description  | Notes
 
 <a name="configPost"></a>
 # **configPost**
-> InlineResponse200 configPost(createConfigReq)
+> CreateConfigRsp configPost(createConfigReq)
 
 创建配置
 
@@ -592,7 +592,7 @@ public class Example {
     ConfigApi apiInstance = new ConfigApi(defaultClient);
     CreateConfigReq createConfigReq = new CreateConfigReq(); // CreateConfigReq | 
     try {
-      InlineResponse200 result = apiInstance.configPost(createConfigReq);
+      CreateConfigRsp result = apiInstance.configPost(createConfigReq);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ConfigApi#configPost");
@@ -613,7 +613,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200**](InlineResponse200.md)
+[**CreateConfigRsp**](CreateConfigRsp.md)
 
 ### Authorization
 
@@ -632,7 +632,7 @@ Name | Type | Description  | Notes
 
 <a name="configPut"></a>
 # **configPut**
-> InlineResponse200 configPut(updateConfigReq)
+> UpdateConfigRsp configPut(updateConfigReq)
 
 更新配置
 
@@ -660,7 +660,7 @@ public class Example {
     ConfigApi apiInstance = new ConfigApi(defaultClient);
     UpdateConfigReq updateConfigReq = new UpdateConfigReq(); // UpdateConfigReq | 
     try {
-      InlineResponse200 result = apiInstance.configPut(updateConfigReq);
+      UpdateConfigRsp result = apiInstance.configPut(updateConfigReq);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ConfigApi#configPut");
@@ -681,7 +681,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200**](InlineResponse200.md)
+[**UpdateConfigRsp**](UpdateConfigRsp.md)
 
 ### Authorization
 
@@ -700,7 +700,7 @@ Name | Type | Description  | Notes
 
 <a name="configRetrieveByKeyPost"></a>
 # **configRetrieveByKeyPost**
-> InlineResponse200 configRetrieveByKeyPost(retrieveConfigByKeyReq)
+> RetrieveConfigByKeyRsp configRetrieveByKeyPost(retrieveConfigByKeyReq)
 
 查询配置
 
@@ -728,7 +728,7 @@ public class Example {
     ConfigApi apiInstance = new ConfigApi(defaultClient);
     RetrieveConfigByKeyReq retrieveConfigByKeyReq = new RetrieveConfigByKeyReq(); // RetrieveConfigByKeyReq | 
     try {
-      InlineResponse200 result = apiInstance.configRetrieveByKeyPost(retrieveConfigByKeyReq);
+      RetrieveConfigByKeyRsp result = apiInstance.configRetrieveByKeyPost(retrieveConfigByKeyReq);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ConfigApi#configRetrieveByKeyPost");
@@ -749,7 +749,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200**](InlineResponse200.md)
+[**RetrieveConfigByKeyRsp**](RetrieveConfigByKeyRsp.md)
 
 ### Authorization
 
@@ -768,7 +768,7 @@ Name | Type | Description  | Notes
 
 <a name="configTemplatePut"></a>
 # **configTemplatePut**
-> InlineResponse2005 configTemplatePut(updateConfigTemplateReq)
+> UpdateConfigTemplateRsp configTemplatePut(updateConfigTemplateReq)
 
 更新配置模版
 
@@ -796,7 +796,7 @@ public class Example {
     ConfigApi apiInstance = new ConfigApi(defaultClient);
     UpdateConfigTemplateReq updateConfigTemplateReq = new UpdateConfigTemplateReq(); // UpdateConfigTemplateReq | 
     try {
-      InlineResponse2005 result = apiInstance.configTemplatePut(updateConfigTemplateReq);
+      UpdateConfigTemplateRsp result = apiInstance.configTemplatePut(updateConfigTemplateReq);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ConfigApi#configTemplatePut");
@@ -817,7 +817,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2005**](InlineResponse2005.md)
+[**UpdateConfigTemplateRsp**](UpdateConfigTemplateRsp.md)
 
 ### Authorization
 

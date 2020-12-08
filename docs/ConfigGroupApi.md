@@ -17,7 +17,7 @@ Method | HTTP request | Description
 
 <a name="configGroupBatchDeletePost"></a>
 # **configGroupBatchDeletePost**
-> InlineResponse2001 configGroupBatchDeletePost(idsReq)
+> InlineResponse200 configGroupBatchDeletePost(idsReq)
 
 批量删除组
 
@@ -45,7 +45,7 @@ public class Example {
     ConfigGroupApi apiInstance = new ConfigGroupApi(defaultClient);
     IdsReq idsReq = new IdsReq(); // IdsReq | 
     try {
-      InlineResponse2001 result = apiInstance.configGroupBatchDeletePost(idsReq);
+      InlineResponse200 result = apiInstance.configGroupBatchDeletePost(idsReq);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ConfigGroupApi#configGroupBatchDeletePost");
@@ -66,7 +66,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2001**](InlineResponse2001.md)
+[**InlineResponse200**](InlineResponse200.md)
 
 ### Authorization
 
@@ -85,7 +85,7 @@ Name | Type | Description  | Notes
 
 <a name="configGroupBatchRetrievePost"></a>
 # **configGroupBatchRetrievePost**
-> InlineResponse20010 configGroupBatchRetrievePost(idsReq)
+> GetConfigGroupsRsp configGroupBatchRetrievePost(idsReq)
 
 批量查询组
 
@@ -113,7 +113,7 @@ public class Example {
     ConfigGroupApi apiInstance = new ConfigGroupApi(defaultClient);
     IdsReq idsReq = new IdsReq(); // IdsReq | 
     try {
-      InlineResponse20010 result = apiInstance.configGroupBatchRetrievePost(idsReq);
+      GetConfigGroupsRsp result = apiInstance.configGroupBatchRetrievePost(idsReq);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ConfigGroupApi#configGroupBatchRetrievePost");
@@ -134,7 +134,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20010**](InlineResponse20010.md)
+[**GetConfigGroupsRsp**](GetConfigGroupsRsp.md)
 
 ### Authorization
 
@@ -153,7 +153,7 @@ Name | Type | Description  | Notes
 
 <a name="configGroupCursorPost"></a>
 # **configGroupCursorPost**
-> InlineResponse20012 configGroupCursorPost(cursorQuery)
+> CursorConfigGroupsRsp configGroupCursorPost(cursorQuery)
 
 Cursor查询组
 
@@ -181,7 +181,7 @@ public class Example {
     ConfigGroupApi apiInstance = new ConfigGroupApi(defaultClient);
     CursorQuery cursorQuery = new CursorQuery(); // CursorQuery | 
     try {
-      InlineResponse20012 result = apiInstance.configGroupCursorPost(cursorQuery);
+      CursorConfigGroupsRsp result = apiInstance.configGroupCursorPost(cursorQuery);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ConfigGroupApi#configGroupCursorPost");
@@ -202,7 +202,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20012**](InlineResponse20012.md)
+[**CursorConfigGroupsRsp**](CursorConfigGroupsRsp.md)
 
 ### Authorization
 
@@ -221,7 +221,7 @@ Name | Type | Description  | Notes
 
 <a name="configGroupIdDelete"></a>
 # **configGroupIdDelete**
-> InlineResponse2001 configGroupIdDelete(id)
+> InlineResponse200 configGroupIdDelete(id)
 
 删除组
 
@@ -249,7 +249,7 @@ public class Example {
     ConfigGroupApi apiInstance = new ConfigGroupApi(defaultClient);
     String id = "id_example"; // String | 删除组
     try {
-      InlineResponse2001 result = apiInstance.configGroupIdDelete(id);
+      InlineResponse200 result = apiInstance.configGroupIdDelete(id);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ConfigGroupApi#configGroupIdDelete");
@@ -270,7 +270,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2001**](InlineResponse2001.md)
+[**InlineResponse200**](InlineResponse200.md)
 
 ### Authorization
 
@@ -289,7 +289,7 @@ Name | Type | Description  | Notes
 
 <a name="configGroupIdGet"></a>
 # **configGroupIdGet**
-> InlineResponse2009 configGroupIdGet(id)
+> GetConfigGroupRsp configGroupIdGet(id)
 
 查询组
 
@@ -317,7 +317,7 @@ public class Example {
     ConfigGroupApi apiInstance = new ConfigGroupApi(defaultClient);
     String id = "id_example"; // String | 查询组通过组ID
     try {
-      InlineResponse2009 result = apiInstance.configGroupIdGet(id);
+      GetConfigGroupRsp result = apiInstance.configGroupIdGet(id);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ConfigGroupApi#configGroupIdGet");
@@ -338,7 +338,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2009**](InlineResponse2009.md)
+[**GetConfigGroupRsp**](GetConfigGroupRsp.md)
 
 ### Authorization
 
@@ -357,7 +357,7 @@ Name | Type | Description  | Notes
 
 <a name="configGroupPagePost"></a>
 # **configGroupPagePost**
-> InlineResponse20011 configGroupPagePost(pageQuery)
+> PageConfigGroupsRsp configGroupPagePost(pageQuery)
 
 Page查询组
 
@@ -385,7 +385,7 @@ public class Example {
     ConfigGroupApi apiInstance = new ConfigGroupApi(defaultClient);
     PageQuery pageQuery = new PageQuery(); // PageQuery | 
     try {
-      InlineResponse20011 result = apiInstance.configGroupPagePost(pageQuery);
+      PageConfigGroupsRsp result = apiInstance.configGroupPagePost(pageQuery);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ConfigGroupApi#configGroupPagePost");
@@ -406,7 +406,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20011**](InlineResponse20011.md)
+[**PageConfigGroupsRsp**](PageConfigGroupsRsp.md)
 
 ### Authorization
 
@@ -425,7 +425,7 @@ Name | Type | Description  | Notes
 
 <a name="configGroupPost"></a>
 # **configGroupPost**
-> InlineResponse2009 configGroupPost(createConfigGroupReq)
+> CreateConfigGroupRsp configGroupPost(createConfigGroupReq)
 
 创建组
 
@@ -453,7 +453,7 @@ public class Example {
     ConfigGroupApi apiInstance = new ConfigGroupApi(defaultClient);
     CreateConfigGroupReq createConfigGroupReq = new CreateConfigGroupReq(); // CreateConfigGroupReq | 
     try {
-      InlineResponse2009 result = apiInstance.configGroupPost(createConfigGroupReq);
+      CreateConfigGroupRsp result = apiInstance.configGroupPost(createConfigGroupReq);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ConfigGroupApi#configGroupPost");
@@ -474,7 +474,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2009**](InlineResponse2009.md)
+[**CreateConfigGroupRsp**](CreateConfigGroupRsp.md)
 
 ### Authorization
 
@@ -493,7 +493,7 @@ Name | Type | Description  | Notes
 
 <a name="configGroupPut"></a>
 # **configGroupPut**
-> InlineResponse2009 configGroupPut(updateConfigGroupReq)
+> UpdateConfigGroupRsp configGroupPut(updateConfigGroupReq)
 
 更新组
 
@@ -521,7 +521,7 @@ public class Example {
     ConfigGroupApi apiInstance = new ConfigGroupApi(defaultClient);
     UpdateConfigGroupReq updateConfigGroupReq = new UpdateConfigGroupReq(); // UpdateConfigGroupReq | 
     try {
-      InlineResponse2009 result = apiInstance.configGroupPut(updateConfigGroupReq);
+      UpdateConfigGroupRsp result = apiInstance.configGroupPut(updateConfigGroupReq);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ConfigGroupApi#configGroupPut");
@@ -542,7 +542,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2009**](InlineResponse2009.md)
+[**UpdateConfigGroupRsp**](UpdateConfigGroupRsp.md)
 
 ### Authorization
 
@@ -561,7 +561,7 @@ Name | Type | Description  | Notes
 
 <a name="configGroupRetrieveByNamePost"></a>
 # **configGroupRetrieveByNamePost**
-> InlineResponse2005 configGroupRetrieveByNamePost(name)
+> RetrieveConfigGroupByNameRsp configGroupRetrieveByNamePost(name)
 
 查询组
 
@@ -589,7 +589,7 @@ public class Example {
     ConfigGroupApi apiInstance = new ConfigGroupApi(defaultClient);
     String name = "name_example"; // String | 查询组通过Name
     try {
-      InlineResponse2005 result = apiInstance.configGroupRetrieveByNamePost(name);
+      RetrieveConfigGroupByNameRsp result = apiInstance.configGroupRetrieveByNamePost(name);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ConfigGroupApi#configGroupRetrieveByNamePost");
@@ -610,7 +610,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2005**](InlineResponse2005.md)
+[**RetrieveConfigGroupByNameRsp**](RetrieveConfigGroupByNameRsp.md)
 
 ### Authorization
 

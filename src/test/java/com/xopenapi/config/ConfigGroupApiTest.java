@@ -15,16 +15,18 @@ package com.xopenapi.config;
 
 import com.xopenapi.ApiException;
 import com.xopenapi.config.model.CreateConfigGroupReq;
+import com.xopenapi.config.model.CreateConfigGroupRsp;
+import com.xopenapi.config.model.CursorConfigGroupsRsp;
 import com.xopenapi.config.model.CursorQuery;
+import com.xopenapi.config.model.GetConfigGroupRsp;
+import com.xopenapi.config.model.GetConfigGroupsRsp;
 import com.xopenapi.config.model.IdsReq;
-import com.xopenapi.config.model.InlineResponse2001;
-import com.xopenapi.config.model.InlineResponse20010;
-import com.xopenapi.config.model.InlineResponse20011;
-import com.xopenapi.config.model.InlineResponse20012;
-import com.xopenapi.config.model.InlineResponse2005;
-import com.xopenapi.config.model.InlineResponse2009;
+import com.xopenapi.config.model.InlineResponse200;
+import com.xopenapi.config.model.PageConfigGroupsRsp;
 import com.xopenapi.config.model.PageQuery;
+import com.xopenapi.config.model.RetrieveConfigGroupByNameRsp;
 import com.xopenapi.config.model.UpdateConfigGroupReq;
+import com.xopenapi.config.model.UpdateConfigGroupRsp;
 import org.junit.Test;
 import org.junit.Ignore;
 
@@ -53,7 +55,7 @@ public class ConfigGroupApiTest {
     @Test
     public void configGroupBatchDeletePostTest() throws ApiException {
         IdsReq idsReq = null;
-        InlineResponse2001 response = api.configGroupBatchDeletePost(idsReq);
+        InlineResponse200 response = api.configGroupBatchDeletePost(idsReq);
 
         // TODO: test validations
     }
@@ -69,7 +71,7 @@ public class ConfigGroupApiTest {
     @Test
     public void configGroupBatchRetrievePostTest() throws ApiException {
         IdsReq idsReq = null;
-        InlineResponse20010 response = api.configGroupBatchRetrievePost(idsReq);
+        GetConfigGroupsRsp response = api.configGroupBatchRetrievePost(idsReq);
 
         // TODO: test validations
     }
@@ -85,7 +87,7 @@ public class ConfigGroupApiTest {
     @Test
     public void configGroupCursorPostTest() throws ApiException {
         CursorQuery cursorQuery = null;
-        InlineResponse20012 response = api.configGroupCursorPost(cursorQuery);
+        CursorConfigGroupsRsp response = api.configGroupCursorPost(cursorQuery);
 
         // TODO: test validations
     }
@@ -101,7 +103,7 @@ public class ConfigGroupApiTest {
     @Test
     public void configGroupIdDeleteTest() throws ApiException {
         String id = null;
-        InlineResponse2001 response = api.configGroupIdDelete(id);
+        InlineResponse200 response = api.configGroupIdDelete(id);
 
         // TODO: test validations
     }
@@ -117,7 +119,7 @@ public class ConfigGroupApiTest {
     @Test
     public void configGroupIdGetTest() throws ApiException {
         String id = null;
-        InlineResponse2009 response = api.configGroupIdGet(id);
+        GetConfigGroupRsp response = api.configGroupIdGet(id);
 
         // TODO: test validations
     }
@@ -133,7 +135,7 @@ public class ConfigGroupApiTest {
     @Test
     public void configGroupPagePostTest() throws ApiException {
         PageQuery pageQuery = null;
-        InlineResponse20011 response = api.configGroupPagePost(pageQuery);
+        PageConfigGroupsRsp response = api.configGroupPagePost(pageQuery);
 
         // TODO: test validations
     }
@@ -149,7 +151,7 @@ public class ConfigGroupApiTest {
     @Test
     public void configGroupPostTest() throws ApiException {
         CreateConfigGroupReq createConfigGroupReq = null;
-        InlineResponse2009 response = api.configGroupPost(createConfigGroupReq);
+        CreateConfigGroupRsp response = api.configGroupPost(createConfigGroupReq);
 
         // TODO: test validations
     }
@@ -165,7 +167,7 @@ public class ConfigGroupApiTest {
     @Test
     public void configGroupPutTest() throws ApiException {
         UpdateConfigGroupReq updateConfigGroupReq = null;
-        InlineResponse2009 response = api.configGroupPut(updateConfigGroupReq);
+        UpdateConfigGroupRsp response = api.configGroupPut(updateConfigGroupReq);
 
         // TODO: test validations
     }
@@ -181,7 +183,7 @@ public class ConfigGroupApiTest {
     @Test
     public void configGroupRetrieveByNamePostTest() throws ApiException {
         String name = null;
-        InlineResponse2005 response = api.configGroupRetrieveByNamePost(name);
+        RetrieveConfigGroupByNameRsp response = api.configGroupRetrieveByNamePost(name);
 
         // TODO: test validations
     }

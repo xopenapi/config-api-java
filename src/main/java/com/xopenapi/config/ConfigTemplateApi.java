@@ -28,15 +28,19 @@ import java.io.IOException;
 
 
 import com.xopenapi.config.model.BatchRetrieveConfigTemplateByKeysReq;
+import com.xopenapi.config.model.BatchRetrieveConfigTemplatesByGroupRsp;
+import com.xopenapi.config.model.BatchRetrieveConfigTemplatesByKeysRsp;
+import com.xopenapi.config.model.BatchRetrieveConfigTemplatesRsp;
 import com.xopenapi.config.model.CreateConfigTemplateReq;
+import com.xopenapi.config.model.CreateConfigTemplateRsp;
+import com.xopenapi.config.model.CursorConfigTemplatesRsp;
 import com.xopenapi.config.model.CursorQuery;
+import com.xopenapi.config.model.GetConfigTemplateRsp;
 import com.xopenapi.config.model.IdsReq;
-import com.xopenapi.config.model.InlineResponse2001;
-import com.xopenapi.config.model.InlineResponse2005;
-import com.xopenapi.config.model.InlineResponse2006;
-import com.xopenapi.config.model.InlineResponse2007;
-import com.xopenapi.config.model.InlineResponse2008;
+import com.xopenapi.config.model.InlineResponse200;
+import com.xopenapi.config.model.PageConfigTemplatesRsp;
 import com.xopenapi.config.model.PageQuery;
+import com.xopenapi.config.model.RetrieveConfigTemplateByKeyRsp;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -118,7 +122,7 @@ public class ConfigTemplateApi {
      * 批量删除配置模版
      * 批量删除配置模版通过配置Id
      * @param idsReq  (optional)
-     * @return InlineResponse2001
+     * @return InlineResponse200
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -127,8 +131,8 @@ public class ConfigTemplateApi {
         <tr><td> 405 </td><td> Invalid input </td><td>  -  </td></tr>
      </table>
      */
-    public InlineResponse2001 configTemplateBatchDeletePost(IdsReq idsReq) throws ApiException {
-        ApiResponse<InlineResponse2001> localVarResp = configTemplateBatchDeletePostWithHttpInfo(idsReq);
+    public InlineResponse200 configTemplateBatchDeletePost(IdsReq idsReq) throws ApiException {
+        ApiResponse<InlineResponse200> localVarResp = configTemplateBatchDeletePostWithHttpInfo(idsReq);
         return localVarResp.getData();
     }
 
@@ -136,7 +140,7 @@ public class ConfigTemplateApi {
      * 批量删除配置模版
      * 批量删除配置模版通过配置Id
      * @param idsReq  (optional)
-     * @return ApiResponse&lt;InlineResponse2001&gt;
+     * @return ApiResponse&lt;InlineResponse200&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -145,9 +149,9 @@ public class ConfigTemplateApi {
         <tr><td> 405 </td><td> Invalid input </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<InlineResponse2001> configTemplateBatchDeletePostWithHttpInfo(IdsReq idsReq) throws ApiException {
+    public ApiResponse<InlineResponse200> configTemplateBatchDeletePostWithHttpInfo(IdsReq idsReq) throws ApiException {
         okhttp3.Call localVarCall = configTemplateBatchDeletePostValidateBeforeCall(idsReq, null);
-        Type localVarReturnType = new TypeToken<InlineResponse2001>(){}.getType();
+        Type localVarReturnType = new TypeToken<InlineResponse200>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -165,10 +169,10 @@ public class ConfigTemplateApi {
         <tr><td> 405 </td><td> Invalid input </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call configTemplateBatchDeletePostAsync(IdsReq idsReq, final ApiCallback<InlineResponse2001> _callback) throws ApiException {
+    public okhttp3.Call configTemplateBatchDeletePostAsync(IdsReq idsReq, final ApiCallback<InlineResponse200> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = configTemplateBatchDeletePostValidateBeforeCall(idsReq, _callback);
-        Type localVarReturnType = new TypeToken<InlineResponse2001>(){}.getType();
+        Type localVarReturnType = new TypeToken<InlineResponse200>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -236,7 +240,7 @@ public class ConfigTemplateApi {
      * 查询配置模版
      * 查询配置模版通过配置模版GroupID
      * @param groupName 分组标签名 (required)
-     * @return InlineResponse2006
+     * @return BatchRetrieveConfigTemplatesByGroupRsp
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -245,8 +249,8 @@ public class ConfigTemplateApi {
         <tr><td> 405 </td><td> Invalid input </td><td>  -  </td></tr>
      </table>
      */
-    public InlineResponse2006 configTemplateBatchRetrieveByGroupPost(String groupName) throws ApiException {
-        ApiResponse<InlineResponse2006> localVarResp = configTemplateBatchRetrieveByGroupPostWithHttpInfo(groupName);
+    public BatchRetrieveConfigTemplatesByGroupRsp configTemplateBatchRetrieveByGroupPost(String groupName) throws ApiException {
+        ApiResponse<BatchRetrieveConfigTemplatesByGroupRsp> localVarResp = configTemplateBatchRetrieveByGroupPostWithHttpInfo(groupName);
         return localVarResp.getData();
     }
 
@@ -254,7 +258,7 @@ public class ConfigTemplateApi {
      * 查询配置模版
      * 查询配置模版通过配置模版GroupID
      * @param groupName 分组标签名 (required)
-     * @return ApiResponse&lt;InlineResponse2006&gt;
+     * @return ApiResponse&lt;BatchRetrieveConfigTemplatesByGroupRsp&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -263,9 +267,9 @@ public class ConfigTemplateApi {
         <tr><td> 405 </td><td> Invalid input </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<InlineResponse2006> configTemplateBatchRetrieveByGroupPostWithHttpInfo(String groupName) throws ApiException {
+    public ApiResponse<BatchRetrieveConfigTemplatesByGroupRsp> configTemplateBatchRetrieveByGroupPostWithHttpInfo(String groupName) throws ApiException {
         okhttp3.Call localVarCall = configTemplateBatchRetrieveByGroupPostValidateBeforeCall(groupName, null);
-        Type localVarReturnType = new TypeToken<InlineResponse2006>(){}.getType();
+        Type localVarReturnType = new TypeToken<BatchRetrieveConfigTemplatesByGroupRsp>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -283,10 +287,10 @@ public class ConfigTemplateApi {
         <tr><td> 405 </td><td> Invalid input </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call configTemplateBatchRetrieveByGroupPostAsync(String groupName, final ApiCallback<InlineResponse2006> _callback) throws ApiException {
+    public okhttp3.Call configTemplateBatchRetrieveByGroupPostAsync(String groupName, final ApiCallback<BatchRetrieveConfigTemplatesByGroupRsp> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = configTemplateBatchRetrieveByGroupPostValidateBeforeCall(groupName, _callback);
-        Type localVarReturnType = new TypeToken<InlineResponse2006>(){}.getType();
+        Type localVarReturnType = new TypeToken<BatchRetrieveConfigTemplatesByGroupRsp>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -345,7 +349,7 @@ public class ConfigTemplateApi {
      * 查询配置模版
      * 查询配置通过配置Keys
      * @param batchRetrieveConfigTemplateByKeysReq  (optional)
-     * @return InlineResponse2006
+     * @return BatchRetrieveConfigTemplatesByKeysRsp
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -354,8 +358,8 @@ public class ConfigTemplateApi {
         <tr><td> 405 </td><td> Invalid input </td><td>  -  </td></tr>
      </table>
      */
-    public InlineResponse2006 configTemplateBatchRetrieveByKeysPost(BatchRetrieveConfigTemplateByKeysReq batchRetrieveConfigTemplateByKeysReq) throws ApiException {
-        ApiResponse<InlineResponse2006> localVarResp = configTemplateBatchRetrieveByKeysPostWithHttpInfo(batchRetrieveConfigTemplateByKeysReq);
+    public BatchRetrieveConfigTemplatesByKeysRsp configTemplateBatchRetrieveByKeysPost(BatchRetrieveConfigTemplateByKeysReq batchRetrieveConfigTemplateByKeysReq) throws ApiException {
+        ApiResponse<BatchRetrieveConfigTemplatesByKeysRsp> localVarResp = configTemplateBatchRetrieveByKeysPostWithHttpInfo(batchRetrieveConfigTemplateByKeysReq);
         return localVarResp.getData();
     }
 
@@ -363,7 +367,7 @@ public class ConfigTemplateApi {
      * 查询配置模版
      * 查询配置通过配置Keys
      * @param batchRetrieveConfigTemplateByKeysReq  (optional)
-     * @return ApiResponse&lt;InlineResponse2006&gt;
+     * @return ApiResponse&lt;BatchRetrieveConfigTemplatesByKeysRsp&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -372,9 +376,9 @@ public class ConfigTemplateApi {
         <tr><td> 405 </td><td> Invalid input </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<InlineResponse2006> configTemplateBatchRetrieveByKeysPostWithHttpInfo(BatchRetrieveConfigTemplateByKeysReq batchRetrieveConfigTemplateByKeysReq) throws ApiException {
+    public ApiResponse<BatchRetrieveConfigTemplatesByKeysRsp> configTemplateBatchRetrieveByKeysPostWithHttpInfo(BatchRetrieveConfigTemplateByKeysReq batchRetrieveConfigTemplateByKeysReq) throws ApiException {
         okhttp3.Call localVarCall = configTemplateBatchRetrieveByKeysPostValidateBeforeCall(batchRetrieveConfigTemplateByKeysReq, null);
-        Type localVarReturnType = new TypeToken<InlineResponse2006>(){}.getType();
+        Type localVarReturnType = new TypeToken<BatchRetrieveConfigTemplatesByKeysRsp>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -392,10 +396,10 @@ public class ConfigTemplateApi {
         <tr><td> 405 </td><td> Invalid input </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call configTemplateBatchRetrieveByKeysPostAsync(BatchRetrieveConfigTemplateByKeysReq batchRetrieveConfigTemplateByKeysReq, final ApiCallback<InlineResponse2006> _callback) throws ApiException {
+    public okhttp3.Call configTemplateBatchRetrieveByKeysPostAsync(BatchRetrieveConfigTemplateByKeysReq batchRetrieveConfigTemplateByKeysReq, final ApiCallback<BatchRetrieveConfigTemplatesByKeysRsp> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = configTemplateBatchRetrieveByKeysPostValidateBeforeCall(batchRetrieveConfigTemplateByKeysReq, _callback);
-        Type localVarReturnType = new TypeToken<InlineResponse2006>(){}.getType();
+        Type localVarReturnType = new TypeToken<BatchRetrieveConfigTemplatesByKeysRsp>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -454,7 +458,7 @@ public class ConfigTemplateApi {
      * 批量查询配置模版
      * 批量查询配置模版通过配置Id
      * @param idsReq  (optional)
-     * @return InlineResponse2006
+     * @return BatchRetrieveConfigTemplatesRsp
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -463,8 +467,8 @@ public class ConfigTemplateApi {
         <tr><td> 405 </td><td> Invalid input </td><td>  -  </td></tr>
      </table>
      */
-    public InlineResponse2006 configTemplateBatchRetrievePost(IdsReq idsReq) throws ApiException {
-        ApiResponse<InlineResponse2006> localVarResp = configTemplateBatchRetrievePostWithHttpInfo(idsReq);
+    public BatchRetrieveConfigTemplatesRsp configTemplateBatchRetrievePost(IdsReq idsReq) throws ApiException {
+        ApiResponse<BatchRetrieveConfigTemplatesRsp> localVarResp = configTemplateBatchRetrievePostWithHttpInfo(idsReq);
         return localVarResp.getData();
     }
 
@@ -472,7 +476,7 @@ public class ConfigTemplateApi {
      * 批量查询配置模版
      * 批量查询配置模版通过配置Id
      * @param idsReq  (optional)
-     * @return ApiResponse&lt;InlineResponse2006&gt;
+     * @return ApiResponse&lt;BatchRetrieveConfigTemplatesRsp&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -481,9 +485,9 @@ public class ConfigTemplateApi {
         <tr><td> 405 </td><td> Invalid input </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<InlineResponse2006> configTemplateBatchRetrievePostWithHttpInfo(IdsReq idsReq) throws ApiException {
+    public ApiResponse<BatchRetrieveConfigTemplatesRsp> configTemplateBatchRetrievePostWithHttpInfo(IdsReq idsReq) throws ApiException {
         okhttp3.Call localVarCall = configTemplateBatchRetrievePostValidateBeforeCall(idsReq, null);
-        Type localVarReturnType = new TypeToken<InlineResponse2006>(){}.getType();
+        Type localVarReturnType = new TypeToken<BatchRetrieveConfigTemplatesRsp>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -501,10 +505,10 @@ public class ConfigTemplateApi {
         <tr><td> 405 </td><td> Invalid input </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call configTemplateBatchRetrievePostAsync(IdsReq idsReq, final ApiCallback<InlineResponse2006> _callback) throws ApiException {
+    public okhttp3.Call configTemplateBatchRetrievePostAsync(IdsReq idsReq, final ApiCallback<BatchRetrieveConfigTemplatesRsp> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = configTemplateBatchRetrievePostValidateBeforeCall(idsReq, _callback);
-        Type localVarReturnType = new TypeToken<InlineResponse2006>(){}.getType();
+        Type localVarReturnType = new TypeToken<BatchRetrieveConfigTemplatesRsp>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -563,7 +567,7 @@ public class ConfigTemplateApi {
      * Cursor查询配置模版
      * Cursor查询配置模版
      * @param cursorQuery  (optional)
-     * @return InlineResponse2008
+     * @return CursorConfigTemplatesRsp
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -572,8 +576,8 @@ public class ConfigTemplateApi {
         <tr><td> 405 </td><td> Invalid input </td><td>  -  </td></tr>
      </table>
      */
-    public InlineResponse2008 configTemplateCursorPost(CursorQuery cursorQuery) throws ApiException {
-        ApiResponse<InlineResponse2008> localVarResp = configTemplateCursorPostWithHttpInfo(cursorQuery);
+    public CursorConfigTemplatesRsp configTemplateCursorPost(CursorQuery cursorQuery) throws ApiException {
+        ApiResponse<CursorConfigTemplatesRsp> localVarResp = configTemplateCursorPostWithHttpInfo(cursorQuery);
         return localVarResp.getData();
     }
 
@@ -581,7 +585,7 @@ public class ConfigTemplateApi {
      * Cursor查询配置模版
      * Cursor查询配置模版
      * @param cursorQuery  (optional)
-     * @return ApiResponse&lt;InlineResponse2008&gt;
+     * @return ApiResponse&lt;CursorConfigTemplatesRsp&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -590,9 +594,9 @@ public class ConfigTemplateApi {
         <tr><td> 405 </td><td> Invalid input </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<InlineResponse2008> configTemplateCursorPostWithHttpInfo(CursorQuery cursorQuery) throws ApiException {
+    public ApiResponse<CursorConfigTemplatesRsp> configTemplateCursorPostWithHttpInfo(CursorQuery cursorQuery) throws ApiException {
         okhttp3.Call localVarCall = configTemplateCursorPostValidateBeforeCall(cursorQuery, null);
-        Type localVarReturnType = new TypeToken<InlineResponse2008>(){}.getType();
+        Type localVarReturnType = new TypeToken<CursorConfigTemplatesRsp>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -610,10 +614,10 @@ public class ConfigTemplateApi {
         <tr><td> 405 </td><td> Invalid input </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call configTemplateCursorPostAsync(CursorQuery cursorQuery, final ApiCallback<InlineResponse2008> _callback) throws ApiException {
+    public okhttp3.Call configTemplateCursorPostAsync(CursorQuery cursorQuery, final ApiCallback<CursorConfigTemplatesRsp> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = configTemplateCursorPostValidateBeforeCall(cursorQuery, _callback);
-        Type localVarReturnType = new TypeToken<InlineResponse2008>(){}.getType();
+        Type localVarReturnType = new TypeToken<CursorConfigTemplatesRsp>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -678,7 +682,7 @@ public class ConfigTemplateApi {
      * 删除配置模版
      * 删除配置模版
      * @param id 删除配置模版 (required)
-     * @return InlineResponse2001
+     * @return InlineResponse200
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -687,8 +691,8 @@ public class ConfigTemplateApi {
         <tr><td> 405 </td><td> Invalid input </td><td>  -  </td></tr>
      </table>
      */
-    public InlineResponse2001 configTemplateIdDelete(String id) throws ApiException {
-        ApiResponse<InlineResponse2001> localVarResp = configTemplateIdDeleteWithHttpInfo(id);
+    public InlineResponse200 configTemplateIdDelete(String id) throws ApiException {
+        ApiResponse<InlineResponse200> localVarResp = configTemplateIdDeleteWithHttpInfo(id);
         return localVarResp.getData();
     }
 
@@ -696,7 +700,7 @@ public class ConfigTemplateApi {
      * 删除配置模版
      * 删除配置模版
      * @param id 删除配置模版 (required)
-     * @return ApiResponse&lt;InlineResponse2001&gt;
+     * @return ApiResponse&lt;InlineResponse200&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -705,9 +709,9 @@ public class ConfigTemplateApi {
         <tr><td> 405 </td><td> Invalid input </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<InlineResponse2001> configTemplateIdDeleteWithHttpInfo(String id) throws ApiException {
+    public ApiResponse<InlineResponse200> configTemplateIdDeleteWithHttpInfo(String id) throws ApiException {
         okhttp3.Call localVarCall = configTemplateIdDeleteValidateBeforeCall(id, null);
-        Type localVarReturnType = new TypeToken<InlineResponse2001>(){}.getType();
+        Type localVarReturnType = new TypeToken<InlineResponse200>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -725,10 +729,10 @@ public class ConfigTemplateApi {
         <tr><td> 405 </td><td> Invalid input </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call configTemplateIdDeleteAsync(String id, final ApiCallback<InlineResponse2001> _callback) throws ApiException {
+    public okhttp3.Call configTemplateIdDeleteAsync(String id, final ApiCallback<InlineResponse200> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = configTemplateIdDeleteValidateBeforeCall(id, _callback);
-        Type localVarReturnType = new TypeToken<InlineResponse2001>(){}.getType();
+        Type localVarReturnType = new TypeToken<InlineResponse200>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -793,7 +797,7 @@ public class ConfigTemplateApi {
      * 查询配置模版
      * 查询配置通过配置模版ID
      * @param id 查询配置通过配置ID (required)
-     * @return InlineResponse2005
+     * @return GetConfigTemplateRsp
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -802,8 +806,8 @@ public class ConfigTemplateApi {
         <tr><td> 405 </td><td> Invalid input </td><td>  -  </td></tr>
      </table>
      */
-    public InlineResponse2005 configTemplateIdGet(String id) throws ApiException {
-        ApiResponse<InlineResponse2005> localVarResp = configTemplateIdGetWithHttpInfo(id);
+    public GetConfigTemplateRsp configTemplateIdGet(String id) throws ApiException {
+        ApiResponse<GetConfigTemplateRsp> localVarResp = configTemplateIdGetWithHttpInfo(id);
         return localVarResp.getData();
     }
 
@@ -811,7 +815,7 @@ public class ConfigTemplateApi {
      * 查询配置模版
      * 查询配置通过配置模版ID
      * @param id 查询配置通过配置ID (required)
-     * @return ApiResponse&lt;InlineResponse2005&gt;
+     * @return ApiResponse&lt;GetConfigTemplateRsp&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -820,9 +824,9 @@ public class ConfigTemplateApi {
         <tr><td> 405 </td><td> Invalid input </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<InlineResponse2005> configTemplateIdGetWithHttpInfo(String id) throws ApiException {
+    public ApiResponse<GetConfigTemplateRsp> configTemplateIdGetWithHttpInfo(String id) throws ApiException {
         okhttp3.Call localVarCall = configTemplateIdGetValidateBeforeCall(id, null);
-        Type localVarReturnType = new TypeToken<InlineResponse2005>(){}.getType();
+        Type localVarReturnType = new TypeToken<GetConfigTemplateRsp>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -840,10 +844,10 @@ public class ConfigTemplateApi {
         <tr><td> 405 </td><td> Invalid input </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call configTemplateIdGetAsync(String id, final ApiCallback<InlineResponse2005> _callback) throws ApiException {
+    public okhttp3.Call configTemplateIdGetAsync(String id, final ApiCallback<GetConfigTemplateRsp> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = configTemplateIdGetValidateBeforeCall(id, _callback);
-        Type localVarReturnType = new TypeToken<InlineResponse2005>(){}.getType();
+        Type localVarReturnType = new TypeToken<GetConfigTemplateRsp>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -902,7 +906,7 @@ public class ConfigTemplateApi {
      * Page查询配置模版
      * Page查询配置模版
      * @param pageQuery  (optional)
-     * @return InlineResponse2007
+     * @return PageConfigTemplatesRsp
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -911,8 +915,8 @@ public class ConfigTemplateApi {
         <tr><td> 405 </td><td> Invalid input </td><td>  -  </td></tr>
      </table>
      */
-    public InlineResponse2007 configTemplatePagePost(PageQuery pageQuery) throws ApiException {
-        ApiResponse<InlineResponse2007> localVarResp = configTemplatePagePostWithHttpInfo(pageQuery);
+    public PageConfigTemplatesRsp configTemplatePagePost(PageQuery pageQuery) throws ApiException {
+        ApiResponse<PageConfigTemplatesRsp> localVarResp = configTemplatePagePostWithHttpInfo(pageQuery);
         return localVarResp.getData();
     }
 
@@ -920,7 +924,7 @@ public class ConfigTemplateApi {
      * Page查询配置模版
      * Page查询配置模版
      * @param pageQuery  (optional)
-     * @return ApiResponse&lt;InlineResponse2007&gt;
+     * @return ApiResponse&lt;PageConfigTemplatesRsp&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -929,9 +933,9 @@ public class ConfigTemplateApi {
         <tr><td> 405 </td><td> Invalid input </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<InlineResponse2007> configTemplatePagePostWithHttpInfo(PageQuery pageQuery) throws ApiException {
+    public ApiResponse<PageConfigTemplatesRsp> configTemplatePagePostWithHttpInfo(PageQuery pageQuery) throws ApiException {
         okhttp3.Call localVarCall = configTemplatePagePostValidateBeforeCall(pageQuery, null);
-        Type localVarReturnType = new TypeToken<InlineResponse2007>(){}.getType();
+        Type localVarReturnType = new TypeToken<PageConfigTemplatesRsp>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -949,10 +953,10 @@ public class ConfigTemplateApi {
         <tr><td> 405 </td><td> Invalid input </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call configTemplatePagePostAsync(PageQuery pageQuery, final ApiCallback<InlineResponse2007> _callback) throws ApiException {
+    public okhttp3.Call configTemplatePagePostAsync(PageQuery pageQuery, final ApiCallback<PageConfigTemplatesRsp> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = configTemplatePagePostValidateBeforeCall(pageQuery, _callback);
-        Type localVarReturnType = new TypeToken<InlineResponse2007>(){}.getType();
+        Type localVarReturnType = new TypeToken<PageConfigTemplatesRsp>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -1011,7 +1015,7 @@ public class ConfigTemplateApi {
      * 创建配置模版
      * 创建配置模版
      * @param createConfigTemplateReq  (optional)
-     * @return InlineResponse2005
+     * @return CreateConfigTemplateRsp
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -1020,8 +1024,8 @@ public class ConfigTemplateApi {
         <tr><td> 405 </td><td> Invalid input </td><td>  -  </td></tr>
      </table>
      */
-    public InlineResponse2005 configTemplatePost(CreateConfigTemplateReq createConfigTemplateReq) throws ApiException {
-        ApiResponse<InlineResponse2005> localVarResp = configTemplatePostWithHttpInfo(createConfigTemplateReq);
+    public CreateConfigTemplateRsp configTemplatePost(CreateConfigTemplateReq createConfigTemplateReq) throws ApiException {
+        ApiResponse<CreateConfigTemplateRsp> localVarResp = configTemplatePostWithHttpInfo(createConfigTemplateReq);
         return localVarResp.getData();
     }
 
@@ -1029,7 +1033,7 @@ public class ConfigTemplateApi {
      * 创建配置模版
      * 创建配置模版
      * @param createConfigTemplateReq  (optional)
-     * @return ApiResponse&lt;InlineResponse2005&gt;
+     * @return ApiResponse&lt;CreateConfigTemplateRsp&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -1038,9 +1042,9 @@ public class ConfigTemplateApi {
         <tr><td> 405 </td><td> Invalid input </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<InlineResponse2005> configTemplatePostWithHttpInfo(CreateConfigTemplateReq createConfigTemplateReq) throws ApiException {
+    public ApiResponse<CreateConfigTemplateRsp> configTemplatePostWithHttpInfo(CreateConfigTemplateReq createConfigTemplateReq) throws ApiException {
         okhttp3.Call localVarCall = configTemplatePostValidateBeforeCall(createConfigTemplateReq, null);
-        Type localVarReturnType = new TypeToken<InlineResponse2005>(){}.getType();
+        Type localVarReturnType = new TypeToken<CreateConfigTemplateRsp>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -1058,10 +1062,10 @@ public class ConfigTemplateApi {
         <tr><td> 405 </td><td> Invalid input </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call configTemplatePostAsync(CreateConfigTemplateReq createConfigTemplateReq, final ApiCallback<InlineResponse2005> _callback) throws ApiException {
+    public okhttp3.Call configTemplatePostAsync(CreateConfigTemplateReq createConfigTemplateReq, final ApiCallback<CreateConfigTemplateRsp> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = configTemplatePostValidateBeforeCall(createConfigTemplateReq, _callback);
-        Type localVarReturnType = new TypeToken<InlineResponse2005>(){}.getType();
+        Type localVarReturnType = new TypeToken<CreateConfigTemplateRsp>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -1129,7 +1133,7 @@ public class ConfigTemplateApi {
      * 查询配置模版
      * 查询配置模版通过配置Key
      * @param key 主键Key (required)
-     * @return InlineResponse2005
+     * @return RetrieveConfigTemplateByKeyRsp
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -1138,8 +1142,8 @@ public class ConfigTemplateApi {
         <tr><td> 405 </td><td> Invalid input </td><td>  -  </td></tr>
      </table>
      */
-    public InlineResponse2005 configTemplateRetrieveByKeyPost(String key) throws ApiException {
-        ApiResponse<InlineResponse2005> localVarResp = configTemplateRetrieveByKeyPostWithHttpInfo(key);
+    public RetrieveConfigTemplateByKeyRsp configTemplateRetrieveByKeyPost(String key) throws ApiException {
+        ApiResponse<RetrieveConfigTemplateByKeyRsp> localVarResp = configTemplateRetrieveByKeyPostWithHttpInfo(key);
         return localVarResp.getData();
     }
 
@@ -1147,7 +1151,7 @@ public class ConfigTemplateApi {
      * 查询配置模版
      * 查询配置模版通过配置Key
      * @param key 主键Key (required)
-     * @return ApiResponse&lt;InlineResponse2005&gt;
+     * @return ApiResponse&lt;RetrieveConfigTemplateByKeyRsp&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -1156,9 +1160,9 @@ public class ConfigTemplateApi {
         <tr><td> 405 </td><td> Invalid input </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<InlineResponse2005> configTemplateRetrieveByKeyPostWithHttpInfo(String key) throws ApiException {
+    public ApiResponse<RetrieveConfigTemplateByKeyRsp> configTemplateRetrieveByKeyPostWithHttpInfo(String key) throws ApiException {
         okhttp3.Call localVarCall = configTemplateRetrieveByKeyPostValidateBeforeCall(key, null);
-        Type localVarReturnType = new TypeToken<InlineResponse2005>(){}.getType();
+        Type localVarReturnType = new TypeToken<RetrieveConfigTemplateByKeyRsp>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -1176,10 +1180,10 @@ public class ConfigTemplateApi {
         <tr><td> 405 </td><td> Invalid input </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call configTemplateRetrieveByKeyPostAsync(String key, final ApiCallback<InlineResponse2005> _callback) throws ApiException {
+    public okhttp3.Call configTemplateRetrieveByKeyPostAsync(String key, final ApiCallback<RetrieveConfigTemplateByKeyRsp> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = configTemplateRetrieveByKeyPostValidateBeforeCall(key, _callback);
-        Type localVarReturnType = new TypeToken<InlineResponse2005>(){}.getType();
+        Type localVarReturnType = new TypeToken<RetrieveConfigTemplateByKeyRsp>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

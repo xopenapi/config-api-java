@@ -24,7 +24,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/inline_response_200'
+                $ref: '#/components/schemas/CreateConfigRsp'
           description: successful operation
         "405":
           description: Invalid input
@@ -45,7 +45,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/inline_response_200'
+                $ref: '#/components/schemas/UpdateConfigRsp'
           description: successful operation
         "405":
           description: Invalid input
@@ -72,7 +72,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/inline_response_200_1'
+                $ref: '#/components/schemas/inline_response_200'
           description: successful operation
         "405":
           description: Invalid input
@@ -97,7 +97,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/inline_response_200'
+                $ref: '#/components/schemas/GetConfigRsp'
           description: successful operation
         "405":
           description: Invalid input
@@ -118,7 +118,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/inline_response_200_2'
+                $ref: '#/components/schemas/BatchRetrieveConfigsRsp'
           description: successful operation
         "405":
           description: Invalid input
@@ -140,7 +140,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/inline_response_200_1'
+                $ref: '#/components/schemas/inline_response_200'
           description: successful operation
         "405":
           description: Invalid input
@@ -162,7 +162,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/inline_response_200_3'
+                $ref: '#/components/schemas/PageConfigsRsp'
           description: successful operation
         "405":
           description: Invalid input
@@ -184,7 +184,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/inline_response_200_4'
+                $ref: '#/components/schemas/CursorConfigsRsp'
           description: successful operation
         "405":
           description: Invalid input
@@ -206,7 +206,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/inline_response_200'
+                $ref: '#/components/schemas/RetrieveConfigByKeyRsp'
           description: successful operation
         "405":
           description: Invalid input
@@ -228,7 +228,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/inline_response_200_2'
+                $ref: '#/components/schemas/BatchRetrieveConfigsByKeysRsp'
           description: successful operation
         "405":
           description: Invalid input
@@ -250,7 +250,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/inline_response_200_2'
+                $ref: '#/components/schemas/inline_response_200_1'
           description: successful operation
         "405":
           description: Invalid input
@@ -272,7 +272,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/inline_response_200_5'
+                $ref: '#/components/schemas/CreateConfigTemplateRsp'
           description: successful operation
         "405":
           description: Invalid input
@@ -293,7 +293,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/inline_response_200_5'
+                $ref: '#/components/schemas/UpdateConfigTemplateRsp'
           description: successful operation
         "405":
           description: Invalid input
@@ -320,7 +320,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/inline_response_200_1'
+                $ref: '#/components/schemas/inline_response_200'
           description: successful operation
         "405":
           description: Invalid input
@@ -345,7 +345,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/inline_response_200_5'
+                $ref: '#/components/schemas/GetConfigTemplateRsp'
           description: successful operation
         "405":
           description: Invalid input
@@ -366,7 +366,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/inline_response_200_6'
+                $ref: '#/components/schemas/BatchRetrieveConfigTemplatesRsp'
           description: successful operation
         "405":
           description: Invalid input
@@ -388,7 +388,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/inline_response_200_1'
+                $ref: '#/components/schemas/inline_response_200'
           description: successful operation
         "405":
           description: Invalid input
@@ -410,7 +410,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/inline_response_200_7'
+                $ref: '#/components/schemas/PageConfigTemplatesRsp'
           description: successful operation
         "405":
           description: Invalid input
@@ -432,7 +432,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/inline_response_200_8'
+                $ref: '#/components/schemas/CursorConfigTemplatesRsp'
           description: successful operation
         "405":
           description: Invalid input
@@ -459,7 +459,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/inline_response_200_5'
+                $ref: '#/components/schemas/RetrieveConfigTemplateByKeyRsp'
           description: successful operation
         "405":
           description: Invalid input
@@ -480,7 +480,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/inline_response_200_6'
+                $ref: '#/components/schemas/BatchRetrieveConfigTemplatesByKeysRsp'
           description: successful operation
         "405":
           description: Invalid input
@@ -507,7 +507,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/inline_response_200_6'
+                $ref: '#/components/schemas/BatchRetrieveConfigTemplatesByGroupRsp'
           description: successful operation
         "405":
           description: Invalid input
@@ -528,7 +528,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/inline_response_200_9'
+                $ref: '#/components/schemas/CreateConfigGroupRsp'
           description: successful operation
         "405":
           description: Invalid input
@@ -549,7 +549,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/inline_response_200_9'
+                $ref: '#/components/schemas/UpdateConfigGroupRsp'
           description: successful operation
         "405":
           description: Invalid input
@@ -576,7 +576,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/inline_response_200_1'
+                $ref: '#/components/schemas/inline_response_200'
           description: successful operation
         "405":
           description: Invalid input
@@ -601,7 +601,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/inline_response_200_9'
+                $ref: '#/components/schemas/GetConfigGroupRsp'
           description: successful operation
         "405":
           description: Invalid input
@@ -622,7 +622,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/inline_response_200_10'
+                $ref: '#/components/schemas/GetConfigGroupsRsp'
           description: successful operation
         "405":
           description: Invalid input
@@ -644,7 +644,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/inline_response_200_1'
+                $ref: '#/components/schemas/inline_response_200'
           description: successful operation
         "405":
           description: Invalid input
@@ -666,7 +666,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/inline_response_200_11'
+                $ref: '#/components/schemas/PageConfigGroupsRsp'
           description: successful operation
         "405":
           description: Invalid input
@@ -688,7 +688,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/inline_response_200_12'
+                $ref: '#/components/schemas/CursorConfigGroupsRsp'
           description: successful operation
         "405":
           description: Invalid input
@@ -715,7 +715,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/inline_response_200_5'
+                $ref: '#/components/schemas/RetrieveConfigGroupByNameRsp'
           description: successful operation
         "405":
           description: Invalid input
@@ -883,6 +883,236 @@ components:
           description: json格式的键值对数据
           type: object
       type: object
+    CreateConfigRsp:
+      example:
+        msg: msg
+        code: 0
+        data:
+          resourceId: resourceId
+          groupId: groupId
+          ctime: 6
+          id: id
+          templateId: templateId
+          mtime: 1
+          value: '{}'
+          key: key
+      properties:
+        code:
+          format: int64
+          type: integer
+        msg:
+          format: string
+          type: string
+        data:
+          $ref: '#/components/schemas/Config'
+      type: object
+    UpdateConfigRsp:
+      example:
+        msg: msg
+        code: 0
+        data:
+          resourceId: resourceId
+          groupId: groupId
+          ctime: 6
+          id: id
+          templateId: templateId
+          mtime: 1
+          value: '{}'
+          key: key
+      properties:
+        code:
+          format: int64
+          type: integer
+        msg:
+          format: string
+          type: string
+        data:
+          $ref: '#/components/schemas/Config'
+      type: object
+    GetConfigRsp:
+      example:
+        msg: msg
+        code: 0
+        data:
+          resourceId: resourceId
+          groupId: groupId
+          ctime: 6
+          id: id
+          templateId: templateId
+          mtime: 1
+          value: '{}'
+          key: key
+      properties:
+        code:
+          format: int64
+          type: integer
+        msg:
+          format: string
+          type: string
+        data:
+          $ref: '#/components/schemas/Config'
+      type: object
+    BatchRetrieveConfigsRsp:
+      example:
+        msg: msg
+        code: 0
+        data:
+        - resourceId: resourceId
+          groupId: groupId
+          ctime: 6
+          id: id
+          templateId: templateId
+          mtime: 1
+          value: '{}'
+          key: key
+        - resourceId: resourceId
+          groupId: groupId
+          ctime: 6
+          id: id
+          templateId: templateId
+          mtime: 1
+          value: '{}'
+          key: key
+      properties:
+        code:
+          format: int64
+          type: integer
+        msg:
+          format: string
+          type: string
+        data:
+          items:
+            $ref: '#/components/schemas/Config'
+          type: array
+      type: object
+    PageConfigsRsp:
+      example:
+        msg: msg
+        code: 0
+        data:
+          pageCount: 5
+          total: 5
+          pageNo: 6
+          pageSize: 1
+          content:
+          - resourceId: resourceId
+            groupId: groupId
+            ctime: 6
+            id: id
+            templateId: templateId
+            mtime: 1
+            value: '{}'
+            key: key
+          - resourceId: resourceId
+            groupId: groupId
+            ctime: 6
+            id: id
+            templateId: templateId
+            mtime: 1
+            value: '{}'
+            key: key
+      properties:
+        code:
+          format: int64
+          type: integer
+        msg:
+          format: string
+          type: string
+        data:
+          $ref: '#/components/schemas/PageConfigsRsp_data'
+      type: object
+    CursorConfigsRsp:
+      example:
+        msg: msg
+        code: 0
+        data:
+          extra:
+            resourceId: resourceId
+            size: 6
+            direction: 1
+          items:
+          - resourceId: resourceId
+            groupId: groupId
+            ctime: 6
+            id: id
+            templateId: templateId
+            mtime: 1
+            value: '{}'
+            key: key
+          - resourceId: resourceId
+            groupId: groupId
+            ctime: 6
+            id: id
+            templateId: templateId
+            mtime: 1
+            value: '{}'
+            key: key
+      properties:
+        code:
+          format: int64
+          type: integer
+        msg:
+          format: string
+          type: string
+        data:
+          $ref: '#/components/schemas/CursorConfigsRsp_data'
+      type: object
+    RetrieveConfigByKeyRsp:
+      example:
+        msg: msg
+        code: 0
+        data:
+          resourceId: resourceId
+          groupId: groupId
+          ctime: 6
+          id: id
+          templateId: templateId
+          mtime: 1
+          value: '{}'
+          key: key
+      properties:
+        code:
+          format: int64
+          type: integer
+        msg:
+          format: string
+          type: string
+        data:
+          $ref: '#/components/schemas/Config'
+      type: object
+    BatchRetrieveConfigsByKeysRsp:
+      example:
+        msg: msg
+        code: 0
+        data:
+        - resourceId: resourceId
+          groupId: groupId
+          ctime: 6
+          id: id
+          templateId: templateId
+          mtime: 1
+          value: '{}'
+          key: key
+        - resourceId: resourceId
+          groupId: groupId
+          ctime: 6
+          id: id
+          templateId: templateId
+          mtime: 1
+          value: '{}'
+          key: key
+      properties:
+        code:
+          format: int64
+          type: integer
+        msg:
+          format: string
+          type: string
+        data:
+          items:
+            $ref: '#/components/schemas/Config'
+          type: array
+      type: object
     Config:
       example:
         resourceId: resourceId
@@ -948,6 +1178,163 @@ components:
           description: 名称
           type: string
       type: object
+    CreateConfigGroupRsp:
+      example:
+        msg: msg
+        code: 0
+        data:
+          name: name
+          ctime: 6
+          id: id
+          mtime: 1
+      properties:
+        code:
+          format: int64
+          type: integer
+        msg:
+          format: string
+          type: string
+        data:
+          $ref: '#/components/schemas/ConfigGroup'
+      type: object
+    UpdateConfigGroupRsp:
+      example:
+        msg: msg
+        code: 0
+        data:
+          name: name
+          ctime: 6
+          id: id
+          mtime: 1
+      properties:
+        code:
+          format: int64
+          type: integer
+        msg:
+          format: string
+          type: string
+        data:
+          $ref: '#/components/schemas/ConfigGroup'
+      type: object
+    GetConfigGroupRsp:
+      example:
+        msg: msg
+        code: 0
+        data:
+          name: name
+          ctime: 6
+          id: id
+          mtime: 1
+      properties:
+        code:
+          format: int64
+          type: integer
+        msg:
+          format: string
+          type: string
+        data:
+          $ref: '#/components/schemas/ConfigGroup'
+      type: object
+    GetConfigGroupsRsp:
+      example:
+        msg: msg
+        code: 0
+        data:
+        - name: name
+          ctime: 6
+          id: id
+          mtime: 1
+        - name: name
+          ctime: 6
+          id: id
+          mtime: 1
+      properties:
+        code:
+          format: int64
+          type: integer
+        msg:
+          format: string
+          type: string
+        data:
+          items:
+            $ref: '#/components/schemas/ConfigGroup'
+          type: array
+      type: object
+    PageConfigGroupsRsp:
+      example:
+        msg: msg
+        code: 0
+        data:
+          pageCount: 5
+          total: 5
+          pageNo: 6
+          pageSize: 1
+          content:
+          - name: name
+            ctime: 6
+            id: id
+            mtime: 1
+          - name: name
+            ctime: 6
+            id: id
+            mtime: 1
+      properties:
+        code:
+          format: int64
+          type: integer
+        msg:
+          format: string
+          type: string
+        data:
+          $ref: '#/components/schemas/PageConfigGroupsRsp_data'
+      type: object
+    CursorConfigGroupsRsp:
+      example:
+        msg: msg
+        code: 0
+        data:
+          extra:
+            resourceId: resourceId
+            size: 6
+            direction: 1
+          items:
+          - name: name
+            ctime: 6
+            id: id
+            mtime: 1
+          - name: name
+            ctime: 6
+            id: id
+            mtime: 1
+      properties:
+        code:
+          format: int64
+          type: integer
+        msg:
+          format: string
+          type: string
+        data:
+          $ref: '#/components/schemas/CursorConfigGroupsRsp_data'
+      type: object
+    RetrieveConfigGroupByNameRsp:
+      example:
+        msg: msg
+        code: 0
+        data:
+          name: name
+          ctime: 6
+          id: id
+          mtime: 1
+      properties:
+        code:
+          format: int64
+          type: integer
+        msg:
+          format: string
+          type: string
+        data:
+          $ref: '#/components/schemas/ConfigGroup'
+      type: object
     ConfigGroup:
       example:
         name: name
@@ -1007,6 +1394,255 @@ components:
         value:
           description: json格式的键值对数据
           type: object
+      type: object
+    CreateConfigTemplateRsp:
+      example:
+        msg: msg
+        code: 0
+        data:
+          groupId: groupId
+          ctime: 6
+          id: id
+          templateId: templateId
+          mtime: 1
+          value: '{}'
+          key: key
+      properties:
+        code:
+          format: int64
+          type: integer
+        msg:
+          format: string
+          type: string
+        data:
+          $ref: '#/components/schemas/ConfigTemplate'
+      type: object
+    UpdateConfigTemplateRsp:
+      example:
+        msg: msg
+        code: 0
+        data:
+          groupId: groupId
+          ctime: 6
+          id: id
+          templateId: templateId
+          mtime: 1
+          value: '{}'
+          key: key
+      properties:
+        code:
+          format: int64
+          type: integer
+        msg:
+          format: string
+          type: string
+        data:
+          $ref: '#/components/schemas/ConfigTemplate'
+      type: object
+    GetConfigTemplateRsp:
+      example:
+        msg: msg
+        code: 0
+        data:
+          groupId: groupId
+          ctime: 6
+          id: id
+          templateId: templateId
+          mtime: 1
+          value: '{}'
+          key: key
+      properties:
+        code:
+          format: int64
+          type: integer
+        msg:
+          format: string
+          type: string
+        data:
+          $ref: '#/components/schemas/ConfigTemplate'
+      type: object
+    BatchRetrieveConfigTemplatesRsp:
+      example:
+        msg: msg
+        code: 0
+        data:
+        - groupId: groupId
+          ctime: 6
+          id: id
+          templateId: templateId
+          mtime: 1
+          value: '{}'
+          key: key
+        - groupId: groupId
+          ctime: 6
+          id: id
+          templateId: templateId
+          mtime: 1
+          value: '{}'
+          key: key
+      properties:
+        code:
+          format: int64
+          type: integer
+        msg:
+          format: string
+          type: string
+        data:
+          items:
+            $ref: '#/components/schemas/ConfigTemplate'
+          type: array
+      type: object
+    PageConfigTemplatesRsp:
+      example:
+        msg: msg
+        code: 0
+        data:
+          pageCount: 5
+          total: 5
+          pageNo: 6
+          pageSize: 1
+          content:
+          - groupId: groupId
+            ctime: 6
+            id: id
+            templateId: templateId
+            mtime: 1
+            value: '{}'
+            key: key
+          - groupId: groupId
+            ctime: 6
+            id: id
+            templateId: templateId
+            mtime: 1
+            value: '{}'
+            key: key
+      properties:
+        code:
+          format: int64
+          type: integer
+        msg:
+          format: string
+          type: string
+        data:
+          $ref: '#/components/schemas/PageConfigTemplatesRsp_data'
+      type: object
+    CursorConfigTemplatesRsp:
+      example:
+        msg: msg
+        code: 0
+        data:
+          extra:
+            resourceId: resourceId
+            size: 6
+            direction: 1
+          items:
+          - groupId: groupId
+            ctime: 6
+            id: id
+            templateId: templateId
+            mtime: 1
+            value: '{}'
+            key: key
+          - groupId: groupId
+            ctime: 6
+            id: id
+            templateId: templateId
+            mtime: 1
+            value: '{}'
+            key: key
+      properties:
+        code:
+          format: int64
+          type: integer
+        msg:
+          format: string
+          type: string
+        data:
+          $ref: '#/components/schemas/CursorConfigTemplatesRsp_data'
+      type: object
+    RetrieveConfigTemplateByKeyRsp:
+      example:
+        msg: msg
+        code: 0
+        data:
+          groupId: groupId
+          ctime: 6
+          id: id
+          templateId: templateId
+          mtime: 1
+          value: '{}'
+          key: key
+      properties:
+        code:
+          format: int64
+          type: integer
+        msg:
+          format: string
+          type: string
+        data:
+          $ref: '#/components/schemas/ConfigTemplate'
+      type: object
+    BatchRetrieveConfigTemplatesByKeysRsp:
+      example:
+        msg: msg
+        code: 0
+        data:
+        - groupId: groupId
+          ctime: 6
+          id: id
+          templateId: templateId
+          mtime: 1
+          value: '{}'
+          key: key
+        - groupId: groupId
+          ctime: 6
+          id: id
+          templateId: templateId
+          mtime: 1
+          value: '{}'
+          key: key
+      properties:
+        code:
+          format: int64
+          type: integer
+        msg:
+          format: string
+          type: string
+        data:
+          items:
+            $ref: '#/components/schemas/ConfigTemplate'
+          type: array
+      type: object
+    BatchRetrieveConfigTemplatesByGroupRsp:
+      example:
+        msg: msg
+        code: 0
+        data:
+        - groupId: groupId
+          ctime: 6
+          id: id
+          templateId: templateId
+          mtime: 1
+          value: '{}'
+          key: key
+        - groupId: groupId
+          ctime: 6
+          id: id
+          templateId: templateId
+          mtime: 1
+          value: '{}'
+          key: key
+      properties:
+        code:
+          format: int64
+          type: integer
+        msg:
+          format: string
+          type: string
+        data:
+          items:
+            $ref: '#/components/schemas/ConfigTemplate'
+          type: array
       type: object
     ConfigTemplate:
       example:
@@ -1099,28 +1735,6 @@ components:
       example:
         msg: msg
         code: 0
-        data:
-          resourceId: resourceId
-          groupId: groupId
-          ctime: 6
-          id: id
-          templateId: templateId
-          mtime: 1
-          value: '{}'
-          key: key
-      properties:
-        code:
-          format: int64
-          type: integer
-        msg:
-          format: string
-          type: string
-        data:
-          $ref: '#/components/schemas/Config'
-    inline_response_200_1:
-      example:
-        msg: msg
-        code: 0
         data: ""
       properties:
         code:
@@ -1131,7 +1745,7 @@ components:
           type: string
         data:
           description: 暂时未返回数据
-    inline_response_200_2:
+    inline_response_200_1:
       example:
         msg: msg
         code: 0
@@ -1163,7 +1777,7 @@ components:
           items:
             $ref: '#/components/schemas/Config'
           type: array
-    inline_response_200_3_data:
+    PageConfigsRsp_data:
       example:
         pageCount: 5
         total: 5
@@ -1207,42 +1821,7 @@ components:
           items:
             $ref: '#/components/schemas/Config'
           type: array
-    inline_response_200_3:
-      example:
-        msg: msg
-        code: 0
-        data:
-          pageCount: 5
-          total: 5
-          pageNo: 6
-          pageSize: 1
-          content:
-          - resourceId: resourceId
-            groupId: groupId
-            ctime: 6
-            id: id
-            templateId: templateId
-            mtime: 1
-            value: '{}'
-            key: key
-          - resourceId: resourceId
-            groupId: groupId
-            ctime: 6
-            id: id
-            templateId: templateId
-            mtime: 1
-            value: '{}'
-            key: key
-      properties:
-        code:
-          format: int64
-          type: integer
-        msg:
-          format: string
-          type: string
-        data:
-          $ref: '#/components/schemas/inline_response_200_3_data'
-    inline_response_200_4_data:
+    CursorConfigsRsp_data:
       example:
         extra:
           resourceId: resourceId
@@ -1272,93 +1851,65 @@ components:
           items:
             $ref: '#/components/schemas/Config'
           type: array
-    inline_response_200_4:
+    PageConfigGroupsRsp_data:
       example:
-        msg: msg
-        code: 0
-        data:
-          extra:
-            resourceId: resourceId
-            size: 6
-            direction: 1
+        pageCount: 5
+        total: 5
+        pageNo: 6
+        pageSize: 1
+        content:
+        - name: name
+          ctime: 6
+          id: id
+          mtime: 1
+        - name: name
+          ctime: 6
+          id: id
+          mtime: 1
+      properties:
+        pageNo:
+          description: 页码
+          format: int32
+          type: integer
+        pageSize:
+          description: 翻页大小
+          format: int32
+          type: integer
+        pageCount:
+          description: 页数
+          format: int32
+          type: integer
+        total:
+          description: 总数量
+          format: int32
+          type: integer
+        content:
           items:
-          - resourceId: resourceId
-            groupId: groupId
-            ctime: 6
-            id: id
-            templateId: templateId
-            mtime: 1
-            value: '{}'
-            key: key
-          - resourceId: resourceId
-            groupId: groupId
-            ctime: 6
-            id: id
-            templateId: templateId
-            mtime: 1
-            value: '{}'
-            key: key
-      properties:
-        code:
-          format: int64
-          type: integer
-        msg:
-          format: string
-          type: string
-        data:
-          $ref: '#/components/schemas/inline_response_200_4_data'
-    inline_response_200_5:
-      example:
-        msg: msg
-        code: 0
-        data:
-          groupId: groupId
-          ctime: 6
-          id: id
-          templateId: templateId
-          mtime: 1
-          value: '{}'
-          key: key
-      properties:
-        code:
-          format: int64
-          type: integer
-        msg:
-          format: string
-          type: string
-        data:
-          $ref: '#/components/schemas/ConfigTemplate'
-    inline_response_200_6:
-      example:
-        msg: msg
-        code: 0
-        data:
-        - groupId: groupId
-          ctime: 6
-          id: id
-          templateId: templateId
-          mtime: 1
-          value: '{}'
-          key: key
-        - groupId: groupId
-          ctime: 6
-          id: id
-          templateId: templateId
-          mtime: 1
-          value: '{}'
-          key: key
-      properties:
-        code:
-          format: int64
-          type: integer
-        msg:
-          format: string
-          type: string
-        data:
-          items:
-            $ref: '#/components/schemas/ConfigTemplate'
+            $ref: '#/components/schemas/ConfigGroup'
           type: array
-    inline_response_200_7_data:
+    CursorConfigGroupsRsp_data:
+      example:
+        extra:
+          resourceId: resourceId
+          size: 6
+          direction: 1
+        items:
+        - name: name
+          ctime: 6
+          id: id
+          mtime: 1
+        - name: name
+          ctime: 6
+          id: id
+          mtime: 1
+      properties:
+        extra:
+          $ref: '#/components/schemas/CursorExtra'
+        items:
+          items:
+            $ref: '#/components/schemas/ConfigGroup'
+          type: array
+    PageConfigTemplatesRsp_data:
       example:
         pageCount: 5
         total: 5
@@ -1400,40 +1951,7 @@ components:
           items:
             $ref: '#/components/schemas/ConfigTemplate'
           type: array
-    inline_response_200_7:
-      example:
-        msg: msg
-        code: 0
-        data:
-          pageCount: 5
-          total: 5
-          pageNo: 6
-          pageSize: 1
-          content:
-          - groupId: groupId
-            ctime: 6
-            id: id
-            templateId: templateId
-            mtime: 1
-            value: '{}'
-            key: key
-          - groupId: groupId
-            ctime: 6
-            id: id
-            templateId: templateId
-            mtime: 1
-            value: '{}'
-            key: key
-      properties:
-        code:
-          format: int64
-          type: integer
-        msg:
-          format: string
-          type: string
-        data:
-          $ref: '#/components/schemas/inline_response_200_7_data'
-    inline_response_200_8_data:
+    CursorConfigTemplatesRsp_data:
       example:
         extra:
           resourceId: resourceId
@@ -1461,193 +1979,6 @@ components:
           items:
             $ref: '#/components/schemas/ConfigTemplate'
           type: array
-    inline_response_200_8:
-      example:
-        msg: msg
-        code: 0
-        data:
-          extra:
-            resourceId: resourceId
-            size: 6
-            direction: 1
-          items:
-          - groupId: groupId
-            ctime: 6
-            id: id
-            templateId: templateId
-            mtime: 1
-            value: '{}'
-            key: key
-          - groupId: groupId
-            ctime: 6
-            id: id
-            templateId: templateId
-            mtime: 1
-            value: '{}'
-            key: key
-      properties:
-        code:
-          format: int64
-          type: integer
-        msg:
-          format: string
-          type: string
-        data:
-          $ref: '#/components/schemas/inline_response_200_8_data'
-    inline_response_200_9:
-      example:
-        msg: msg
-        code: 0
-        data:
-          name: name
-          ctime: 6
-          id: id
-          mtime: 1
-      properties:
-        code:
-          format: int64
-          type: integer
-        msg:
-          format: string
-          type: string
-        data:
-          $ref: '#/components/schemas/ConfigGroup'
-    inline_response_200_10:
-      example:
-        msg: msg
-        code: 0
-        data:
-        - name: name
-          ctime: 6
-          id: id
-          mtime: 1
-        - name: name
-          ctime: 6
-          id: id
-          mtime: 1
-      properties:
-        code:
-          format: int64
-          type: integer
-        msg:
-          format: string
-          type: string
-        data:
-          items:
-            $ref: '#/components/schemas/ConfigGroup'
-          type: array
-    inline_response_200_11_data:
-      example:
-        pageCount: 5
-        total: 5
-        pageNo: 6
-        pageSize: 1
-        content:
-        - name: name
-          ctime: 6
-          id: id
-          mtime: 1
-        - name: name
-          ctime: 6
-          id: id
-          mtime: 1
-      properties:
-        pageNo:
-          description: 页码
-          format: int32
-          type: integer
-        pageSize:
-          description: 翻页大小
-          format: int32
-          type: integer
-        pageCount:
-          description: 页数
-          format: int32
-          type: integer
-        total:
-          description: 总数量
-          format: int32
-          type: integer
-        content:
-          items:
-            $ref: '#/components/schemas/ConfigGroup'
-          type: array
-    inline_response_200_11:
-      example:
-        msg: msg
-        code: 0
-        data:
-          pageCount: 5
-          total: 5
-          pageNo: 6
-          pageSize: 1
-          content:
-          - name: name
-            ctime: 6
-            id: id
-            mtime: 1
-          - name: name
-            ctime: 6
-            id: id
-            mtime: 1
-      properties:
-        code:
-          format: int64
-          type: integer
-        msg:
-          format: string
-          type: string
-        data:
-          $ref: '#/components/schemas/inline_response_200_11_data'
-    inline_response_200_12_data:
-      example:
-        extra:
-          resourceId: resourceId
-          size: 6
-          direction: 1
-        items:
-        - name: name
-          ctime: 6
-          id: id
-          mtime: 1
-        - name: name
-          ctime: 6
-          id: id
-          mtime: 1
-      properties:
-        extra:
-          $ref: '#/components/schemas/CursorExtra'
-        items:
-          items:
-            $ref: '#/components/schemas/ConfigGroup'
-          type: array
-    inline_response_200_12:
-      example:
-        msg: msg
-        code: 0
-        data:
-          extra:
-            resourceId: resourceId
-            size: 6
-            direction: 1
-          items:
-          - name: name
-            ctime: 6
-            id: id
-            mtime: 1
-          - name: name
-            ctime: 6
-            id: id
-            mtime: 1
-      properties:
-        code:
-          format: int64
-          type: integer
-        msg:
-          format: string
-          type: string
-        data:
-          $ref: '#/components/schemas/inline_response_200_12_data'
   securitySchemes:
     ApiKey:
       scheme: bearer

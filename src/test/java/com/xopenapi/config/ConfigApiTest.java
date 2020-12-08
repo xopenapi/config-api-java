@@ -16,19 +16,24 @@ package com.xopenapi.config;
 import com.xopenapi.ApiException;
 import com.xopenapi.config.model.BatchRetrieveByKeysReq;
 import com.xopenapi.config.model.BatchRetrieveByResourcesReq;
+import com.xopenapi.config.model.BatchRetrieveConfigsByKeysRsp;
+import com.xopenapi.config.model.BatchRetrieveConfigsRsp;
 import com.xopenapi.config.model.CreateConfigReq;
+import com.xopenapi.config.model.CreateConfigRsp;
+import com.xopenapi.config.model.CursorConfigsRsp;
 import com.xopenapi.config.model.CursorQuery;
+import com.xopenapi.config.model.GetConfigRsp;
 import com.xopenapi.config.model.IdsReq;
 import com.xopenapi.config.model.InlineResponse200;
 import com.xopenapi.config.model.InlineResponse2001;
-import com.xopenapi.config.model.InlineResponse2002;
-import com.xopenapi.config.model.InlineResponse2003;
-import com.xopenapi.config.model.InlineResponse2004;
-import com.xopenapi.config.model.InlineResponse2005;
+import com.xopenapi.config.model.PageConfigsRsp;
 import com.xopenapi.config.model.PageQuery;
 import com.xopenapi.config.model.RetrieveConfigByKeyReq;
+import com.xopenapi.config.model.RetrieveConfigByKeyRsp;
 import com.xopenapi.config.model.UpdateConfigReq;
+import com.xopenapi.config.model.UpdateConfigRsp;
 import com.xopenapi.config.model.UpdateConfigTemplateReq;
+import com.xopenapi.config.model.UpdateConfigTemplateRsp;
 import org.junit.Test;
 import org.junit.Ignore;
 
@@ -57,7 +62,7 @@ public class ConfigApiTest {
     @Test
     public void configBatchDeletePostTest() throws ApiException {
         IdsReq idsReq = null;
-        InlineResponse2001 response = api.configBatchDeletePost(idsReq);
+        InlineResponse200 response = api.configBatchDeletePost(idsReq);
 
         // TODO: test validations
     }
@@ -73,7 +78,7 @@ public class ConfigApiTest {
     @Test
     public void configBatchRetrieveByKeysPostTest() throws ApiException {
         BatchRetrieveByKeysReq batchRetrieveByKeysReq = null;
-        InlineResponse2002 response = api.configBatchRetrieveByKeysPost(batchRetrieveByKeysReq);
+        BatchRetrieveConfigsByKeysRsp response = api.configBatchRetrieveByKeysPost(batchRetrieveByKeysReq);
 
         // TODO: test validations
     }
@@ -89,7 +94,7 @@ public class ConfigApiTest {
     @Test
     public void configBatchRetrieveByResourcesPostTest() throws ApiException {
         BatchRetrieveByResourcesReq batchRetrieveByResourcesReq = null;
-        InlineResponse2002 response = api.configBatchRetrieveByResourcesPost(batchRetrieveByResourcesReq);
+        InlineResponse2001 response = api.configBatchRetrieveByResourcesPost(batchRetrieveByResourcesReq);
 
         // TODO: test validations
     }
@@ -105,7 +110,7 @@ public class ConfigApiTest {
     @Test
     public void configBatchRetrievePostTest() throws ApiException {
         IdsReq idsReq = null;
-        InlineResponse2002 response = api.configBatchRetrievePost(idsReq);
+        BatchRetrieveConfigsRsp response = api.configBatchRetrievePost(idsReq);
 
         // TODO: test validations
     }
@@ -121,7 +126,7 @@ public class ConfigApiTest {
     @Test
     public void configCursorPostTest() throws ApiException {
         CursorQuery cursorQuery = null;
-        InlineResponse2004 response = api.configCursorPost(cursorQuery);
+        CursorConfigsRsp response = api.configCursorPost(cursorQuery);
 
         // TODO: test validations
     }
@@ -137,7 +142,7 @@ public class ConfigApiTest {
     @Test
     public void configIdDeleteTest() throws ApiException {
         String id = null;
-        InlineResponse2001 response = api.configIdDelete(id);
+        InlineResponse200 response = api.configIdDelete(id);
 
         // TODO: test validations
     }
@@ -153,7 +158,7 @@ public class ConfigApiTest {
     @Test
     public void configIdGetTest() throws ApiException {
         String id = null;
-        InlineResponse200 response = api.configIdGet(id);
+        GetConfigRsp response = api.configIdGet(id);
 
         // TODO: test validations
     }
@@ -169,7 +174,7 @@ public class ConfigApiTest {
     @Test
     public void configPagePostTest() throws ApiException {
         PageQuery pageQuery = null;
-        InlineResponse2003 response = api.configPagePost(pageQuery);
+        PageConfigsRsp response = api.configPagePost(pageQuery);
 
         // TODO: test validations
     }
@@ -185,7 +190,7 @@ public class ConfigApiTest {
     @Test
     public void configPostTest() throws ApiException {
         CreateConfigReq createConfigReq = null;
-        InlineResponse200 response = api.configPost(createConfigReq);
+        CreateConfigRsp response = api.configPost(createConfigReq);
 
         // TODO: test validations
     }
@@ -201,7 +206,7 @@ public class ConfigApiTest {
     @Test
     public void configPutTest() throws ApiException {
         UpdateConfigReq updateConfigReq = null;
-        InlineResponse200 response = api.configPut(updateConfigReq);
+        UpdateConfigRsp response = api.configPut(updateConfigReq);
 
         // TODO: test validations
     }
@@ -217,7 +222,7 @@ public class ConfigApiTest {
     @Test
     public void configRetrieveByKeyPostTest() throws ApiException {
         RetrieveConfigByKeyReq retrieveConfigByKeyReq = null;
-        InlineResponse200 response = api.configRetrieveByKeyPost(retrieveConfigByKeyReq);
+        RetrieveConfigByKeyRsp response = api.configRetrieveByKeyPost(retrieveConfigByKeyReq);
 
         // TODO: test validations
     }
@@ -233,7 +238,7 @@ public class ConfigApiTest {
     @Test
     public void configTemplatePutTest() throws ApiException {
         UpdateConfigTemplateReq updateConfigTemplateReq = null;
-        InlineResponse2005 response = api.configTemplatePut(updateConfigTemplateReq);
+        UpdateConfigTemplateRsp response = api.configTemplatePut(updateConfigTemplateReq);
 
         // TODO: test validations
     }
