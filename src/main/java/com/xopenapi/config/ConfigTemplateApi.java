@@ -35,9 +35,9 @@ import com.xopenapi.config.model.CreateConfigTemplateReq;
 import com.xopenapi.config.model.CreateConfigTemplateRsp;
 import com.xopenapi.config.model.CursorConfigTemplatesRsp;
 import com.xopenapi.config.model.CursorQuery;
+import com.xopenapi.config.model.DeleteRsp;
 import com.xopenapi.config.model.GetConfigTemplateRsp;
 import com.xopenapi.config.model.IdsReq;
-import com.xopenapi.config.model.InlineResponse200;
 import com.xopenapi.config.model.PageConfigTemplatesRsp;
 import com.xopenapi.config.model.PageQuery;
 import com.xopenapi.config.model.RetrieveConfigTemplateByKeyRsp;
@@ -122,7 +122,7 @@ public class ConfigTemplateApi {
      * 批量删除配置模版
      * 批量删除配置模版通过配置Id
      * @param idsReq  (optional)
-     * @return InlineResponse200
+     * @return DeleteRsp
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -131,8 +131,8 @@ public class ConfigTemplateApi {
         <tr><td> 405 </td><td> Invalid input </td><td>  -  </td></tr>
      </table>
      */
-    public InlineResponse200 configTemplateBatchDeletePost(IdsReq idsReq) throws ApiException {
-        ApiResponse<InlineResponse200> localVarResp = configTemplateBatchDeletePostWithHttpInfo(idsReq);
+    public DeleteRsp configTemplateBatchDeletePost(IdsReq idsReq) throws ApiException {
+        ApiResponse<DeleteRsp> localVarResp = configTemplateBatchDeletePostWithHttpInfo(idsReq);
         return localVarResp.getData();
     }
 
@@ -140,7 +140,7 @@ public class ConfigTemplateApi {
      * 批量删除配置模版
      * 批量删除配置模版通过配置Id
      * @param idsReq  (optional)
-     * @return ApiResponse&lt;InlineResponse200&gt;
+     * @return ApiResponse&lt;DeleteRsp&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -149,9 +149,9 @@ public class ConfigTemplateApi {
         <tr><td> 405 </td><td> Invalid input </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<InlineResponse200> configTemplateBatchDeletePostWithHttpInfo(IdsReq idsReq) throws ApiException {
+    public ApiResponse<DeleteRsp> configTemplateBatchDeletePostWithHttpInfo(IdsReq idsReq) throws ApiException {
         okhttp3.Call localVarCall = configTemplateBatchDeletePostValidateBeforeCall(idsReq, null);
-        Type localVarReturnType = new TypeToken<InlineResponse200>(){}.getType();
+        Type localVarReturnType = new TypeToken<DeleteRsp>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -169,10 +169,10 @@ public class ConfigTemplateApi {
         <tr><td> 405 </td><td> Invalid input </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call configTemplateBatchDeletePostAsync(IdsReq idsReq, final ApiCallback<InlineResponse200> _callback) throws ApiException {
+    public okhttp3.Call configTemplateBatchDeletePostAsync(IdsReq idsReq, final ApiCallback<DeleteRsp> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = configTemplateBatchDeletePostValidateBeforeCall(idsReq, _callback);
-        Type localVarReturnType = new TypeToken<InlineResponse200>(){}.getType();
+        Type localVarReturnType = new TypeToken<DeleteRsp>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -682,7 +682,7 @@ public class ConfigTemplateApi {
      * 删除配置模版
      * 删除配置模版
      * @param id 删除配置模版 (required)
-     * @return InlineResponse200
+     * @return DeleteRsp
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -691,8 +691,8 @@ public class ConfigTemplateApi {
         <tr><td> 405 </td><td> Invalid input </td><td>  -  </td></tr>
      </table>
      */
-    public InlineResponse200 configTemplateIdDelete(String id) throws ApiException {
-        ApiResponse<InlineResponse200> localVarResp = configTemplateIdDeleteWithHttpInfo(id);
+    public DeleteRsp configTemplateIdDelete(String id) throws ApiException {
+        ApiResponse<DeleteRsp> localVarResp = configTemplateIdDeleteWithHttpInfo(id);
         return localVarResp.getData();
     }
 
@@ -700,7 +700,7 @@ public class ConfigTemplateApi {
      * 删除配置模版
      * 删除配置模版
      * @param id 删除配置模版 (required)
-     * @return ApiResponse&lt;InlineResponse200&gt;
+     * @return ApiResponse&lt;DeleteRsp&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -709,9 +709,9 @@ public class ConfigTemplateApi {
         <tr><td> 405 </td><td> Invalid input </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<InlineResponse200> configTemplateIdDeleteWithHttpInfo(String id) throws ApiException {
+    public ApiResponse<DeleteRsp> configTemplateIdDeleteWithHttpInfo(String id) throws ApiException {
         okhttp3.Call localVarCall = configTemplateIdDeleteValidateBeforeCall(id, null);
-        Type localVarReturnType = new TypeToken<InlineResponse200>(){}.getType();
+        Type localVarReturnType = new TypeToken<DeleteRsp>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -729,10 +729,10 @@ public class ConfigTemplateApi {
         <tr><td> 405 </td><td> Invalid input </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call configTemplateIdDeleteAsync(String id, final ApiCallback<InlineResponse200> _callback) throws ApiException {
+    public okhttp3.Call configTemplateIdDeleteAsync(String id, final ApiCallback<DeleteRsp> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = configTemplateIdDeleteValidateBeforeCall(id, _callback);
-        Type localVarReturnType = new TypeToken<InlineResponse200>(){}.getType();
+        Type localVarReturnType = new TypeToken<DeleteRsp>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

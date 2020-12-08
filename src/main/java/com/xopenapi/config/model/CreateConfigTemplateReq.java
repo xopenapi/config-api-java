@@ -27,7 +27,7 @@ import java.io.IOException;
 /**
  * CreateConfigTemplateReq
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-12-08T10:34:11.838Z[GMT]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-12-08T10:50:47.636Z[GMT]")
 public class CreateConfigTemplateReq {
   public static final String SERIALIZED_NAME_GROUP_ID = "groupId";
   @SerializedName(SERIALIZED_NAME_GROUP_ID)

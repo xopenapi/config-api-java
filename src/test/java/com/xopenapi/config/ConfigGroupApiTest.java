@@ -18,10 +18,10 @@ import com.xopenapi.config.model.CreateConfigGroupReq;
 import com.xopenapi.config.model.CreateConfigGroupRsp;
 import com.xopenapi.config.model.CursorConfigGroupsRsp;
 import com.xopenapi.config.model.CursorQuery;
+import com.xopenapi.config.model.DeleteRsp;
 import com.xopenapi.config.model.GetConfigGroupRsp;
 import com.xopenapi.config.model.GetConfigGroupsRsp;
 import com.xopenapi.config.model.IdsReq;
-import com.xopenapi.config.model.InlineResponse200;
 import com.xopenapi.config.model.PageConfigGroupsRsp;
 import com.xopenapi.config.model.PageQuery;
 import com.xopenapi.config.model.RetrieveConfigGroupByNameRsp;
@@ -55,7 +55,7 @@ public class ConfigGroupApiTest {
     @Test
     public void configGroupBatchDeletePostTest() throws ApiException {
         IdsReq idsReq = null;
-        InlineResponse200 response = api.configGroupBatchDeletePost(idsReq);
+        DeleteRsp response = api.configGroupBatchDeletePost(idsReq);
 
         // TODO: test validations
     }
@@ -103,7 +103,7 @@ public class ConfigGroupApiTest {
     @Test
     public void configGroupIdDeleteTest() throws ApiException {
         String id = null;
-        InlineResponse200 response = api.configGroupIdDelete(id);
+        DeleteRsp response = api.configGroupIdDelete(id);
 
         // TODO: test validations
     }

@@ -18,29 +18,26 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.xopenapi.config.model.Config;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
 
 
 /**
- * Model tests for InlineResponse2001
+ * Model tests for DeleteRsp
  */
-public class InlineResponse2001Test {
-    private final InlineResponse2001 model = new InlineResponse2001();
+public class DeleteRspTest {
+    private final DeleteRsp model = new DeleteRsp();
 
     /**
-     * Model tests for InlineResponse2001
+     * Model tests for DeleteRsp
      */
     @Test
-    public void testInlineResponse2001() {
-        // TODO: test InlineResponse2001
+    public void testDeleteRsp() {
+        // TODO: test DeleteRsp
     }
 
     /**

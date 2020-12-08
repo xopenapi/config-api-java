@@ -35,10 +35,10 @@ import com.xopenapi.config.model.CreateConfigReq;
 import com.xopenapi.config.model.CreateConfigRsp;
 import com.xopenapi.config.model.CursorConfigsRsp;
 import com.xopenapi.config.model.CursorQuery;
+import com.xopenapi.config.model.DeleteRsp;
 import com.xopenapi.config.model.GetConfigRsp;
 import com.xopenapi.config.model.IdsReq;
 import com.xopenapi.config.model.InlineResponse200;
-import com.xopenapi.config.model.InlineResponse2001;
 import com.xopenapi.config.model.PageConfigsRsp;
 import com.xopenapi.config.model.PageQuery;
 import com.xopenapi.config.model.RetrieveConfigByKeyReq;
@@ -128,7 +128,7 @@ public class ConfigApi {
      * 批量删除配置
      * 批量删除配置通过配置Id
      * @param idsReq  (optional)
-     * @return InlineResponse200
+     * @return DeleteRsp
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -137,8 +137,8 @@ public class ConfigApi {
         <tr><td> 405 </td><td> Invalid input </td><td>  -  </td></tr>
      </table>
      */
-    public InlineResponse200 configBatchDeletePost(IdsReq idsReq) throws ApiException {
-        ApiResponse<InlineResponse200> localVarResp = configBatchDeletePostWithHttpInfo(idsReq);
+    public DeleteRsp configBatchDeletePost(IdsReq idsReq) throws ApiException {
+        ApiResponse<DeleteRsp> localVarResp = configBatchDeletePostWithHttpInfo(idsReq);
         return localVarResp.getData();
     }
 
@@ -146,7 +146,7 @@ public class ConfigApi {
      * 批量删除配置
      * 批量删除配置通过配置Id
      * @param idsReq  (optional)
-     * @return ApiResponse&lt;InlineResponse200&gt;
+     * @return ApiResponse&lt;DeleteRsp&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -155,9 +155,9 @@ public class ConfigApi {
         <tr><td> 405 </td><td> Invalid input </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<InlineResponse200> configBatchDeletePostWithHttpInfo(IdsReq idsReq) throws ApiException {
+    public ApiResponse<DeleteRsp> configBatchDeletePostWithHttpInfo(IdsReq idsReq) throws ApiException {
         okhttp3.Call localVarCall = configBatchDeletePostValidateBeforeCall(idsReq, null);
-        Type localVarReturnType = new TypeToken<InlineResponse200>(){}.getType();
+        Type localVarReturnType = new TypeToken<DeleteRsp>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -175,10 +175,10 @@ public class ConfigApi {
         <tr><td> 405 </td><td> Invalid input </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call configBatchDeletePostAsync(IdsReq idsReq, final ApiCallback<InlineResponse200> _callback) throws ApiException {
+    public okhttp3.Call configBatchDeletePostAsync(IdsReq idsReq, final ApiCallback<DeleteRsp> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = configBatchDeletePostValidateBeforeCall(idsReq, _callback);
-        Type localVarReturnType = new TypeToken<InlineResponse200>(){}.getType();
+        Type localVarReturnType = new TypeToken<DeleteRsp>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -346,7 +346,7 @@ public class ConfigApi {
      * 查询配置
      * 查询配置通过配置GroupID
      * @param batchRetrieveByResourcesReq  (optional)
-     * @return InlineResponse2001
+     * @return InlineResponse200
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -355,8 +355,8 @@ public class ConfigApi {
         <tr><td> 405 </td><td> Invalid input </td><td>  -  </td></tr>
      </table>
      */
-    public InlineResponse2001 configBatchRetrieveByResourcesPost(BatchRetrieveByResourcesReq batchRetrieveByResourcesReq) throws ApiException {
-        ApiResponse<InlineResponse2001> localVarResp = configBatchRetrieveByResourcesPostWithHttpInfo(batchRetrieveByResourcesReq);
+    public InlineResponse200 configBatchRetrieveByResourcesPost(BatchRetrieveByResourcesReq batchRetrieveByResourcesReq) throws ApiException {
+        ApiResponse<InlineResponse200> localVarResp = configBatchRetrieveByResourcesPostWithHttpInfo(batchRetrieveByResourcesReq);
         return localVarResp.getData();
     }
 
@@ -364,7 +364,7 @@ public class ConfigApi {
      * 查询配置
      * 查询配置通过配置GroupID
      * @param batchRetrieveByResourcesReq  (optional)
-     * @return ApiResponse&lt;InlineResponse2001&gt;
+     * @return ApiResponse&lt;InlineResponse200&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -373,9 +373,9 @@ public class ConfigApi {
         <tr><td> 405 </td><td> Invalid input </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<InlineResponse2001> configBatchRetrieveByResourcesPostWithHttpInfo(BatchRetrieveByResourcesReq batchRetrieveByResourcesReq) throws ApiException {
+    public ApiResponse<InlineResponse200> configBatchRetrieveByResourcesPostWithHttpInfo(BatchRetrieveByResourcesReq batchRetrieveByResourcesReq) throws ApiException {
         okhttp3.Call localVarCall = configBatchRetrieveByResourcesPostValidateBeforeCall(batchRetrieveByResourcesReq, null);
-        Type localVarReturnType = new TypeToken<InlineResponse2001>(){}.getType();
+        Type localVarReturnType = new TypeToken<InlineResponse200>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -393,10 +393,10 @@ public class ConfigApi {
         <tr><td> 405 </td><td> Invalid input </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call configBatchRetrieveByResourcesPostAsync(BatchRetrieveByResourcesReq batchRetrieveByResourcesReq, final ApiCallback<InlineResponse2001> _callback) throws ApiException {
+    public okhttp3.Call configBatchRetrieveByResourcesPostAsync(BatchRetrieveByResourcesReq batchRetrieveByResourcesReq, final ApiCallback<InlineResponse200> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = configBatchRetrieveByResourcesPostValidateBeforeCall(batchRetrieveByResourcesReq, _callback);
-        Type localVarReturnType = new TypeToken<InlineResponse2001>(){}.getType();
+        Type localVarReturnType = new TypeToken<InlineResponse200>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -679,7 +679,7 @@ public class ConfigApi {
      * 删除配置
      * 删除配置
      * @param id 删除配置 (required)
-     * @return InlineResponse200
+     * @return DeleteRsp
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -688,8 +688,8 @@ public class ConfigApi {
         <tr><td> 405 </td><td> Invalid input </td><td>  -  </td></tr>
      </table>
      */
-    public InlineResponse200 configIdDelete(String id) throws ApiException {
-        ApiResponse<InlineResponse200> localVarResp = configIdDeleteWithHttpInfo(id);
+    public DeleteRsp configIdDelete(String id) throws ApiException {
+        ApiResponse<DeleteRsp> localVarResp = configIdDeleteWithHttpInfo(id);
         return localVarResp.getData();
     }
 
@@ -697,7 +697,7 @@ public class ConfigApi {
      * 删除配置
      * 删除配置
      * @param id 删除配置 (required)
-     * @return ApiResponse&lt;InlineResponse200&gt;
+     * @return ApiResponse&lt;DeleteRsp&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -706,9 +706,9 @@ public class ConfigApi {
         <tr><td> 405 </td><td> Invalid input </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<InlineResponse200> configIdDeleteWithHttpInfo(String id) throws ApiException {
+    public ApiResponse<DeleteRsp> configIdDeleteWithHttpInfo(String id) throws ApiException {
         okhttp3.Call localVarCall = configIdDeleteValidateBeforeCall(id, null);
-        Type localVarReturnType = new TypeToken<InlineResponse200>(){}.getType();
+        Type localVarReturnType = new TypeToken<DeleteRsp>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -726,10 +726,10 @@ public class ConfigApi {
         <tr><td> 405 </td><td> Invalid input </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call configIdDeleteAsync(String id, final ApiCallback<InlineResponse200> _callback) throws ApiException {
+    public okhttp3.Call configIdDeleteAsync(String id, final ApiCallback<DeleteRsp> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = configIdDeleteValidateBeforeCall(id, _callback);
-        Type localVarReturnType = new TypeToken<InlineResponse200>(){}.getType();
+        Type localVarReturnType = new TypeToken<DeleteRsp>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

@@ -18,7 +18,7 @@ Method | HTTP request | Description
 
 <a name="configTemplateBatchDeletePost"></a>
 # **configTemplateBatchDeletePost**
-> InlineResponse200 configTemplateBatchDeletePost(idsReq)
+> DeleteRsp configTemplateBatchDeletePost(idsReq)
 
 批量删除配置模版
 
@@ -46,7 +46,7 @@ public class Example {
     ConfigTemplateApi apiInstance = new ConfigTemplateApi(defaultClient);
     IdsReq idsReq = new IdsReq(); // IdsReq | 
     try {
-      InlineResponse200 result = apiInstance.configTemplateBatchDeletePost(idsReq);
+      DeleteRsp result = apiInstance.configTemplateBatchDeletePost(idsReq);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ConfigTemplateApi#configTemplateBatchDeletePost");
@@ -67,7 +67,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200**](InlineResponse200.md)
+[**DeleteRsp**](DeleteRsp.md)
 
 ### Authorization
 
@@ -358,7 +358,7 @@ Name | Type | Description  | Notes
 
 <a name="configTemplateIdDelete"></a>
 # **configTemplateIdDelete**
-> InlineResponse200 configTemplateIdDelete(id)
+> DeleteRsp configTemplateIdDelete(id)
 
 删除配置模版
 
@@ -386,7 +386,7 @@ public class Example {
     ConfigTemplateApi apiInstance = new ConfigTemplateApi(defaultClient);
     String id = "id_example"; // String | 删除配置模版
     try {
-      InlineResponse200 result = apiInstance.configTemplateIdDelete(id);
+      DeleteRsp result = apiInstance.configTemplateIdDelete(id);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ConfigTemplateApi#configTemplateIdDelete");
@@ -407,7 +407,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200**](InlineResponse200.md)
+[**DeleteRsp**](DeleteRsp.md)
 
 ### Authorization
 

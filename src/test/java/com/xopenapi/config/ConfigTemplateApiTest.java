@@ -22,9 +22,9 @@ import com.xopenapi.config.model.CreateConfigTemplateReq;
 import com.xopenapi.config.model.CreateConfigTemplateRsp;
 import com.xopenapi.config.model.CursorConfigTemplatesRsp;
 import com.xopenapi.config.model.CursorQuery;
+import com.xopenapi.config.model.DeleteRsp;
 import com.xopenapi.config.model.GetConfigTemplateRsp;
 import com.xopenapi.config.model.IdsReq;
-import com.xopenapi.config.model.InlineResponse200;
 import com.xopenapi.config.model.PageConfigTemplatesRsp;
 import com.xopenapi.config.model.PageQuery;
 import com.xopenapi.config.model.RetrieveConfigTemplateByKeyRsp;
@@ -56,7 +56,7 @@ public class ConfigTemplateApiTest {
     @Test
     public void configTemplateBatchDeletePostTest() throws ApiException {
         IdsReq idsReq = null;
-        InlineResponse200 response = api.configTemplateBatchDeletePost(idsReq);
+        DeleteRsp response = api.configTemplateBatchDeletePost(idsReq);
 
         // TODO: test validations
     }
@@ -136,7 +136,7 @@ public class ConfigTemplateApiTest {
     @Test
     public void configTemplateIdDeleteTest() throws ApiException {
         String id = null;
-        InlineResponse200 response = api.configTemplateIdDelete(id);
+        DeleteRsp response = api.configTemplateIdDelete(id);
 
         // TODO: test validations
     }

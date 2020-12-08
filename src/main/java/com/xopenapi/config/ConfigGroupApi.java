@@ -31,10 +31,10 @@ import com.xopenapi.config.model.CreateConfigGroupReq;
 import com.xopenapi.config.model.CreateConfigGroupRsp;
 import com.xopenapi.config.model.CursorConfigGroupsRsp;
 import com.xopenapi.config.model.CursorQuery;
+import com.xopenapi.config.model.DeleteRsp;
 import com.xopenapi.config.model.GetConfigGroupRsp;
 import com.xopenapi.config.model.GetConfigGroupsRsp;
 import com.xopenapi.config.model.IdsReq;
-import com.xopenapi.config.model.InlineResponse200;
 import com.xopenapi.config.model.PageConfigGroupsRsp;
 import com.xopenapi.config.model.PageQuery;
 import com.xopenapi.config.model.RetrieveConfigGroupByNameRsp;
@@ -121,7 +121,7 @@ public class ConfigGroupApi {
      * 批量删除组
      * 批量删除组通过组Id
      * @param idsReq  (optional)
-     * @return InlineResponse200
+     * @return DeleteRsp
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -130,8 +130,8 @@ public class ConfigGroupApi {
         <tr><td> 405 </td><td> Invalid input </td><td>  -  </td></tr>
      </table>
      */
-    public InlineResponse200 configGroupBatchDeletePost(IdsReq idsReq) throws ApiException {
-        ApiResponse<InlineResponse200> localVarResp = configGroupBatchDeletePostWithHttpInfo(idsReq);
+    public DeleteRsp configGroupBatchDeletePost(IdsReq idsReq) throws ApiException {
+        ApiResponse<DeleteRsp> localVarResp = configGroupBatchDeletePostWithHttpInfo(idsReq);
         return localVarResp.getData();
     }
 
@@ -139,7 +139,7 @@ public class ConfigGroupApi {
      * 批量删除组
      * 批量删除组通过组Id
      * @param idsReq  (optional)
-     * @return ApiResponse&lt;InlineResponse200&gt;
+     * @return ApiResponse&lt;DeleteRsp&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -148,9 +148,9 @@ public class ConfigGroupApi {
         <tr><td> 405 </td><td> Invalid input </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<InlineResponse200> configGroupBatchDeletePostWithHttpInfo(IdsReq idsReq) throws ApiException {
+    public ApiResponse<DeleteRsp> configGroupBatchDeletePostWithHttpInfo(IdsReq idsReq) throws ApiException {
         okhttp3.Call localVarCall = configGroupBatchDeletePostValidateBeforeCall(idsReq, null);
-        Type localVarReturnType = new TypeToken<InlineResponse200>(){}.getType();
+        Type localVarReturnType = new TypeToken<DeleteRsp>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -168,10 +168,10 @@ public class ConfigGroupApi {
         <tr><td> 405 </td><td> Invalid input </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call configGroupBatchDeletePostAsync(IdsReq idsReq, final ApiCallback<InlineResponse200> _callback) throws ApiException {
+    public okhttp3.Call configGroupBatchDeletePostAsync(IdsReq idsReq, final ApiCallback<DeleteRsp> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = configGroupBatchDeletePostValidateBeforeCall(idsReq, _callback);
-        Type localVarReturnType = new TypeToken<InlineResponse200>(){}.getType();
+        Type localVarReturnType = new TypeToken<DeleteRsp>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
@@ -454,7 +454,7 @@ public class ConfigGroupApi {
      * 删除组
      * 删除组
      * @param id 删除组 (required)
-     * @return InlineResponse200
+     * @return DeleteRsp
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -463,8 +463,8 @@ public class ConfigGroupApi {
         <tr><td> 405 </td><td> Invalid input </td><td>  -  </td></tr>
      </table>
      */
-    public InlineResponse200 configGroupIdDelete(String id) throws ApiException {
-        ApiResponse<InlineResponse200> localVarResp = configGroupIdDeleteWithHttpInfo(id);
+    public DeleteRsp configGroupIdDelete(String id) throws ApiException {
+        ApiResponse<DeleteRsp> localVarResp = configGroupIdDeleteWithHttpInfo(id);
         return localVarResp.getData();
     }
 
@@ -472,7 +472,7 @@ public class ConfigGroupApi {
      * 删除组
      * 删除组
      * @param id 删除组 (required)
-     * @return ApiResponse&lt;InlineResponse200&gt;
+     * @return ApiResponse&lt;DeleteRsp&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -481,9 +481,9 @@ public class ConfigGroupApi {
         <tr><td> 405 </td><td> Invalid input </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<InlineResponse200> configGroupIdDeleteWithHttpInfo(String id) throws ApiException {
+    public ApiResponse<DeleteRsp> configGroupIdDeleteWithHttpInfo(String id) throws ApiException {
         okhttp3.Call localVarCall = configGroupIdDeleteValidateBeforeCall(id, null);
-        Type localVarReturnType = new TypeToken<InlineResponse200>(){}.getType();
+        Type localVarReturnType = new TypeToken<DeleteRsp>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
@@ -501,10 +501,10 @@ public class ConfigGroupApi {
         <tr><td> 405 </td><td> Invalid input </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call configGroupIdDeleteAsync(String id, final ApiCallback<InlineResponse200> _callback) throws ApiException {
+    public okhttp3.Call configGroupIdDeleteAsync(String id, final ApiCallback<DeleteRsp> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = configGroupIdDeleteValidateBeforeCall(id, _callback);
-        Type localVarReturnType = new TypeToken<InlineResponse200>(){}.getType();
+        Type localVarReturnType = new TypeToken<DeleteRsp>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }

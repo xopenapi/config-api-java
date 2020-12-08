@@ -20,7 +20,7 @@ Method | HTTP request | Description
 
 <a name="configBatchDeletePost"></a>
 # **configBatchDeletePost**
-> InlineResponse200 configBatchDeletePost(idsReq)
+> DeleteRsp configBatchDeletePost(idsReq)
 
 批量删除配置
 
@@ -48,7 +48,7 @@ public class Example {
     ConfigApi apiInstance = new ConfigApi(defaultClient);
     IdsReq idsReq = new IdsReq(); // IdsReq | 
     try {
-      InlineResponse200 result = apiInstance.configBatchDeletePost(idsReq);
+      DeleteRsp result = apiInstance.configBatchDeletePost(idsReq);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ConfigApi#configBatchDeletePost");
@@ -69,7 +69,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200**](InlineResponse200.md)
+[**DeleteRsp**](DeleteRsp.md)
 
 ### Authorization
 
@@ -156,7 +156,7 @@ Name | Type | Description  | Notes
 
 <a name="configBatchRetrieveByResourcesPost"></a>
 # **configBatchRetrieveByResourcesPost**
-> InlineResponse2001 configBatchRetrieveByResourcesPost(batchRetrieveByResourcesReq)
+> InlineResponse200 configBatchRetrieveByResourcesPost(batchRetrieveByResourcesReq)
 
 查询配置
 
@@ -184,7 +184,7 @@ public class Example {
     ConfigApi apiInstance = new ConfigApi(defaultClient);
     BatchRetrieveByResourcesReq batchRetrieveByResourcesReq = new BatchRetrieveByResourcesReq(); // BatchRetrieveByResourcesReq | 
     try {
-      InlineResponse2001 result = apiInstance.configBatchRetrieveByResourcesPost(batchRetrieveByResourcesReq);
+      InlineResponse200 result = apiInstance.configBatchRetrieveByResourcesPost(batchRetrieveByResourcesReq);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ConfigApi#configBatchRetrieveByResourcesPost");
@@ -205,7 +205,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2001**](InlineResponse2001.md)
+[**InlineResponse200**](InlineResponse200.md)
 
 ### Authorization
 
@@ -360,7 +360,7 @@ Name | Type | Description  | Notes
 
 <a name="configIdDelete"></a>
 # **configIdDelete**
-> InlineResponse200 configIdDelete(id)
+> DeleteRsp configIdDelete(id)
 
 删除配置
 
@@ -388,7 +388,7 @@ public class Example {
     ConfigApi apiInstance = new ConfigApi(defaultClient);
     String id = "id_example"; // String | 删除配置
     try {
-      InlineResponse200 result = apiInstance.configIdDelete(id);
+      DeleteRsp result = apiInstance.configIdDelete(id);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ConfigApi#configIdDelete");
@@ -409,7 +409,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200**](InlineResponse200.md)
+[**DeleteRsp**](DeleteRsp.md)
 
 ### Authorization
 

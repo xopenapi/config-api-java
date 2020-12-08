@@ -28,7 +28,7 @@ import java.io.IOException;
 /**
  * UpdateConfigTemplateRsp
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-12-08T10:34:11.838Z[GMT]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-12-08T10:50:47.636Z[GMT]")
 public class UpdateConfigTemplateRsp {
   public static final String SERIALIZED_NAME_CODE = "code";
   @SerializedName(SERIALIZED_NAME_CODE)

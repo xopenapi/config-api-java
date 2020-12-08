@@ -2,7 +2,7 @@
 
 配置服务API
 - API version: 1.0.0
-  - Build date: 2020-12-08T10:34:11.838Z[GMT]
+  - Build date: 2020-12-08T10:50:47.636Z[GMT]
 
 配置服务API
 
@@ -92,7 +92,7 @@ public class Example {
     ConfigApi apiInstance = new ConfigApi(defaultClient);
     IdsReq idsReq = new IdsReq(); // IdsReq | 
     try {
-      InlineResponse200 result = apiInstance.configBatchDeletePost(idsReq);
+      DeleteRsp result = apiInstance.configBatchDeletePost(idsReq);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ConfigApi#configBatchDeletePost");
@@ -172,13 +172,13 @@ Class | Method | HTTP request | Description
  - [CursorConfigsRspData](docs/CursorConfigsRspData.md)
  - [CursorExtra](docs/CursorExtra.md)
  - [CursorQuery](docs/CursorQuery.md)
+ - [DeleteRsp](docs/DeleteRsp.md)
  - [GetConfigGroupRsp](docs/GetConfigGroupRsp.md)
  - [GetConfigGroupsRsp](docs/GetConfigGroupsRsp.md)
  - [GetConfigRsp](docs/GetConfigRsp.md)
  - [GetConfigTemplateRsp](docs/GetConfigTemplateRsp.md)
  - [IdsReq](docs/IdsReq.md)
  - [InlineResponse200](docs/InlineResponse200.md)
- - [InlineResponse2001](docs/InlineResponse2001.md)
  - [PageConfigGroupsRsp](docs/PageConfigGroupsRsp.md)
  - [PageConfigGroupsRspData](docs/PageConfigGroupsRspData.md)
  - [PageConfigTemplatesRsp](docs/PageConfigTemplatesRsp.md)

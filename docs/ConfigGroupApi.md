@@ -17,7 +17,7 @@ Method | HTTP request | Description
 
 <a name="configGroupBatchDeletePost"></a>
 # **configGroupBatchDeletePost**
-> InlineResponse200 configGroupBatchDeletePost(idsReq)
+> DeleteRsp configGroupBatchDeletePost(idsReq)
 
 批量删除组
 
@@ -45,7 +45,7 @@ public class Example {
     ConfigGroupApi apiInstance = new ConfigGroupApi(defaultClient);
     IdsReq idsReq = new IdsReq(); // IdsReq | 
     try {
-      InlineResponse200 result = apiInstance.configGroupBatchDeletePost(idsReq);
+      DeleteRsp result = apiInstance.configGroupBatchDeletePost(idsReq);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ConfigGroupApi#configGroupBatchDeletePost");
@@ -66,7 +66,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200**](InlineResponse200.md)
+[**DeleteRsp**](DeleteRsp.md)
 
 ### Authorization
 
@@ -221,7 +221,7 @@ Name | Type | Description  | Notes
 
 <a name="configGroupIdDelete"></a>
 # **configGroupIdDelete**
-> InlineResponse200 configGroupIdDelete(id)
+> DeleteRsp configGroupIdDelete(id)
 
 删除组
 
@@ -249,7 +249,7 @@ public class Example {
     ConfigGroupApi apiInstance = new ConfigGroupApi(defaultClient);
     String id = "id_example"; // String | 删除组
     try {
-      InlineResponse200 result = apiInstance.configGroupIdDelete(id);
+      DeleteRsp result = apiInstance.configGroupIdDelete(id);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ConfigGroupApi#configGroupIdDelete");
@@ -270,7 +270,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200**](InlineResponse200.md)
+[**DeleteRsp**](DeleteRsp.md)
 
 ### Authorization
 

@@ -1,6 +1,6 @@
 
 
-# InlineResponse2001
+# DeleteRsp
 
 ## Properties
 
@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **code** | **Long** |  |  [optional]
 **msg** | **String** |  |  [optional]
-**data** | [**List&lt;Config&gt;**](Config.md) |  |  [optional]
+**data** | **Object** | 暂时未返回数据 |  [optional]
 
 
 

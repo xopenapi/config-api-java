@@ -20,18 +20,15 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.xopenapi.config.model.Config;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 
 /**
- * InlineResponse2001
+ * DeleteRsp
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-12-08T10:34:11.838Z[GMT]")
-public class InlineResponse2001 {
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-12-08T10:50:47.636Z[GMT]")
+public class DeleteRsp {
   public static final String SERIALIZED_NAME_CODE = "code";
   @SerializedName(SERIALIZED_NAME_CODE)
   private Long code;
@@ -42,10 +39,10 @@ public class InlineResponse2001 {
 
   public static final String SERIALIZED_NAME_DATA = "data";
   @SerializedName(SERIALIZED_NAME_DATA)
-  private List<Config> data = null;
+  private Object data = null;
 
 
-  public InlineResponse2001 code(Long code) {
+  public DeleteRsp code(Long code) {
     
     this.code = code;
     return this;
@@ -68,7 +65,7 @@ public class InlineResponse2001 {
   }
 
 
-  public InlineResponse2001 msg(String msg) {
+  public DeleteRsp msg(String msg) {
     
     this.msg = msg;
     return this;
@@ -91,33 +88,25 @@ public class InlineResponse2001 {
   }
 
 
-  public InlineResponse2001 data(List<Config> data) {
+  public DeleteRsp data(Object data) {
     
     this.data = data;
     return this;
   }
 
-  public InlineResponse2001 addDataItem(Config dataItem) {
-    if (this.data == null) {
-      this.data = new ArrayList<Config>();
-    }
-    this.data.add(dataItem);
-    return this;
-  }
-
    /**
-   * Get data
+   * 暂时未返回数据
    * @return data
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "暂时未返回数据")
 
-  public List<Config> getData() {
+  public Object getData() {
     return data;
   }
 
 
-  public void setData(List<Config> data) {
+  public void setData(Object data) {
     this.data = data;
   }
 
@@ -130,10 +119,10 @@ public class InlineResponse2001 {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    InlineResponse2001 inlineResponse2001 = (InlineResponse2001) o;
-    return Objects.equals(this.code, inlineResponse2001.code) &&
-        Objects.equals(this.msg, inlineResponse2001.msg) &&
-        Objects.equals(this.data, inlineResponse2001.data);
+    DeleteRsp deleteRsp = (DeleteRsp) o;
+    return Objects.equals(this.code, deleteRsp.code) &&
+        Objects.equals(this.msg, deleteRsp.msg) &&
+        Objects.equals(this.data, deleteRsp.data);
   }
 
   @Override
@@ -145,7 +134,7 @@ public class InlineResponse2001 {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class InlineResponse2001 {\n");
+    sb.append("class DeleteRsp {\n");
     sb.append("    code: ").append(toIndentedString(code)).append("\n");
     sb.append("    msg: ").append(toIndentedString(msg)).append("\n");
     sb.append("    data: ").append(toIndentedString(data)).append("\n");

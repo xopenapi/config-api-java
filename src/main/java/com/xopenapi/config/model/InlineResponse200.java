@@ -20,14 +20,17 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import com.xopenapi.config.model.Config;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * InlineResponse200
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-12-08T10:34:11.838Z[GMT]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-12-08T10:50:47.636Z[GMT]")
 public class InlineResponse200 {
   public static final String SERIALIZED_NAME_CODE = "code";
   @SerializedName(SERIALIZED_NAME_CODE)
@@ -39,7 +42,7 @@ public class InlineResponse200 {
 
   public static final String SERIALIZED_NAME_DATA = "data";
   @SerializedName(SERIALIZED_NAME_DATA)
-  private Object data = null;
+  private List<Config> data = null;
 
 
   public InlineResponse200 code(Long code) {
@@ -88,25 +91,33 @@ public class InlineResponse200 {
   }
 
 
-  public InlineResponse200 data(Object data) {
+  public InlineResponse200 data(List<Config> data) {
     
     this.data = data;
     return this;
   }
 
+  public InlineResponse200 addDataItem(Config dataItem) {
+    if (this.data == null) {
+      this.data = new ArrayList<Config>();
+    }
+    this.data.add(dataItem);
+    return this;
+  }
+
    /**
-   * 暂时未返回数据
+   * Get data
    * @return data
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "暂时未返回数据")
+  @ApiModelProperty(value = "")
 
-  public Object getData() {
+  public List<Config> getData() {
     return data;
   }
 
 
-  public void setData(Object data) {
+  public void setData(List<Config> data) {
     this.data = data;
   }
 

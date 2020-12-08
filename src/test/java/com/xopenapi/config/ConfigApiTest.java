@@ -22,10 +22,10 @@ import com.xopenapi.config.model.CreateConfigReq;
 import com.xopenapi.config.model.CreateConfigRsp;
 import com.xopenapi.config.model.CursorConfigsRsp;
 import com.xopenapi.config.model.CursorQuery;
+import com.xopenapi.config.model.DeleteRsp;
 import com.xopenapi.config.model.GetConfigRsp;
 import com.xopenapi.config.model.IdsReq;
 import com.xopenapi.config.model.InlineResponse200;
-import com.xopenapi.config.model.InlineResponse2001;
 import com.xopenapi.config.model.PageConfigsRsp;
 import com.xopenapi.config.model.PageQuery;
 import com.xopenapi.config.model.RetrieveConfigByKeyReq;
@@ -62,7 +62,7 @@ public class ConfigApiTest {
     @Test
     public void configBatchDeletePostTest() throws ApiException {
         IdsReq idsReq = null;
-        InlineResponse200 response = api.configBatchDeletePost(idsReq);
+        DeleteRsp response = api.configBatchDeletePost(idsReq);
 
         // TODO: test validations
     }
@@ -94,7 +94,7 @@ public class ConfigApiTest {
     @Test
     public void configBatchRetrieveByResourcesPostTest() throws ApiException {
         BatchRetrieveByResourcesReq batchRetrieveByResourcesReq = null;
-        InlineResponse2001 response = api.configBatchRetrieveByResourcesPost(batchRetrieveByResourcesReq);
+        InlineResponse200 response = api.configBatchRetrieveByResourcesPost(batchRetrieveByResourcesReq);
 
         // TODO: test validations
     }
@@ -142,7 +142,7 @@ public class ConfigApiTest {
     @Test
     public void configIdDeleteTest() throws ApiException {
         String id = null;
-        InlineResponse200 response = api.configIdDelete(id);
+        DeleteRsp response = api.configIdDelete(id);
 
         // TODO: test validations
     }
