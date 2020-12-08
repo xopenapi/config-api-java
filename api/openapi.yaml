@@ -1,0 +1,1655 @@
+openapi: 3.0.0
+info:
+  description: 配置服务API
+  license:
+    name: Apache-2.0
+    url: https://www.apache.org/licenses/LICENSE-2.0.html
+  title: 配置服务API
+  version: 1.0.0
+servers:
+- url: https://api.lucfish.com/configuration/v1
+security:
+- ApiKey: []
+paths:
+  /config:
+    post:
+      description: 创建配置
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateConfigReq'
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/inline_response_200'
+          description: successful operation
+        "405":
+          description: Invalid input
+      summary: 创建配置
+      tags:
+      - Config
+      x-contentType: application/json
+      x-accepts: application/json
+    put:
+      description: 更新配置，需要全部的配置信息
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UpdateConfigReq'
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/inline_response_200'
+          description: successful operation
+        "405":
+          description: Invalid input
+      summary: 更新配置
+      tags:
+      - Config
+      x-contentType: application/json
+      x-accepts: application/json
+  /config/{id}:
+    delete:
+      description: 删除配置
+      parameters:
+      - description: 删除配置
+        explode: false
+        in: path
+        name: id
+        required: true
+        schema:
+          format: string
+          type: string
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/inline_response_200_1'
+          description: successful operation
+        "405":
+          description: Invalid input
+      summary: 删除配置
+      tags:
+      - Config
+      x-accepts: application/json
+    get:
+      description: 查询配置通过配置ID
+      parameters:
+      - description: 查询配置通过配置ID
+        explode: false
+        in: path
+        name: id
+        required: true
+        schema:
+          format: string
+          type: string
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/inline_response_200'
+          description: successful operation
+        "405":
+          description: Invalid input
+      summary: 查询配置
+      tags:
+      - Config
+      x-accepts: application/json
+  /config/batchRetrieve:
+    post:
+      description: 批量查询配置通过配置Id
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/IdsReq'
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/inline_response_200_2'
+          description: successful operation
+        "405":
+          description: Invalid input
+      summary: 批量查询配置
+      tags:
+      - Config
+      x-contentType: application/json
+      x-accepts: application/json
+  /config/batchDelete:
+    post:
+      description: 批量删除配置通过配置Id
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/IdsReq'
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/inline_response_200_1'
+          description: successful operation
+        "405":
+          description: Invalid input
+      summary: 批量删除配置
+      tags:
+      - Config
+      x-contentType: application/json
+      x-accepts: application/json
+  /config/page:
+    post:
+      description: Page查询配置
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PageQuery'
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/inline_response_200_3'
+          description: successful operation
+        "405":
+          description: Invalid input
+      summary: Page查询配置
+      tags:
+      - Config
+      x-contentType: application/json
+      x-accepts: application/json
+  /config/cursor:
+    post:
+      description: Cursor查询配置
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CursorQuery'
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/inline_response_200_4'
+          description: successful operation
+        "405":
+          description: Invalid input
+      summary: Cursor查询配置
+      tags:
+      - Config
+      x-contentType: application/json
+      x-accepts: application/json
+  /config/retrieveByKey:
+    post:
+      description: 查询配置通过配置Key和资源ID
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/RetrieveConfigByKeyReq'
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/inline_response_200'
+          description: successful operation
+        "405":
+          description: Invalid input
+      summary: 查询配置
+      tags:
+      - Config
+      x-contentType: application/json
+      x-accepts: application/json
+  /config/batchRetrieveByKeys:
+    post:
+      description: 查询配置通过配置Keys和资源ID
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/BatchRetrieveByKeysReq'
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/inline_response_200_2'
+          description: successful operation
+        "405":
+          description: Invalid input
+      summary: 查询配置
+      tags:
+      - Config
+      x-contentType: application/json
+      x-accepts: application/json
+  /config/batchRetrieveByResources:
+    post:
+      description: 查询配置通过配置GroupID
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/BatchRetrieveByResourcesReq'
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/inline_response_200_2'
+          description: successful operation
+        "405":
+          description: Invalid input
+      summary: 查询配置
+      tags:
+      - Config
+      x-contentType: application/json
+      x-accepts: application/json
+  /configTemplate:
+    post:
+      description: 创建配置模版
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateConfigTemplateReq'
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/inline_response_200_5'
+          description: successful operation
+        "405":
+          description: Invalid input
+      summary: 创建配置模版
+      tags:
+      - ConfigTemplate
+      x-contentType: application/json
+      x-accepts: application/json
+    put:
+      description: 更新配置模版，需要全部的配置模版信息
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UpdateConfigTemplateReq'
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/inline_response_200_5'
+          description: successful operation
+        "405":
+          description: Invalid input
+      summary: 更新配置模版
+      tags:
+      - Config
+      x-contentType: application/json
+      x-accepts: application/json
+  /configTemplate/{id}:
+    delete:
+      description: 删除配置模版
+      parameters:
+      - description: 删除配置模版
+        explode: false
+        in: path
+        name: id
+        required: true
+        schema:
+          format: string
+          type: string
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/inline_response_200_1'
+          description: successful operation
+        "405":
+          description: Invalid input
+      summary: 删除配置模版
+      tags:
+      - ConfigTemplate
+      x-accepts: application/json
+    get:
+      description: 查询配置通过配置模版ID
+      parameters:
+      - description: 查询配置通过配置ID
+        explode: false
+        in: path
+        name: id
+        required: true
+        schema:
+          format: string
+          type: string
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/inline_response_200_5'
+          description: successful operation
+        "405":
+          description: Invalid input
+      summary: 查询配置模版
+      tags:
+      - ConfigTemplate
+      x-accepts: application/json
+  /configTemplate/batchRetrieve:
+    post:
+      description: 批量查询配置模版通过配置Id
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/IdsReq'
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/inline_response_200_6'
+          description: successful operation
+        "405":
+          description: Invalid input
+      summary: 批量查询配置模版
+      tags:
+      - ConfigTemplate
+      x-contentType: application/json
+      x-accepts: application/json
+  /configTemplate/batchDelete:
+    post:
+      description: 批量删除配置模版通过配置Id
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/IdsReq'
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/inline_response_200_1'
+          description: successful operation
+        "405":
+          description: Invalid input
+      summary: 批量删除配置模版
+      tags:
+      - ConfigTemplate
+      x-contentType: application/json
+      x-accepts: application/json
+  /configTemplate/page:
+    post:
+      description: Page查询配置模版
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PageQuery'
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/inline_response_200_7'
+          description: successful operation
+        "405":
+          description: Invalid input
+      summary: Page查询配置模版
+      tags:
+      - ConfigTemplate
+      x-contentType: application/json
+      x-accepts: application/json
+  /configTemplate/cursor:
+    post:
+      description: Cursor查询配置模版
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CursorQuery'
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/inline_response_200_8'
+          description: successful operation
+        "405":
+          description: Invalid input
+      summary: Cursor查询配置模版
+      tags:
+      - ConfigTemplate
+      x-contentType: application/json
+      x-accepts: application/json
+  /configTemplate/retrieveByKey:
+    post:
+      description: 查询配置模版通过配置Key
+      parameters:
+      - description: 主键Key
+        explode: true
+        in: query
+        name: key
+        required: true
+        schema:
+          format: string
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/inline_response_200_5'
+          description: successful operation
+        "405":
+          description: Invalid input
+      summary: 查询配置模版
+      tags:
+      - ConfigTemplate
+      x-accepts: application/json
+  /configTemplate/batchRetrieveByKeys:
+    post:
+      description: 查询配置通过配置Keys
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/BatchRetrieveConfigTemplateByKeysReq'
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/inline_response_200_6'
+          description: successful operation
+        "405":
+          description: Invalid input
+      summary: 查询配置模版
+      tags:
+      - ConfigTemplate
+      x-contentType: application/json
+      x-accepts: application/json
+  /configTemplate/batchRetrieveByGroup:
+    post:
+      description: 查询配置模版通过配置模版GroupID
+      parameters:
+      - description: 分组标签名
+        explode: true
+        in: query
+        name: groupName
+        required: true
+        schema:
+          format: string
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/inline_response_200_6'
+          description: successful operation
+        "405":
+          description: Invalid input
+      summary: 查询配置模版
+      tags:
+      - ConfigTemplate
+      x-accepts: application/json
+  /configGroup:
+    post:
+      description: 创建组
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateConfigGroupReq'
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/inline_response_200_9'
+          description: successful operation
+        "405":
+          description: Invalid input
+      summary: 创建组
+      tags:
+      - ConfigGroup
+      x-contentType: application/json
+      x-accepts: application/json
+    put:
+      description: 更新组，需要全部的组信息
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UpdateConfigGroupReq'
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/inline_response_200_9'
+          description: successful operation
+        "405":
+          description: Invalid input
+      summary: 更新组
+      tags:
+      - ConfigGroup
+      x-contentType: application/json
+      x-accepts: application/json
+  /configGroup/{id}:
+    delete:
+      description: 删除组
+      parameters:
+      - description: 删除组
+        explode: false
+        in: path
+        name: id
+        required: true
+        schema:
+          format: string
+          type: string
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/inline_response_200_1'
+          description: successful operation
+        "405":
+          description: Invalid input
+      summary: 删除组
+      tags:
+      - ConfigGroup
+      x-accepts: application/json
+    get:
+      description: 查询组通过组ID
+      parameters:
+      - description: 查询组通过组ID
+        explode: false
+        in: path
+        name: id
+        required: true
+        schema:
+          format: string
+          type: string
+        style: simple
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/inline_response_200_9'
+          description: successful operation
+        "405":
+          description: Invalid input
+      summary: 查询组
+      tags:
+      - ConfigGroup
+      x-accepts: application/json
+  /configGroup/batchRetrieve:
+    post:
+      description: 批量查询组通过组Id
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/IdsReq'
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/inline_response_200_10'
+          description: successful operation
+        "405":
+          description: Invalid input
+      summary: 批量查询组
+      tags:
+      - ConfigGroup
+      x-contentType: application/json
+      x-accepts: application/json
+  /configGroup/batchDelete:
+    post:
+      description: 批量删除组通过组Id
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/IdsReq'
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/inline_response_200_1'
+          description: successful operation
+        "405":
+          description: Invalid input
+      summary: 批量删除组
+      tags:
+      - ConfigGroup
+      x-contentType: application/json
+      x-accepts: application/json
+  /configGroup/page:
+    post:
+      description: Page查询组
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PageQuery'
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/inline_response_200_11'
+          description: successful operation
+        "405":
+          description: Invalid input
+      summary: Page查询组
+      tags:
+      - ConfigGroup
+      x-contentType: application/json
+      x-accepts: application/json
+  /configGroup/cursor:
+    post:
+      description: Cursor查询组
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CursorQuery'
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/inline_response_200_12'
+          description: successful operation
+        "405":
+          description: Invalid input
+      summary: Cursor查询组
+      tags:
+      - ConfigGroup
+      x-contentType: application/json
+      x-accepts: application/json
+  /configGroup/retrieveByName:
+    post:
+      description: 查询组通过Name
+      parameters:
+      - description: 查询组通过Name
+        explode: true
+        in: query
+        name: name
+        required: true
+        schema:
+          format: string
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/inline_response_200_5'
+          description: successful operation
+        "405":
+          description: Invalid input
+      summary: 查询组
+      tags:
+      - ConfigGroup
+      x-accepts: application/json
+components:
+  schemas:
+    IdsReq:
+      example:
+        ids:
+        - ids
+        - ids
+      properties:
+        ids:
+          description: 配置ID列表
+          items:
+            format: string
+            type: string
+          type: array
+      type: object
+    RetrieveConfigByKeyReq:
+      example:
+        resourceId: resourceId
+        key: key
+      properties:
+        key:
+          description: key
+          format: string
+          type: string
+        resourceId:
+          description: 资源ID
+          format: string
+          type: string
+      type: object
+    BatchRetrieveByKeysReq:
+      example:
+        resourceId: resourceId
+        keys:
+        - keys
+        - keys
+      properties:
+        keys:
+          description: keys
+          items:
+            type: string
+          type: array
+        resourceId:
+          description: 资源ID
+          format: string
+          type: string
+      type: object
+    BatchRetrieveByResourcesReq:
+      example:
+        key: key
+        resourceIds:
+        - resourceIds
+        - resourceIds
+      properties:
+        key:
+          description: key
+          format: string
+          type: string
+        resourceIds:
+          description: 资源ID组
+          items:
+            type: string
+          type: array
+      type: object
+    BatchRetrieveConfigTemplateByKeysReq:
+      example:
+        keys:
+        - keys
+        - keys
+      properties:
+        keys:
+          items:
+            type: string
+          type: array
+      type: object
+    CursorQuery:
+      example:
+        cursor: cursor
+        cursorSort: ""
+        size: 0
+        filters: '{}'
+        direction: 6
+      properties:
+        filters:
+          description: 查询条件，传键值对
+          type: object
+        cursor:
+          description: 游标值
+          format: string
+          type: string
+        cursorSort:
+          description: 排序 $ref:"#/components/schemas/SortSpec"
+        size:
+          description: 大小
+          format: int64
+          type: integer
+        direction:
+          description: 查询方向，0表示游标前，1表示游标后
+          format: byte
+          type: integer
+      type: object
+    CursorExtra:
+      example:
+        resourceId: resourceId
+        size: 6
+        direction: 1
+      properties:
+        size:
+          description: 大小
+          format: int64
+          type: integer
+        direction:
+          description: 查询方向，0表示游标前，1表示游标后
+          format: byte
+          type: integer
+        resourceId:
+          description: 资源ID
+          format: string
+          type: string
+      type: object
+    CreateConfigReq:
+      example:
+        resourceId: resourceId
+        groupId: groupId
+        templateId: templateId
+        value: '{}'
+        key: key
+      properties:
+        resourceId:
+          description: 资源ID
+          format: string
+          type: string
+        groupId:
+          description: 组ID
+          format: string
+          type: string
+        templateId:
+          description: 模版ID
+          format: string
+          type: string
+        key:
+          description: 对应的字段名
+          format: string
+          type: string
+        value:
+          description: json格式的键值对数据
+          type: object
+      type: object
+    UpdateConfigReq:
+      example:
+        id: id
+        value: '{}'
+      properties:
+        id:
+          description: 配置ID
+          format: string
+          type: string
+        value:
+          description: json格式的键值对数据
+          type: object
+      type: object
+    Config:
+      example:
+        resourceId: resourceId
+        groupId: groupId
+        ctime: 6
+        id: id
+        templateId: templateId
+        mtime: 1
+        value: '{}'
+        key: key
+      properties:
+        id:
+          description: 配置ID
+          format: string
+          type: string
+        resourceId:
+          description: 资源ID
+          format: string
+          type: string
+        groupId:
+          description: 组ID
+          format: string
+          type: string
+        templateId:
+          description: 模版ID
+          format: string
+          type: string
+        key:
+          description: 对应的字段名
+          format: string
+          type: string
+        value:
+          description: json格式的键值对数据
+          type: object
+        ctime:
+          description: 创建时间，返回时间戳
+          format: int64
+          type: integer
+        mtime:
+          description: 更新时间，返回时间戳
+          format: int64
+          type: integer
+      type: object
+    CreateConfigGroupReq:
+      example:
+        name: name
+      properties:
+        name:
+          description: 名称
+          format: string
+          type: string
+      type: object
+    UpdateConfigGroupReq:
+      example:
+        name: name
+        id: id
+      properties:
+        id:
+          description: 配置ID
+          format: string
+          type: string
+        name:
+          description: 名称
+          type: string
+      type: object
+    ConfigGroup:
+      example:
+        name: name
+        ctime: 6
+        id: id
+        mtime: 1
+      properties:
+        id:
+          description: 配置ID
+          format: string
+          type: string
+        name:
+          description: 名称
+          format: string
+          type: string
+        ctime:
+          description: 创建时间，返回时间戳
+          format: int64
+          type: integer
+        mtime:
+          description: 更新时间，返回时间戳
+          format: int64
+          type: integer
+      type: object
+    CreateConfigTemplateReq:
+      example:
+        groupId: groupId
+        templateId: templateId
+        value: '{}'
+        key: key
+      properties:
+        groupId:
+          description: 组ID
+          format: string
+          type: string
+        templateId:
+          description: 模版ID
+          format: string
+          type: string
+        key:
+          description: 对应的字段名
+          format: string
+          type: string
+        value:
+          description: json格式的键值对数据
+          type: object
+      type: object
+    UpdateConfigTemplateReq:
+      example:
+        id: id
+        value: '{}'
+      properties:
+        id:
+          description: 配置ID
+          format: string
+          type: string
+        value:
+          description: json格式的键值对数据
+          type: object
+      type: object
+    ConfigTemplate:
+      example:
+        groupId: groupId
+        ctime: 6
+        id: id
+        templateId: templateId
+        mtime: 1
+        value: '{}'
+        key: key
+      properties:
+        id:
+          description: 配置ID
+          format: string
+          type: string
+        groupId:
+          description: 组ID
+          format: string
+          type: string
+        templateId:
+          description: 模版ID
+          format: string
+          type: string
+        key:
+          description: 对应的字段名
+          format: string
+          type: string
+        value:
+          description: json格式的键值对数据
+          type: object
+        ctime:
+          description: 创建时间，返回时间戳
+          format: int64
+          type: integer
+        mtime:
+          description: 更新时间，返回时间戳
+          format: int64
+          type: integer
+      type: object
+    PageQuery:
+      example:
+        pageNo: 0
+        pageSize: 6
+        filters: '{}'
+        sort:
+        - ignoreCase: ignoreCase
+          property: property
+          type: type
+        - ignoreCase: ignoreCase
+          property: property
+          type: type
+      properties:
+        filters:
+          description: 查询条件，传键值对
+          type: object
+        pageNo:
+          description: 页码
+          format: int32
+          type: integer
+        pageSize:
+          description: 每页数据量
+          format: int32
+          type: integer
+        sort:
+          description: 排序
+          items:
+            $ref: '#/components/schemas/SortSpec'
+          type: array
+      type: object
+    SortSpec:
+      example:
+        ignoreCase: ignoreCase
+        property: property
+        type: type
+      properties:
+        property:
+          description: 排序字段
+          format: string
+          type: string
+        type:
+          description: 排序类型，0默认，1升序，2降序
+          format: string
+          type: string
+        ignoreCase:
+          description: 是否忽略大小写
+          format: string
+          type: string
+      type: object
+    inline_response_200:
+      example:
+        msg: msg
+        code: 0
+        data:
+          resourceId: resourceId
+          groupId: groupId
+          ctime: 6
+          id: id
+          templateId: templateId
+          mtime: 1
+          value: '{}'
+          key: key
+      properties:
+        code:
+          format: int64
+          type: integer
+        msg:
+          format: string
+          type: string
+        data:
+          $ref: '#/components/schemas/Config'
+    inline_response_200_1:
+      example:
+        msg: msg
+        code: 0
+        data: ""
+      properties:
+        code:
+          format: int64
+          type: integer
+        msg:
+          format: string
+          type: string
+        data:
+          description: 暂时未返回数据
+    inline_response_200_2:
+      example:
+        msg: msg
+        code: 0
+        data:
+        - resourceId: resourceId
+          groupId: groupId
+          ctime: 6
+          id: id
+          templateId: templateId
+          mtime: 1
+          value: '{}'
+          key: key
+        - resourceId: resourceId
+          groupId: groupId
+          ctime: 6
+          id: id
+          templateId: templateId
+          mtime: 1
+          value: '{}'
+          key: key
+      properties:
+        code:
+          format: int64
+          type: integer
+        msg:
+          format: string
+          type: string
+        data:
+          items:
+            $ref: '#/components/schemas/Config'
+          type: array
+    inline_response_200_3_data:
+      example:
+        pageCount: 5
+        total: 5
+        pageNo: 6
+        pageSize: 1
+        content:
+        - resourceId: resourceId
+          groupId: groupId
+          ctime: 6
+          id: id
+          templateId: templateId
+          mtime: 1
+          value: '{}'
+          key: key
+        - resourceId: resourceId
+          groupId: groupId
+          ctime: 6
+          id: id
+          templateId: templateId
+          mtime: 1
+          value: '{}'
+          key: key
+      properties:
+        pageNo:
+          description: 页码
+          format: int32
+          type: integer
+        pageSize:
+          description: 翻页大小
+          format: int32
+          type: integer
+        pageCount:
+          description: 页数
+          format: int32
+          type: integer
+        total:
+          description: 总数量
+          format: int32
+          type: integer
+        content:
+          items:
+            $ref: '#/components/schemas/Config'
+          type: array
+    inline_response_200_3:
+      example:
+        msg: msg
+        code: 0
+        data:
+          pageCount: 5
+          total: 5
+          pageNo: 6
+          pageSize: 1
+          content:
+          - resourceId: resourceId
+            groupId: groupId
+            ctime: 6
+            id: id
+            templateId: templateId
+            mtime: 1
+            value: '{}'
+            key: key
+          - resourceId: resourceId
+            groupId: groupId
+            ctime: 6
+            id: id
+            templateId: templateId
+            mtime: 1
+            value: '{}'
+            key: key
+      properties:
+        code:
+          format: int64
+          type: integer
+        msg:
+          format: string
+          type: string
+        data:
+          $ref: '#/components/schemas/inline_response_200_3_data'
+    inline_response_200_4_data:
+      example:
+        extra:
+          resourceId: resourceId
+          size: 6
+          direction: 1
+        items:
+        - resourceId: resourceId
+          groupId: groupId
+          ctime: 6
+          id: id
+          templateId: templateId
+          mtime: 1
+          value: '{}'
+          key: key
+        - resourceId: resourceId
+          groupId: groupId
+          ctime: 6
+          id: id
+          templateId: templateId
+          mtime: 1
+          value: '{}'
+          key: key
+      properties:
+        extra:
+          $ref: '#/components/schemas/CursorExtra'
+        items:
+          items:
+            $ref: '#/components/schemas/Config'
+          type: array
+    inline_response_200_4:
+      example:
+        msg: msg
+        code: 0
+        data:
+          extra:
+            resourceId: resourceId
+            size: 6
+            direction: 1
+          items:
+          - resourceId: resourceId
+            groupId: groupId
+            ctime: 6
+            id: id
+            templateId: templateId
+            mtime: 1
+            value: '{}'
+            key: key
+          - resourceId: resourceId
+            groupId: groupId
+            ctime: 6
+            id: id
+            templateId: templateId
+            mtime: 1
+            value: '{}'
+            key: key
+      properties:
+        code:
+          format: int64
+          type: integer
+        msg:
+          format: string
+          type: string
+        data:
+          $ref: '#/components/schemas/inline_response_200_4_data'
+    inline_response_200_5:
+      example:
+        msg: msg
+        code: 0
+        data:
+          groupId: groupId
+          ctime: 6
+          id: id
+          templateId: templateId
+          mtime: 1
+          value: '{}'
+          key: key
+      properties:
+        code:
+          format: int64
+          type: integer
+        msg:
+          format: string
+          type: string
+        data:
+          $ref: '#/components/schemas/ConfigTemplate'
+    inline_response_200_6:
+      example:
+        msg: msg
+        code: 0
+        data:
+        - groupId: groupId
+          ctime: 6
+          id: id
+          templateId: templateId
+          mtime: 1
+          value: '{}'
+          key: key
+        - groupId: groupId
+          ctime: 6
+          id: id
+          templateId: templateId
+          mtime: 1
+          value: '{}'
+          key: key
+      properties:
+        code:
+          format: int64
+          type: integer
+        msg:
+          format: string
+          type: string
+        data:
+          items:
+            $ref: '#/components/schemas/ConfigTemplate'
+          type: array
+    inline_response_200_7_data:
+      example:
+        pageCount: 5
+        total: 5
+        pageNo: 6
+        pageSize: 1
+        content:
+        - groupId: groupId
+          ctime: 6
+          id: id
+          templateId: templateId
+          mtime: 1
+          value: '{}'
+          key: key
+        - groupId: groupId
+          ctime: 6
+          id: id
+          templateId: templateId
+          mtime: 1
+          value: '{}'
+          key: key
+      properties:
+        pageNo:
+          description: 页码
+          format: int32
+          type: integer
+        pageSize:
+          description: 翻页大小
+          format: int32
+          type: integer
+        pageCount:
+          description: 页数
+          format: int32
+          type: integer
+        total:
+          description: 总数量
+          format: int32
+          type: integer
+        content:
+          items:
+            $ref: '#/components/schemas/ConfigTemplate'
+          type: array
+    inline_response_200_7:
+      example:
+        msg: msg
+        code: 0
+        data:
+          pageCount: 5
+          total: 5
+          pageNo: 6
+          pageSize: 1
+          content:
+          - groupId: groupId
+            ctime: 6
+            id: id
+            templateId: templateId
+            mtime: 1
+            value: '{}'
+            key: key
+          - groupId: groupId
+            ctime: 6
+            id: id
+            templateId: templateId
+            mtime: 1
+            value: '{}'
+            key: key
+      properties:
+        code:
+          format: int64
+          type: integer
+        msg:
+          format: string
+          type: string
+        data:
+          $ref: '#/components/schemas/inline_response_200_7_data'
+    inline_response_200_8_data:
+      example:
+        extra:
+          resourceId: resourceId
+          size: 6
+          direction: 1
+        items:
+        - groupId: groupId
+          ctime: 6
+          id: id
+          templateId: templateId
+          mtime: 1
+          value: '{}'
+          key: key
+        - groupId: groupId
+          ctime: 6
+          id: id
+          templateId: templateId
+          mtime: 1
+          value: '{}'
+          key: key
+      properties:
+        extra:
+          $ref: '#/components/schemas/CursorExtra'
+        items:
+          items:
+            $ref: '#/components/schemas/ConfigTemplate'
+          type: array
+    inline_response_200_8:
+      example:
+        msg: msg
+        code: 0
+        data:
+          extra:
+            resourceId: resourceId
+            size: 6
+            direction: 1
+          items:
+          - groupId: groupId
+            ctime: 6
+            id: id
+            templateId: templateId
+            mtime: 1
+            value: '{}'
+            key: key
+          - groupId: groupId
+            ctime: 6
+            id: id
+            templateId: templateId
+            mtime: 1
+            value: '{}'
+            key: key
+      properties:
+        code:
+          format: int64
+          type: integer
+        msg:
+          format: string
+          type: string
+        data:
+          $ref: '#/components/schemas/inline_response_200_8_data'
+    inline_response_200_9:
+      example:
+        msg: msg
+        code: 0
+        data:
+          name: name
+          ctime: 6
+          id: id
+          mtime: 1
+      properties:
+        code:
+          format: int64
+          type: integer
+        msg:
+          format: string
+          type: string
+        data:
+          $ref: '#/components/schemas/ConfigGroup'
+    inline_response_200_10:
+      example:
+        msg: msg
+        code: 0
+        data:
+        - name: name
+          ctime: 6
+          id: id
+          mtime: 1
+        - name: name
+          ctime: 6
+          id: id
+          mtime: 1
+      properties:
+        code:
+          format: int64
+          type: integer
+        msg:
+          format: string
+          type: string
+        data:
+          items:
+            $ref: '#/components/schemas/ConfigGroup'
+          type: array
+    inline_response_200_11_data:
+      example:
+        pageCount: 5
+        total: 5
+        pageNo: 6
+        pageSize: 1
+        content:
+        - name: name
+          ctime: 6
+          id: id
+          mtime: 1
+        - name: name
+          ctime: 6
+          id: id
+          mtime: 1
+      properties:
+        pageNo:
+          description: 页码
+          format: int32
+          type: integer
+        pageSize:
+          description: 翻页大小
+          format: int32
+          type: integer
+        pageCount:
+          description: 页数
+          format: int32
+          type: integer
+        total:
+          description: 总数量
+          format: int32
+          type: integer
+        content:
+          items:
+            $ref: '#/components/schemas/ConfigGroup'
+          type: array
+    inline_response_200_11:
+      example:
+        msg: msg
+        code: 0
+        data:
+          pageCount: 5
+          total: 5
+          pageNo: 6
+          pageSize: 1
+          content:
+          - name: name
+            ctime: 6
+            id: id
+            mtime: 1
+          - name: name
+            ctime: 6
+            id: id
+            mtime: 1
+      properties:
+        code:
+          format: int64
+          type: integer
+        msg:
+          format: string
+          type: string
+        data:
+          $ref: '#/components/schemas/inline_response_200_11_data'
+    inline_response_200_12_data:
+      example:
+        extra:
+          resourceId: resourceId
+          size: 6
+          direction: 1
+        items:
+        - name: name
+          ctime: 6
+          id: id
+          mtime: 1
+        - name: name
+          ctime: 6
+          id: id
+          mtime: 1
+      properties:
+        extra:
+          $ref: '#/components/schemas/CursorExtra'
+        items:
+          items:
+            $ref: '#/components/schemas/ConfigGroup'
+          type: array
+    inline_response_200_12:
+      example:
+        msg: msg
+        code: 0
+        data:
+          extra:
+            resourceId: resourceId
+            size: 6
+            direction: 1
+          items:
+          - name: name
+            ctime: 6
+            id: id
+            mtime: 1
+          - name: name
+            ctime: 6
+            id: id
+            mtime: 1
+      properties:
+        code:
+          format: int64
+          type: integer
+        msg:
+          format: string
+          type: string
+        data:
+          $ref: '#/components/schemas/inline_response_200_12_data'
+  securitySchemes:
+    ApiKey:
+      scheme: bearer
+      type: http
+
